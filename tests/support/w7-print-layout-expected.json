@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "status": "normative expectations only; no product PDF has been generated",
+  "units": "pt",
+  "tolerancePt": 0.02,
+  "cases": [
+    {
+      "id": "a4-portrait-two-pages",
+      "purpose": "Offscreen rows, deterministic pagination and complete area coverage",
+      "input": {"sheet":"Print","area":"A1:C50","paper":"A4","orientation":"portrait","marginsPt":[36,36,36,36],"scale":1,"columnWidthsPt":[72,108,90],"rowHeightPt":18,"hiddenRows":[]},
+      "expected": {"pageSizePt":[595.2755905512,841.8897637795],"pageCount":2,"pages":[{"number":1,"rows":[1,42],"cellCount":126,"representativeCells":{"A1":{"bbox":[36,36,72,18],"text":"Item"},"C42":{"bbox":[216,774,90,18],"text":"row-42"}}},{"number":2,"rows":[43,50],"cellCount":24,"representativeCells":{"A43":{"bbox":[36,36,72,18],"text":"row-43"},"C50":{"bbox":[216,162,90,18],"text":"row-50"}}}]}
+    },
+    {
+      "id": "letter-landscape-hidden-and-merge",
+      "purpose": "Hidden/filter exclusion, qualified merge geometry and date/error text",
+      "input": {"sheet":"Print","area":"A1:C4","paper":"Letter","orientation":"landscape","marginsPt":[36,36,36,36],"scale":1,"columnWidthsPt":[72,108,90],"rowHeightPt":24,"hiddenRows":[3],"merges":["B2:C2"],"excludeHidden":true},
+      "expected": {"pageSizePt":[792,612],"pageCount":1,"pages":[{"number":1,"rows":[1,2,4],"cellCount":8,"representativeCells":{"A1":{"bbox":[36,36,72,24],"text":"Item"},"B2":{"bbox":[108,60,198,24],"text":"Merged heading","merge":"B2:C2"},"C4":{"bbox":[216,84,90,24],"text":"1900-02-29"}},"absentCells":["C2","A3","B3","C3"]}]}
+    },
+    {
+      "id": "letter-half-scale-objects",
+      "purpose": "One shared scale for cell, chart, image and print-area clipping geometry",
+      "input": {"sheet":"Print","area":"A1:D4","paper":"Letter","orientation":"landscape","marginsPt":[36,36,36,36],"scale":0.5,"columnWidthsPt":[144,144,144,144],"rowHeightPt":36,"hiddenRows":[]},
+      "expected": {"pageSizePt":[792,612],"pageCount":1,"pages":[{"number":1,"rows":[1,4],"cellCount":16,"representativeCells":{"A1":{"bbox":[36,36,72,18],"text":"Item"},"D4":{"bbox":[252,90,72,18],"text":"#DIV/0!"}},"objects":[{"id":"image-reference","kind":"image","bbox":[120,60,54,27],"clipBox":[36,36,288,72],"clipped":false},{"id":"chart-reference","kind":"chart","bbox":[36,90,120,60],"clipBox":[36,36,288,72],"clipped":true}]}]}
+    },
+    {"id":"refuse-page-cut-merge","purpose":"A merge cannot silently split or lose its lower cells","input":{"area":"A1:C50","merge":"B42:C43","paper":"A4","rowHeightPt":18,"marginsPt":[36,36,36,36]},"expectedRefusal":{"code":"PRINT_MERGE_PAGE_CUT","range":"B42:C43"}},
+    {"id":"refuse-protected-visible-object","purpose":"Protected shapes cannot vanish from default output","input":{"area":"A1:H40","unsupportedPolicy":"refuse","visibleObjectId":"Protected shape"},"expectedRefusal":{"code":"PRINT_UNSUPPORTED_OBJECT","objectId":"Protected shape"}},
+    {"id":"refuse-unresolved-calculation","purpose":"No stale or manufactured numeric results in print jobs","input":{"area":"A1:C4","unresolvedCell":"Sales!B3"},"expectedRefusal":{"code":"PRINT_UNRESOLVED_CALCULATION","cell":"Sales!B3"}}
+  ]
+}

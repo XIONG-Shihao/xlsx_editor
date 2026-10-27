@@ -1,0 +1,139 @@
+{
+  "actions": [
+    {
+      "kind": "create",
+      "sheet": "Sales",
+      "id": "workbook:11111111-1111-4111-8111-111111111111"
+    },
+    {
+      "kind": "create",
+      "sheet": "Sales",
+      "id": "workbook:22222222-2222-4222-8222-222222222222"
+    },
+    {
+      "kind": "create",
+      "sheet": "Sales",
+      "id": "workbook:33333333-3333-4333-8333-333333333333"
+    }
+  ],
+  "objects": [
+    {
+      "sheet": "Sales",
+      "id": "workbook:11111111-1111-4111-8111-111111111111",
+      "kind": "chart",
+      "protected": [],
+      "anchor": {
+        "kind": "oneCellAnchor",
+        "from": {
+          "row": 1,
+          "col": 4,
+          "rowOff": 0,
+          "colOff": 0
+        },
+        "extent": {
+          "cx": 5715000,
+          "cy": 3333750
+        }
+      },
+      "chart": {
+        "kind": "column",
+        "title": "Monthly sales",
+        "legend": "b",
+        "blanks": "gap",
+        "includeHidden": false,
+        "series": [
+          {
+            "index": 0,
+            "order": 0,
+            "title": {
+              "formula": "'Sales'!$B$1",
+              "cache": [
+                "Sales"
+              ]
+            },
+            "categories": {
+              "formula": "'Sales'!$A$2:$A$4",
+              "cache": [
+                "Jan",
+                "Feb",
+                "Mar"
+              ]
+            },
+            "values": {
+              "formula": "'Sales'!$B$2:$B$4",
+              "cache": [
+                2,
+                3,
+                5
+              ]
+            }
+          },
+          {
+            "index": 1,
+            "order": 1,
+            "title": {
+              "formula": "'Sales'!$C$1",
+              "cache": [
+                "Costs"
+              ]
+            },
+            "categories": {
+              "formula": "'Sales'!$A$2:$A$4",
+              "cache": [
+                "Jan",
+                "Feb",
+                "Mar"
+              ]
+            },
+            "values": {
+              "formula": "'Sales'!$C$2:$C$4",
+              "cache": [
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sheet": "Sales",
+      "id": "workbook:22222222-2222-4222-8222-222222222222",
+      "kind": "image",
+      "protected": [],
+      "altText": "Sales logo",
+      "media": {
+        "mime": "image/png",
+        "bytes": 73,
+        "sha256": "c162f517f5a42e8b0b4a824761000fc44950ed4cdb05843b1cc0f40b61bc01a5"
+      }
+    },
+    {
+      "sheet": "Sales",
+      "id": "workbook:33333333-3333-4333-8333-333333333333",
+      "kind": "image",
+      "protected": [],
+      "altText": "Sales logo",
+      "media": {
+        "mime": "image/jpeg",
+        "bytes": 632,
+        "sha256": "a2a75cee707914d51154d429e425c9920bfb5a88cce802b9f7cf69dedc100da0"
+      }
+    }
+  ],
+  "allowChangedParts": [
+    "[[]Content_Types].xml",
+    "xl/worksheets/sheet1.xml",
+    "xl/worksheets/_rels/sheet1.xml.rels",
+    "xl/drawings/*",
+    "xl/charts/*",
+    "xl/media/*"
+  ],
+  "preservedParts": [
+    "custom/opaque.bin",
+    "xl/worksheets/sheet2.xml",
+    "xl/workbook.xml",
+    "xl/_rels/workbook.xml.rels"
+  ]
+}

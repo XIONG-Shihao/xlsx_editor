@@ -1,0 +1,283 @@
+{
+  "name": "@office-editors/xlsx-editor",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Independent XLSX engine, editor and desktop application",
+  "engines": {
+    "node": ">=24.12.0 <25"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/types/ui/index.d.ts",
+      "development": "./ui/index.ts",
+      "default": "./dist/ui/index.js"
+    },
+    "./ui": {
+      "types": "./dist/types/ui/index.d.ts",
+      "development": "./ui/index.ts",
+      "default": "./dist/ui/index.js"
+    },
+    "./host": {
+      "types": "./dist/types/ui/host.d.ts",
+      "development": "./ui/host.tsx",
+      "default": "./dist/ui/host.js"
+    },
+    "./contracts": {
+      "types": "./dist/types/core/contracts.d.ts",
+      "default": "./dist/core/contracts.js"
+    },
+    "./package.json": "./package.json",
+    "./ui/sheetRecovery": {
+      "types": "./dist/types/ui/sheetRecovery.d.ts",
+      "development": "./ui/sheetRecovery.ts",
+      "default": "./dist/ui/sheetRecovery.js"
+    },
+    "./ui/host": {
+      "types": "./dist/types/ui/host.d.ts",
+      "development": "./ui/host.tsx",
+      "default": "./dist/ui/host.js"
+    },
+    "./ui/SpreadsheetRibbon": {
+      "types": "./dist/types/ui/SpreadsheetRibbon.d.ts",
+      "development": "./ui/SpreadsheetRibbon.tsx",
+      "default": "./dist/ui/SpreadsheetRibbon.js"
+    },
+    "./ui/workbookWorker": {
+      "types": "./dist/types/ui/workbookWorker.d.ts",
+      "development": "./ui/workbookWorker.ts",
+      "default": "./dist/ui/workbookWorker.js"
+    },
+    "./ui/csvModel": {
+      "types": "./dist/types/ui/csvModel.d.ts",
+      "development": "./ui/csvModel.ts",
+      "default": "./dist/ui/csvModel.js"
+    },
+    "./ui/SpreadsheetGrid": {
+      "types": "./dist/types/ui/SpreadsheetGrid.d.ts",
+      "development": "./ui/SpreadsheetGrid.tsx",
+      "default": "./dist/ui/SpreadsheetGrid.js"
+    },
+    "./ui/words": {
+      "types": "./dist/types/ui/words.d.ts",
+      "development": "./ui/words.ts",
+      "default": "./dist/ui/words.js"
+    },
+    "./ui/rangeCells": {
+      "types": "./dist/types/ui/rangeCells.d.ts",
+      "development": "./ui/rangeCells.ts",
+      "default": "./dist/ui/rangeCells.js"
+    },
+    "./ui/sheetModel": {
+      "types": "./dist/types/ui/sheetModel.d.ts",
+      "development": "./ui/sheetModel.ts",
+      "default": "./dist/ui/sheetModel.js"
+    },
+    "./ui/workbook.worker": {
+      "types": "./dist/types/ui/workbook.worker.d.ts",
+      "development": "./ui/workbook.worker.ts",
+      "default": "./dist/ui/workbook.worker.js"
+    },
+    "./ui/index": {
+      "types": "./dist/types/ui/index.d.ts",
+      "development": "./ui/index.ts",
+      "default": "./dist/ui/index.js"
+    },
+    "./ui/sheetHistory": {
+      "types": "./dist/types/ui/sheetHistory.d.ts",
+      "development": "./ui/sheetHistory.ts",
+      "default": "./dist/ui/sheetHistory.js"
+    },
+    "./core/zip-file.mjs": "./core/zip-file.mjs",
+    "./core/indexed-cache.mjs": "./core/indexed-cache.mjs",
+    "./core/indexed-storage.mjs": "./core/indexed-storage.mjs",
+    "./core/native-client.mjs": "./core/native-client.mjs",
+    "./core/zip-parts.mjs": "./core/zip-parts.mjs",
+    "./core/csv-file-save.mjs": "./core/csv-file-save.mjs",
+    "./core/csv-file.mjs": "./core/csv-file.mjs",
+    "./core/csv-document.mjs": "./core/csv-document.mjs",
+    "./core/calculation-node.mjs": "./core/calculation-node.mjs",
+    "./core/csv-workbook.mjs": "./core/csv-workbook.mjs",
+    "./core/display.mjs": "./core/display.mjs",
+    "./core/formula-preview.mjs": "./core/formula-preview.mjs",
+    "./core/used-range.mjs": "./core/used-range.mjs",
+    "./core/note-membership.mjs": "./core/note-membership.mjs",
+    "./core/notes.mjs": {
+      "types": "./core/notes.d.mts",
+      "default": "./core/notes.mjs"
+    },
+    "./core/duplicate-model.mjs": "./core/duplicate-model.mjs",
+    "./core/workbook-service.mjs": "./core/workbook-service.mjs",
+    "./core/calculation-browser.mjs": "./core/calculation-browser.mjs",
+    "./core/indexed-objects.mjs": "./core/indexed-objects.mjs",
+    "./core/native-formula.mjs": "./core/native-formula.mjs",
+    "./core/workbook-package.mjs": "./core/workbook-package.mjs",
+    "./core/csv-codec.mjs": "./core/csv-codec.mjs",
+    "./core/worksheet-xml.mjs": "./core/worksheet-xml.mjs",
+    "./core/indexed-calculation.mjs": "./core/indexed-calculation.mjs",
+    "./core/workbook-commands.mjs": "./core/workbook-commands.mjs",
+    "./core/calculation.mjs": "./core/calculation.mjs",
+    "./core/indexed-copy.mjs": "./core/indexed-copy.mjs",
+    "./core/indexed-insertion.mjs": "./core/indexed-insertion.mjs",
+    "./core/indexed-session.mjs": "./core/indexed-session.mjs",
+    "./core/workbook-styles.mjs": "./core/workbook-styles.mjs",
+    "./core/workbook-projection.mjs": "./core/workbook-projection.mjs",
+    "./styles/01.css": "./ui/styles/01.css",
+    "./styles/02.css": "./ui/styles/02.css",
+    "./delimited": {
+      "types": "./dist/types/core/delimited.d.ts",
+      "default": "./dist/core/delimited.js"
+    },
+    "./build-native": "./scripts/build-native.mjs",
+    "./native": "./core/native-runtime.mjs",
+    "./core/native-runtime.mjs": "./core/native-runtime.mjs",
+    "./engine": "./core/index.mjs",
+    "./core/index.mjs": "./core/index.mjs",
+    "./transport": {
+      "types": "./dist/types/core/transport.d.ts",
+      "default": "./dist/core/transport.js"
+    },
+    "./csv-transfer": {
+      "types": "./dist/types/core/csv-transfer.d.ts",
+      "default": "./dist/core/csv-transfer.js"
+    },
+    "./csv-transfer-node": {
+      "types": "./dist/types/core/csv-transfer-node.d.ts",
+      "default": "./dist/core/csv-transfer-node.js"
+    },
+    "./document-session": "./adapters/document-session.mjs",
+    "./worker-client": "./adapters/worker-client.mjs",
+    "./test/grid-entry": "./scripts/test/xlsx-differential-entry.tsx",
+    "./test/package-oracle": "./scripts/test/package-oracle.mjs",
+    "./csv-worker": "./adapters/csv-worker.mjs",
+    "./core/indexed-csv-session.mjs": "./core/indexed-csv-session.mjs",
+    "./delimited-file-import": "./adapters/delimited-file-import.mjs",
+    "./core/delimited-import.mjs": "./core/delimited-import.mjs",
+    "./core/local-query.mjs": "./core/local-query.mjs",
+    "./passive-workbook": "./adapters/passive-workbook.mjs",
+    "./offline-spelling": {
+      "types": "./adapters/offline-spelling.d.mts",
+      "default": "./adapters/offline-spelling.mjs"
+    },
+    "./workbook-spelling-jobs": {
+      "types": "./adapters/workbook-spelling-jobs.d.mts",
+      "default": "./adapters/workbook-spelling-jobs.mjs"
+    },
+    "./core/ink-stroke.mjs": {
+      "types": "./core/ink-stroke.d.mts",
+      "default": "./core/ink-stroke.mjs"
+    },
+    "./core/ink-stroke-xml.mjs": {
+      "types": "./core/ink-stroke-xml.d.mts",
+      "default": "./core/ink-stroke-xml.mjs"
+    },
+    "./core/accessibility.mjs": {
+      "types": "./core/accessibility.d.mts",
+      "default": "./core/accessibility.mjs"
+    }
+  },
+  "files": [
+    "ui",
+    "core",
+    "adapters",
+    "native/Cargo.toml",
+    "native/Cargo.lock",
+    "native/src",
+    "native/assets",
+    "native/bin",
+    "standalone",
+    "scripts",
+    "README.md",
+    "dist/ui",
+    "dist/types",
+    "vite.library.config.ts",
+    "tsconfig.json",
+    "tsconfig.build.json",
+    "dist/core",
+    "docs",
+    "fixtures/*.xlsx",
+    "fixtures/build-corpus.py",
+    "fixtures/expectations.json",
+    "fixtures/budgets*.json",
+    "fixtures/spreadsheet-model-before.ts",
+    "fixtures/spreadsheet-adapter-before.mjs"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "build:native": "node scripts/build-native.mjs",
+    "test": "node tests/native-client-protocol.mjs && node --import ./scripts/ts-resolve-register.mjs  --test tests/workbook-indexed.mjs tests/native-diagnostics.mjs tests/indexed-cache.mjs tests/indexed-checkpoint.mjs tests/workbook-style-index.mjs && node --import ./scripts/ts-resolve-register.mjs --test tests/range-diagnostics.mjs && node --import ./scripts/ts-resolve-register.mjs tests/sheet-model.mjs && node --import ./scripts/ts-resolve-register.mjs tests/sheet-history.mjs && node tests/csv-sparse-save.mjs && node --test tests/csv-file.mjs tests/indexed-csv-session.mjs tests/csv-owner-worker.mjs && npm run test:document && npm run test:features && npm run test:compat && node tests/package-roundtrip.mjs && npm run test:cleanup",
+    "pretest": "npm run build",
+    "build:ui": "vite build --config vite.library.config.ts && node scripts/build-types.mjs",
+    "build": "npm run build:native && npm run build:ui",
+    "prepack": "npm run build",
+    "test:document": "node --test --test-concurrency=1 tests/document-session.mjs tests/new-workbook.mjs tests/worker-lifecycle.mjs tests/document-save-crash.mjs tests/operation-gate.mjs tests/filter-values-transport.mjs && node --import ./scripts/ts-resolve-register.mjs --test --test-concurrency=1 tests/large-paste.mjs tests/indexed-import.mjs tests/indexed-owner-import.mjs tests/staged-paste-oracle.mjs tests/document-import.mjs tests/document-import-crash.mjs tests/document-redo-retention.mjs tests/document-objects.mjs tests/worker-reaping-proof.mjs tests/object-transport.mjs && node --test tests/recent-files.mjs tests/standalone-bridge.mjs tests/print-document.mjs tests/saved-package-oracle.mjs && npm run test:search && npm run test:delimited-import && npm run test:tabs",
+    "test:reference": "node scripts/test/reference-corpus.mjs",
+    "test:search": "node --import ./scripts/ts-resolve-register.mjs --test tests/search-pages.mjs",
+    "test:features": "node --import ./scripts/ts-resolve-register.mjs --test --test-concurrency=1 tests/workbook-real-protected.mjs tests/package-capabilities.mjs tests/readonly-export.mjs tests/workbook-name-update.mjs tests/name-update-admission.mjs tests/name-dependency-admission.mjs tests/workbook-spills.mjs tests/workbook-spill-boundaries.mjs tests/workbook-spill-consumers.mjs tests/workbook-spill-print.mjs tests/workbook-spill-metadata.mjs tests/spill-metadata-oracle.mjs tests/workbook-objects.mjs tests/managed-object-extensions.mjs tests/indexed-owner-objects.mjs tests/native-managed-chart-cache.mjs tests/workbook-print.mjs tests/print-conditional.mjs tests/document-print.mjs tests/kept-recovery.mjs tests/rules-model.mjs tests/workbook-rules.mjs tests/document-rules.mjs tests/workbook-table-edits.mjs tests/workbook-scalar-arrays.mjs tests/workbook-month-dates.mjs tests/workbook-pivots.mjs tests/document-pivots.mjs && node tests/workbook-objects-ui.mjs && node tests/workbook-print-ui.mjs && node tests/workbook-rules-ui.mjs",
+    "format": "npx --yes prettier@3.6.2 --write \"core/**/*.{mjs,ts,mts}\" \"ui/**/*.{ts,tsx,css}\" \"adapters/**/*.{mjs,ts}\" \"standalone/**/*.{mjs,cjs,ts,tsx}\" \"tests/**/*.{mjs,ts,tsx}\" \"scripts/**/*.{mjs,ts,cjs}\" \"*.css\" && cargo fmt --manifest-path native/Cargo.toml",
+    "test:format": "node scripts/test/line-length.mjs && node scripts/test/documentation-contract.mjs",
+    "test:ordinary": "node --import ./scripts/ts-resolve-register.mjs --test tests/ordinary-sheets.mjs && node --import ./scripts/ts-resolve-register.mjs --test tests/refusal-codes.mjs && node --import ./scripts/ts-resolve-register.mjs --test tests/preserved-layout.mjs && node --import ./scripts/ts-resolve-register.mjs --test tests/calculator-routes.mjs",
+    "test:compat": "node --test --test-concurrency=1 tests/compat-*.test.mjs",
+    "benchmark:transfer": "node scripts/bench/workbook-transfer-rss.mjs",
+    "benchmark:model": "node --import ./scripts/ts-resolve-register.mjs scripts/bench/sheet-model.mjs",
+    "test:browser": "node scripts/test/xlsx-sheet-grid.mjs && node scripts/test/xlsx-indexed-grid.mjs && node scripts/test/csv-grid.mjs",
+    "test:preservation": "node scripts/test/xlsx-preservation-matrix.mjs",
+    "clean:artifacts": "node scripts/clean-artifacts.mjs",
+    "test:cleanup": "node tests/clean-artifacts.mjs",
+    "test:delimited-import": "node --import ./scripts/ts-resolve-register.mjs --test --test-concurrency=1 tests/delimited-import.mjs tests/delimited-file-import.mjs",
+    "test:objects:extensions": "node --import ./scripts/ts-resolve-register.mjs --test --test-concurrency=1 tests/managed-object-extensions.mjs && node --test tests/workbook-objects-ui.mjs",
+    "test:tabs": "node --test tests/workbook-tab-registry.mjs",
+    "test:tables": "node --import ./scripts/ts-resolve-register.mjs --test tests/workbook-table-edits.mjs",
+    "test:scalar-arrays": "node --test tests/workbook-scalar-arrays.mjs",
+    "test:month-dates": "node --test tests/compat-xlsx-month-dates.test.mjs tests/workbook-month-dates.mjs",
+    "test:pivots": "node --import ./scripts/ts-resolve-register.mjs --test tests/workbook-pivots.mjs tests/document-pivots.mjs",
+    "test:remaining-formats": "node --import ./scripts/ts-resolve-register.mjs --test tests/passive-formats.mjs tests/passive-format-ovba.mjs tests/pure-vba.mjs tests/pure-vba-excel-reference.mjs tests/passive-data-export.mjs tests/xlsb-values-normalize.mjs tests/document-passive-formats.mjs tests/bounded-range-read.mjs",
+    "desktop:build": "node desktop/scripts/build-editor.mjs && node desktop/scripts/build.mjs",
+    "desktop:package": "node desktop/scripts/package.mjs",
+    "gates": "node scripts/gates.mjs",
+    "test:all": "node scripts/test/run.mjs",
+    "test:alone": "node scripts/test/folder-alone.mjs"
+  },
+  "dependencies": {
+    "@noble/hashes": "2.3.0",
+    "@univerjs/core": "0.25.2",
+    "@univerjs/engine-formula": "0.25.2",
+    "@univerjs/sheets": "0.25.2",
+    "@univerjs/sheets-formula": "0.25.2",
+    "@univerjs/sheets-table": "0.25.2",
+    "@xmldom/xmldom": "0.8.15",
+    "dictionary-en": "4.0.0",
+    "dictionary-en-gb": "3.0.0",
+    "fflate": "0.8.3",
+    "nspell": "2.1.5",
+    "rxjs": "7.8.2",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@napi-rs/canvas": "1.0.3",
+    "@playwright/test": "1.62.1",
+    "@tauri-apps/api": "2.12.2",
+    "@tauri-apps/cli": "2.12.1",
+    "@types/node": "24.13.4",
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
+    "@vitejs/plugin-react": "5.2.0",
+    "esbuild": "0.28.2",
+    "jsdom": "27.4.0",
+    "pdfjs-dist": "4.10.38",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "typescript": "5.9.3",
+    "vite": "7.3.6"
+  },
+  "overrides": {
+    "@univerjs/core": {
+      "nanoid": "5.1.16"
+    }
+  },
+  "packageManager": "bun@1.4.3"
+}

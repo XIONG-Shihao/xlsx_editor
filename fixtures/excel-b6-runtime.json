@@ -1,0 +1,131 @@
+{
+  "excel": "16.113",
+  "sheet": "Cases",
+  "cases": [
+    {
+      "ref": "D1",
+      "formula": "0.1+0.2",
+      "expected": 0.30000000000000004
+    },
+    {
+      "ref": "D2",
+      "formula": "A1+A2",
+      "expected": 0.30000000000000004
+    },
+    {
+      "ref": "D3",
+      "formula": "(0.1+0.2+0.3)*2",
+      "expected": 1.2000000000000002
+    },
+    {
+      "ref": "D4",
+      "formula": "A1*A2",
+      "expected": 0.020000000000000004
+    },
+    {
+      "ref": "D5",
+      "formula": "0.1*0.2",
+      "expected": 0.020000000000000004
+    },
+    {
+      "ref": "D6",
+      "formula": "1/A3",
+      "expected": 3.3333333333333335
+    },
+    {
+      "ref": "D7",
+      "formula": "A1/A3",
+      "expected": 0.33333333333333337
+    },
+    {
+      "ref": "D8",
+      "formula": "0.3-0.2",
+      "expected": 0.09999999999999998
+    },
+    {
+      "ref": "D9",
+      "formula": "0.1+0.2-0.3",
+      "expected": 0
+    },
+    {
+      "ref": "D10",
+      "formula": "1000000000-1000000000",
+      "expected": 0
+    },
+    {
+      "ref": "D11",
+      "formula": "(10000000000000000+1)+(-10000000000000000)",
+      "expected": 0
+    },
+    {
+      "ref": "D12",
+      "formula": "10000000000000000+(1-10000000000000000)",
+      "expected": 0
+    },
+    {
+      "ref": "D13",
+      "formula": "ROUNDUP(-2.71,1)",
+      "expected": -2.8000000000000003
+    },
+    {
+      "ref": "D14",
+      "formula": "ROUNDDOWN(-2.79,1)",
+      "expected": -2.7
+    },
+    {
+      "ref": "D15",
+      "formula": "ROUNDUP(1.005,2)",
+      "expected": 1.01
+    },
+    {
+      "ref": "D16",
+      "formula": "ROUNDDOWN(1.005,2)",
+      "expected": 1
+    },
+    {
+      "ref": "D17",
+      "formula": "ROUNDUP(123.4,-1)",
+      "expected": 130
+    },
+    {
+      "ref": "D18",
+      "formula": "ROUNDDOWN(-123.4,-1)",
+      "expected": -120
+    },
+    {
+      "ref": "D19",
+      "formula": "ROWS(A1:B3)",
+      "expected": 3
+    },
+    {
+      "ref": "D20",
+      "formula": "COLUMNS(A1:B3)",
+      "expected": 2
+    },
+    {
+      "ref": "D21",
+      "formula": "INDIRECT(B1)",
+      "expected": 0.2
+    },
+    {
+      "ref": "D22",
+      "formula": "SUM(INDIRECT(\"A1:A3\"))",
+      "expected": 0.6000000000000001
+    },
+    {
+      "ref": "D23",
+      "formula": "OFFSET(A1,B2,0)",
+      "expected": 0.2
+    },
+    {
+      "ref": "D24",
+      "formula": "SUM(OFFSET(A1,0,0,3,1))",
+      "expected": 0.6000000000000001
+    },
+    {
+      "ref": "D25",
+      "formula": "IF(TRUE,INDIRECT(\"A2\"),INDIRECT(\"A3\"))",
+      "expected": 0.2
+    }
+  ]
+}

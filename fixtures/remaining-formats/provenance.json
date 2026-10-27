@@ -1,0 +1,60 @@
+{
+  "schema": 1,
+  "source": "LibreOffice/core primary QA repository",
+  "commit": "dabd91337a44b9c3792bb0985624c4980023225a",
+  "refEvidence": "git ls-remote https://github.com/LibreOffice/core.git refs/heads/master",
+  "records": [
+    {
+      "sourcePath": "sc/qa/unit/data/xlsm/vba-user-function.xlsm",
+      "url": "https://raw.githubusercontent.com/LibreOffice/core/dabd91337a44b9c3792bb0985624c4980023225a/sc/qa/unit/data/xlsm/vba-user-function.xlsm",
+      "localPath": ".build/tests/remaining-formats-fixtures-1/vba-user-function.xlsm",
+      "bytes": 13111,
+      "sha256": "20ae63044d0f5edbbdd522cc710a4ef0333e9391cc33aafed875287b91452d4c",
+      "gitBlobSha1": "a43a8eb9f3fc12e5d653004ef9d3a153bca65eb7",
+      "status": 200,
+      "retainedPath": "fixtures/remaining-formats/vba-user-function.xlsm"
+    },
+    {
+      "sourcePath": "sc/qa/unit/data/xls/universal-content.xls",
+      "url": "https://raw.githubusercontent.com/LibreOffice/core/dabd91337a44b9c3792bb0985624c4980023225a/sc/qa/unit/data/xls/universal-content.xls",
+      "localPath": ".build/tests/remaining-formats-fixtures-1/universal-content.xls",
+      "bytes": 6656,
+      "sha256": "3f84bf513e191642835acbd56a40361bdcf1e4ef1a094b5a444b80f240fd889c",
+      "gitBlobSha1": "ca011db12155558b43c49b15fdcacd6ebdd077ad",
+      "status": 200,
+      "retainedPath": "fixtures/remaining-formats/universal-content.xls"
+    },
+    {
+      "sourcePath": "sc/qa/unit/data/xlsb/universal-content.xlsb",
+      "url": "https://raw.githubusercontent.com/LibreOffice/core/dabd91337a44b9c3792bb0985624c4980023225a/sc/qa/unit/data/xlsb/universal-content.xlsb",
+      "localPath": ".build/tests/remaining-formats-fixtures-1/universal-content.xlsb",
+      "bytes": 11087,
+      "sha256": "3d425c433c4f0688d4d2f2c84bbcfc25494641d0d38cbe96d6a954d820536170",
+      "gitBlobSha1": "fd9c253ef75c97cb5bbfb7e84ca503863310036f",
+      "status": 200,
+      "retainedPath": "fixtures/remaining-formats/universal-content.xlsb"
+    },
+    {
+      "sourcePath": "sc/qa/unit/data/xlsx/universal-content.xlsx",
+      "url": "https://raw.githubusercontent.com/LibreOffice/core/dabd91337a44b9c3792bb0985624c4980023225a/sc/qa/unit/data/xlsx/universal-content.xlsx",
+      "localPath": ".build/tests/remaining-formats-fixtures-1/universal-content.xlsx",
+      "bytes": 7296,
+      "sha256": "2ea90a5abfba7b6fb4f46a9dfdacef244dff1809620d6064a7e08314f6d09a18",
+      "gitBlobSha1": "687a5832c2bccd3a4711e4d80d3aeac0c768bddc",
+      "status": 200,
+      "retainedPath": "fixtures/remaining-formats/universal-content.xlsx"
+    },
+    {
+      "sourcePath": "COPYING.MPL",
+      "url": "https://raw.githubusercontent.com/LibreOffice/core/dabd91337a44b9c3792bb0985624c4980023225a/COPYING.MPL",
+      "localPath": ".build/tests/remaining-formats-fixtures-1/COPYING.MPL",
+      "bytes": 16725,
+      "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5",
+      "gitBlobSha1": "a612ad9813b006ce81d1ee438dd784da99a54007",
+      "status": 200,
+      "retainedPath": "fixtures/remaining-formats/COPYING.MPL"
+    }
+  ],
+  "scope": "Third-party binary/OOXML fixture provenance only; no office-suite application or calculation execution",
+  "license": "COPYING.MPL retained when present; source paths and commit pinned"
+}

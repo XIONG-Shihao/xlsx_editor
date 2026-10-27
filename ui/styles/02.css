@@ -1,0 +1,162 @@
+.sheet-batch-toolbar {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--border);
+  font-size: 11px;
+}
+.sheet-batch-toolbar label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.sheet-batch-toolbar input {
+  width: 100px;
+  min-width: 0;
+}
+.sheet-batch-toolbar input[type='number'] {
+  width: 58px;
+}
+.sheet-batch-toolbar button {
+  font-size: 11px;
+  padding: 3px 6px;
+}
+.sheet-grid thead th {
+  position: sticky;
+  top: 0;
+  height: var(--sheet-header-height, 32px);
+  z-index: 3;
+}
+.sheet-special-selection-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 10px 0;
+}
+.sheet-special-selection-actions button {
+  margin: 0;
+}
+.sheet-special-selection dl {
+  display: grid;
+  grid-template-columns: minmax(80px, 0.8fr) minmax(0, 1.2fr);
+  gap: 4px 10px;
+  font-size: 12px;
+}
+.sheet-special-selection dt {
+  font-weight: 600;
+}
+.sheet-special-selection dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.sheet-special-selection-rows {
+  max-height: min(220px, 28vh);
+  overflow: auto;
+  overscroll-behavior: contain;
+  border: 1px solid var(--border, #ddd);
+  border-radius: 4px;
+}
+.sheet-special-selection table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 12px;
+}
+.sheet-special-selection th,
+.sheet-special-selection td {
+  padding: 4px 7px;
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid var(--border, #ddd);
+}
+
+.sheet-fill-across fieldset {
+  min-width: 0;
+  margin: 10px 0;
+  border: 1px solid var(--border, #ddd);
+  border-radius: 4px;
+}
+.sheet-fill-across fieldset label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 0;
+  overflow-wrap: anywhere;
+}
+.sheet-fill-across-picker {
+  max-height: min(220px, 28vh);
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+.sheet-fill-across-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 10px 0;
+}
+.sheet-fill-across dl {
+  display: grid;
+  grid-template-columns: minmax(80px, 0.8fr) minmax(0, 1.2fr);
+  gap: 4px 10px;
+  font-size: 12px;
+}
+.sheet-fill-across dt {
+  font-weight: 600;
+}
+.sheet-fill-across dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.sheet-fill-across-destinations {
+  max-height: min(220px, 28vh);
+  overflow: auto;
+  overscroll-behavior: contain;
+  border: 1px solid var(--border, #ddd);
+}
+.sheet-fill-across table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 12px;
+}
+.sheet-fill-across th,
+.sheet-fill-across td {
+  padding: 4px 7px;
+  text-align: left;
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid var(--border, #ddd);
+}
+
+.sheet-page-boundary-toolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border, #ddd);
+}
+.sheet-page-boundary-toolbar small {
+  flex-basis: 100%;
+  color: var(--text-muted, #666);
+}
+.sheet-page-boundary-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 6;
+  overflow: hidden;
+}
+.sheet-page-boundary-overlay rect {
+  fill: rgba(37, 99, 235, 0.035);
+  stroke: #2563eb;
+  stroke-width: 2;
+}
+.sheet-page-boundary-overlay text {
+  fill: #2563eb;
+  fill-opacity: 0.4;
+  font-size: 32px;
+  font-weight: 600;
+}

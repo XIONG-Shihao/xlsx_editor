@@ -1,0 +1,25 @@
+{
+  "limit": 160,
+  "areas": {
+    "core": {
+      "long": 33,
+      "longest": 1201
+    },
+    "ui": {
+      "long": 29,
+      "longest": 268
+    },
+    "adapters": {
+      "long": 2,
+      "longest": 195
+    },
+    "native": {
+      "long": 607,
+      "longest": 1928
+    },
+    "tests": {
+      "long": 675,
+      "longest": 1290
+    }
+  }
+}

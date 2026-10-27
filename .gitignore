@@ -1,0 +1,9 @@
+# Generated files owned by this independently usable component.
+node_modules
+dist/
+.build/
+artifacts/
+native/target/
+native/bin/
+*.tsbuildinfo
+.DS_Store

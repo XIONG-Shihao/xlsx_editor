@@ -1,0 +1,4 @@
+import type {DelimitedSource,DelimitedInspection,DelimitedProgress} from '../core/delimited-import.mjs';
+import type {PasteDescriptor} from '../core/paste-protocol.mjs';
+export function snapshotDelimitedFile(options:{source:string;directory:string;signal?:AbortSignal;checkCurrent?:()=>void|Promise<void>;onProgress?:(event:DelimitedProgress)=>void}):Promise<DelimitedSource&{sha256:string;check:()=>Promise<void>;dispose:()=>Promise<void>}>;
+export function prepareDelimitedFileImport(options:{source:string;directory:string;sheet:string;start:string;delimiter?:'auto'|','|';'|'\t';signal?:AbortSignal;checkCurrent?:()=>void|Promise<void>;onProgress?:(event:DelimitedProgress)=>void;sink:any;state:string}):Promise<{descriptor:PasteDescriptor;source:DelimitedInspection['source'];delimiter:DelimitedInspection['delimiter'];encoding:DelimitedInspection['encoding'];bom:boolean;inspection:DelimitedInspection;check:()=>Promise<void>;dispose:()=>Promise<void>}>;

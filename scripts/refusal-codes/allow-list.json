@@ -1,0 +1,4 @@
+{
+  "about": "How many refusal sites each file may still have without a code. The numbers only go down: node scripts/refusal-codes/check.mjs --shrink. The ten files are being edited in another branch; after it merges run apply.mjs on them (see README in this folder) and shrink this list to empty.",
+  "files": {}
+}

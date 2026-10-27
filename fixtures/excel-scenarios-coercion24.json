@@ -1,0 +1,181 @@
+{
+  "excel": "16.113",
+  "method": "Actual Mac Excel F9, save and independent OOXML readback",
+  "cases": [
+    {
+      "ref": "B1",
+      "formula": "\"12\"+1",
+      "expected": 13
+    },
+    {
+      "ref": "B2",
+      "formula": "\" 12 \"+1",
+      "expected": 13
+    },
+    {
+      "ref": "B3",
+      "formula": "\"12.5\"*2",
+      "expected": 25
+    },
+    {
+      "ref": "B4",
+      "formula": "\"-2.5\"/2",
+      "expected": -1.25
+    },
+    {
+      "ref": "B5",
+      "formula": "\"1e2\"-1",
+      "expected": 99
+    },
+    {
+      "ref": "B6",
+      "formula": "TRUE+2",
+      "expected": 3
+    },
+    {
+      "ref": "B7",
+      "formula": "FALSE*3",
+      "expected": 0
+    },
+    {
+      "ref": "B8",
+      "formula": "A1+1",
+      "expected": 13
+    },
+    {
+      "ref": "B9",
+      "formula": "A2+1",
+      "expected": 2
+    },
+    {
+      "ref": "B10",
+      "formula": "A3+1",
+      "expected": 1
+    },
+    {
+      "ref": "B11",
+      "formula": "IFERROR(\"\"+1,\"bad\")",
+      "expected": "bad"
+    },
+    {
+      "ref": "B12",
+      "formula": "IFERROR(\"x\"+1,\"bad\")",
+      "expected": "bad"
+    },
+    {
+      "ref": "B13",
+      "formula": "-\"12\"",
+      "expected": -12
+    },
+    {
+      "ref": "B14",
+      "formula": "\"12\"%",
+      "expected": 0.12
+    },
+    {
+      "ref": "B15",
+      "formula": "IFERROR(\"  \"+1,\"bad\")",
+      "expected": "bad"
+    },
+    {
+      "ref": "B16",
+      "formula": "IF(TRUE,\"12\",0)+1",
+      "expected": 13
+    },
+    {
+      "ref": "B17",
+      "formula": "(\"0.1\"+\"0.2\"-\"0.3\")",
+      "expected": 5.551115123125783e-17
+    },
+    {
+      "ref": "B18",
+      "formula": "\"0.1\"+\"0.2\"-\"0.3\"",
+      "expected": 0
+    },
+    {
+      "ref": "B19",
+      "formula": "IFERROR(\"1,200\"+1,\"bad\")",
+      "expected": 1201
+    },
+    {
+      "ref": "B20",
+      "formula": "IFERROR(\"12%\"+1,\"bad\")",
+      "expected": 1.12
+    },
+    {
+      "ref": "B21",
+      "formula": "\"3\"*0.1",
+      "expected": 0.30000000000000004
+    },
+    {
+      "ref": "B22",
+      "formula": "TRUE+0.1",
+      "expected": 1.1
+    },
+    {
+      "ref": "B23",
+      "formula": "\"12\"/5",
+      "expected": 2.4
+    },
+    {
+      "ref": "B24",
+      "formula": "\"2\"^3",
+      "expected": 8
+    },
+    {
+      "ref": "B25",
+      "formula": "\"100\"%",
+      "expected": 1
+    },
+    {
+      "ref": "B26",
+      "formula": "IFERROR(\"12\"/0,\"bad\")",
+      "expected": "bad"
+    },
+    {
+      "ref": "B27",
+      "formula": "\"1,234.5\"+1",
+      "expected": 1235.5
+    },
+    {
+      "ref": "B28",
+      "formula": "\"12.5%\"*8",
+      "expected": 1
+    },
+    {
+      "ref": "B29",
+      "formula": "IFERROR(\"1,2\"+1,\"bad\")",
+      "expected": "bad"
+    },
+    {
+      "ref": "B30",
+      "formula": "IFERROR(\"--1\"+1,\"bad\")",
+      "expected": "bad"
+    },
+    {
+      "ref": "B31",
+      "formula": "(\"0.1\"+\"0.2\")",
+      "expected": 0.30000000000000004
+    },
+    {
+      "ref": "B32",
+      "formula": "A1/5",
+      "expected": 2.4
+    },
+    {
+      "ref": "B33",
+      "formula": "IF(TRUE,\"0.25\",\"bad\")*4",
+      "expected": 1
+    },
+    {
+      "ref": "B34",
+      "formula": "(TRUE+0.1)-0.1",
+      "expected": 1
+    },
+    {
+      "ref": "B35",
+      "formula": "\"2.5e-1\"*4",
+      "expected": 1
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "schema": "workbook.xlsx.reference-corpus.v1",
+  "provenance": "Replay of retained Excel 16.113 saved scalar workbooks and their recorded exact-value oracles. This manifest does not imply a new Excel run or a real-user defect corpus.",
+  "fixtures": [
+    {
+      "id": "binary64-runtime",
+      "source": "excel-b6-runtime.xlsx",
+      "sourceSha256": "cd93179908e44e2f0ffea6b482ae9a967e8a61f5c528323939f256cc29bca4d5",
+      "oracle": "excel-b6-runtime.json",
+      "oracleSha256": "aca596f77385a5f0438c7ee9dc088a1f9fc5b5d4e9a7c0aa35e30bc77cd2f55a",
+      "sheet": "Cases",
+      "boundaries": ["binary64", "arithmetic", "rounding", "dynamic-references"],
+      "compatibilityUnresolved": ["D21", "D22", "D23", "D24", "D25"],
+      "compatibilityReason": "Portable evaluator intentionally protects INDIRECT/OFFSET replay; indexed native evaluation qualifies these selected dynamic references."
+    },
+    {
+      "id": "authored-arithmetic-grouping",
+      "source": "excel-b7-add-sub.xlsx",
+      "sourceSha256": "14138af4046b8e9f25f9b9428cfa1472e68abd800eddd3dbc701e6816b4a7292",
+      "oracle": "excel-b7-add-sub.json",
+      "oracleSha256": "2bb7a64770c5cd43f86d049f9fead2c7b98a660c3136b1e2ee6508e003801e29",
+      "sheet": "Cases",
+      "boundaries": ["binary64", "grouping", "text", "dynamic-references"],
+      "compatibilityUnresolved": ["D125", "D126"],
+      "compatibilityReason": "Portable evaluator protects dynamic references; indexed native evaluation qualifies these selected INDIRECT cases."
+    },
+    {
+      "id": "typed-text-and-errors",
+      "source": "excel-native-text22.xlsx",
+      "sourceSha256": "c266a90fde785096a3e42ae9551d13cc015f0ef2c018529546f72185c251bd4a",
+      "oracle": "excel-native-text22.json",
+      "oracleSha256": "64649970d8c6a73b43f08335460ae70077bda80a862943a075779fb4c0c2dc2e",
+      "sheet": "Data",
+      "boundaries": ["text", "booleans", "blanks", "errors", "coercion"],
+      "errorRefs": ["B29"]
+    },
+    {
+      "id": "scalar-coercion",
+      "source": "excel-coercion23.xlsx",
+      "sourceSha256": "ca2ead1bc33d18e3e1fbdcac39a3001aff64dd4e401bc806712e362b6d14549a",
+      "oracle": "excel-coercion23.json",
+      "oracleSha256": "e2c6b51f5a29d9267afb2c5f4d4639f8576d20d5ff8b400b09a1e6b5ae2c8305",
+      "sheet": "Data",
+      "boundaries": ["coercion", "whitespace", "percent", "grouping", "booleans", "blanks"]
+    }
+  ],
+  "unqualified": ["New external-runtime capture", "Minimized real-user defect intake", "1904 date-function expansion", "Locale-specific date/currency interpretation", "Dynamic-array spill semantics"]
+}

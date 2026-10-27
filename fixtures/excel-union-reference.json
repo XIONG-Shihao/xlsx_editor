@@ -1,0 +1,91 @@
+{
+  "schema": "rpf.xlsx.excel-union-oracle.v1",
+  "excel": "16.113.3",
+  "sheet": "Cases",
+  "capturedAt": "2026-09-30T10:15:36.814514+00:00",
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "sourceSha256": "ba798994c577e3ed0a6f5a5b9a6df4a8e3063724fed5ae2460a08fe3c0fb1767",
+  "oracleWorkbookSha256": "cf0ad9d40d204b6943696b8682e2d5ea95a6e47e64150df10ec64215e7b9ee9d",
+  "method": "Independent stdlib OOXML source opened in installed Microsoft Excel through Finder UI; active Cases worksheet recalculated with Shift-F9; Save As to separate union-excel.xlsx using native UI; expected typed caches extracted with independent stdlib ZIP/XML. Source hash preserved. Actual new external-runtime capture; manual calculation setting left unchanged.",
+  "cases": [
+    {
+      "ref": "E1",
+      "formula": "SUM((B1,B2))",
+      "expected": 9.0,
+      "dataType": "number",
+      "rawValue": "9"
+    },
+    {
+      "ref": "E2",
+      "formula": "SUM((B1,B1))",
+      "expected": 8.0,
+      "dataType": "number",
+      "rawValue": "8"
+    },
+    {
+      "ref": "E3",
+      "formula": "SUM((B1:B2,B2:B3))",
+      "expected": 20.0,
+      "dataType": "number",
+      "rawValue": "20"
+    },
+    {
+      "ref": "E4",
+      "formula": "SUM((A1:A3,B1:B3))",
+      "expected": 15.0,
+      "dataType": "number",
+      "rawValue": "15"
+    },
+    {
+      "ref": "E5",
+      "formula": "SUM((B1:B3,A1:A3))",
+      "expected": 16.0,
+      "dataType": "number",
+      "rawValue": "16"
+    },
+    {
+      "ref": "E6",
+      "formula": "SUM((A3:A3,A1:A2))",
+      "expected": 1.0,
+      "dataType": "number",
+      "rawValue": "1"
+    },
+    {
+      "ref": "E7",
+      "formula": "SUM((B1:B2,C1))",
+      "expected": "#DIV/0!",
+      "dataType": "error",
+      "rawValue": "#DIV/0!"
+    },
+    {
+      "ref": "E8",
+      "formula": "SUM((B2,'Other Sheet'!$A$1))",
+      "expected": "#VALUE!",
+      "dataType": "error",
+      "rawValue": "#VALUE!"
+    },
+    {
+      "ref": "E9",
+      "formula": "SUM(($B$1,B$2,$B3))",
+      "expected": 15.0,
+      "dataType": "number",
+      "rawValue": "15"
+    },
+    {
+      "ref": "E10",
+      "formula": "SUM((C1,C2))",
+      "expected": "#DIV/0!",
+      "dataType": "error",
+      "rawValue": "#DIV/0!"
+    },
+    {
+      "ref": "E11",
+      "formula": "SUM((C2,C1))",
+      "expected": "#N/A",
+      "dataType": "error",
+      "rawValue": "#N/A"
+    }
+  ],
+  "source": "excel-union-source.xlsx",
+  "oracleWorkbook": "excel-union-reference.xlsx"
+}

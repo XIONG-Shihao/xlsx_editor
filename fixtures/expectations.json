@@ -1,0 +1,473 @@
+{
+  "schema": "workbook.xlsx.literal-answer-keys.v1",
+  "origin": "Hand-authored literal expectations and arithmetic, independent of both workbook implementations and fixture generation. Microsoft Excel is the external compatibility reference.",
+  "numericTolerance": {
+    "absolute": 1e-09,
+    "relative": 1e-12
+  },
+  "fixtures": {
+    "pricing-schedule": {
+      "role": "synthetic W1/W4 pricing schedule",
+      "dateSystem": "1900",
+      "cells": {
+        "Pricing!A2": {
+          "value": "00123"
+        },
+        "Pricing!D2": {
+          "formula": "B2*C2",
+          "calculated": 250
+        },
+        "Pricing!E2": {
+          "formula": "TaxRate",
+          "calculated": 0.09
+        },
+        "Pricing!F2": {
+          "formula": "D2*(1+E2)",
+          "calculated": 272.5
+        },
+        "Pricing!D4": {
+          "formula": "SUM(D2:D3)",
+          "calculated": 330
+        },
+        "Pricing!F4": {
+          "formula": "SUM(F2:F3)",
+          "calculated": 359.7
+        },
+        "Pricing!D5": {
+          "formula": "SUM(PricingItems[Subtotal])",
+          "calculated": 330
+        }
+      },
+      "scenario": {
+        "name": "person quantity then agent unit price",
+        "edits": [
+          {
+            "sheet": "Pricing",
+            "cell": "B2",
+            "value": 3
+          },
+          {
+            "sheet": "Pricing",
+            "cell": "C2",
+            "value": 150
+          }
+        ],
+        "expected": {
+          "Pricing!D2": 450,
+          "Pricing!F2": 490.5,
+          "Pricing!D4": 530,
+          "Pricing!F4": 577.7,
+          "Pricing!D5": 530
+        }
+      },
+      "preservation": {
+        "allowedChanged": [
+          "xl/worksheets/sheet1.xml",
+          "xl/workbook.xml"
+        ],
+        "requiredByteIdentical": [
+          "xl/tables/table1.xml",
+          "xl/worksheets/sheet2.xml",
+          "xl/styles.xml"
+        ]
+      },
+      "baselinePolicy": {
+        "desktopLiteralEdit": "supported",
+        "mcpExactEdit": "refused: table dependency profile",
+        "mcpCommonEdit": "requires optional Aspose before migration"
+      }
+    },
+    "response-matrix": {
+      "role": "synthetic W2 response matrix",
+      "dateSystem": "1900",
+      "cells": {
+        "Responses!A2": {
+          "value": "REQ-001"
+        },
+        "Responses!C2": {
+          "value": "待填写"
+        },
+        "Responses!D2": {
+          "value": "=literal response"
+        },
+        "Responses!A3": {
+          "value": "REQ-002"
+        }
+      },
+      "scenario": {
+        "name": "guarded response cell",
+        "edits": [
+          {
+            "sheet": "Responses",
+            "cell": "C2",
+            "value": "Compliant"
+          }
+        ],
+        "expected": {
+          "Responses!C2": "Compliant"
+        }
+      },
+      "preservation": {
+        "allowedChanged": [
+          "xl/worksheets/sheet1.xml",
+          "xl/workbook.xml"
+        ],
+        "requiredByteIdentical": [
+          "xl/styles.xml",
+          "customXml/item1.xml"
+        ]
+      },
+      "baselinePolicy": {
+        "desktopLiteralEdit": "supported",
+        "mcpExactEdit": "refused: worksheet validation profile"
+      }
+    },
+    "budget": {
+      "role": "synthetic W3 budget and mixed references",
+      "dateSystem": "1900",
+      "cells": {
+        "Budget!D2": {
+          "formula": "$B2*C$2",
+          "calculated": 100
+        },
+        "Budget!D3": {
+          "formula": "B3*C3",
+          "calculated": 150
+        },
+        "Budget!D4": {
+          "formula": "SUM(D2:D3)",
+          "calculated": 250
+        },
+        "Budget!F2": {
+          "formula": "'Rates'!B1*D4",
+          "calculated": 25
+        },
+        "Budget!G2": {
+          "formula": "AVERAGE(D2:D3)",
+          "calculated": 125
+        },
+        "Budget!H2": {
+          "formula": "MIN(D2:D3)",
+          "calculated": 100
+        },
+        "Budget!I2": {
+          "formula": "MAX(D2:D3)",
+          "calculated": 150
+        },
+        "Budget!J2": {
+          "formula": "COUNT(D2:D3)",
+          "calculated": 2
+        }
+      },
+      "scenario": {
+        "name": "budget quantity update",
+        "edits": [
+          {
+            "sheet": "Budget",
+            "cell": "B2",
+            "value": 3
+          }
+        ],
+        "expected": {
+          "Budget!D2": 150,
+          "Budget!D4": 300,
+          "Budget!F2": 30,
+          "Budget!G2": 150,
+          "Budget!H2": 150,
+          "Budget!I2": 150,
+          "Budget!J2": 2
+        }
+      },
+      "preservation": {
+        "allowedChanged": [
+          "xl/worksheets/sheet1.xml",
+          "xl/workbook.xml"
+        ],
+        "requiredByteIdentical": [
+          "xl/worksheets/sheet2.xml",
+          "xl/styles.xml"
+        ]
+      },
+      "baselinePolicy": {
+        "desktopLiteralEdit": "supported",
+        "structuralInsert": "refused until reference-updating writer qualified"
+      }
+    },
+    "calculation-states": {
+      "role": "dependency/error/precision diagnostics",
+      "dateSystem": "1900",
+      "cells": {
+        "Diagnostics!A1": {
+          "formula": "IF(1=1,10,0)",
+          "calculated": 10
+        },
+        "Diagnostics!A2": {
+          "value": 5
+        },
+        "Diagnostics!B1": {
+          "formula": "SUM(A1:A2)",
+          "calculated": 15,
+          "forbiddenPartial": 5
+        },
+        "Diagnostics!B2": {
+          "formula": "1/0",
+          "error": "#DIV/0!"
+        },
+        "Diagnostics!C1": {
+          "formula": "UNKNOWN_LOCAL(A2)",
+          "status": "unresolved"
+        },
+        "Diagnostics!C2": {
+          "formula": "SUM(C1,C3)",
+          "status": "unresolved"
+        },
+        "Diagnostics!D1": {
+          "formula": "D2+1",
+          "status": "circular"
+        },
+        "Diagnostics!D2": {
+          "formula": "D1+1",
+          "status": "circular"
+        },
+        "Diagnostics!E1": {
+          "rawValue": "9007199254740993"
+        },
+        "Diagnostics!E2": {
+          "value": "000123"
+        },
+        "Diagnostics!E3": {
+          "value": "=SUM(A1:A2)"
+        },
+        "Diagnostics!F1": {
+          "value": true
+        },
+        "Diagnostics!F2": {
+          "value": "東京 / 中文"
+        },
+        "Diagnostics!G1": {
+          "formula": "SUM(A2:A2)",
+          "calculated": 5,
+          "storedCache": 999,
+          "cacheFreshness": "intentionally-stale"
+        },
+        "Diagnostics!G2": {
+          "formula": "A2+1",
+          "calculated": 6,
+          "storedCache": null
+        },
+        "Diagnostics!C3": {
+          "value": 5
+        },
+        "Diagnostics!F3": {
+          "value": null,
+          "mayOmitBlankCell": true
+        }
+      }
+    },
+    "dates-1900": {
+      "role": "1900 date-system boundary",
+      "dateSystem": "1900",
+      "cells": {
+        "Dates!A1": {
+          "rawValue": "59",
+          "dateMeaning": "1900-02-28"
+        },
+        "Dates!A2": {
+          "rawValue": "60",
+          "dateMeaning": "Excel fictitious 1900-02-29; do not silently map to March 1"
+        },
+        "Dates!A3": {
+          "rawValue": "61",
+          "dateMeaning": "1900-03-01"
+        },
+        "Dates!A4": {
+          "rawValue": "1462",
+          "dateMeaning": "1904-01-01"
+        }
+      }
+    },
+    "dates-1904": {
+      "role": "1904 date-system boundary",
+      "dateSystem": "1904",
+      "cells": {
+        "Dates!A1": {
+          "rawValue": "0",
+          "dateMeaning": "1904-01-01"
+        },
+        "Dates!A2": {
+          "rawValue": "1",
+          "dateMeaning": "1904-01-02"
+        },
+        "Dates!B1": {
+          "formula": "A1+1",
+          "calculated": 1
+        }
+      }
+    },
+    "preservation-rich": {
+      "role": "charts/images/hidden sheet/names/merge/validation/custom XML preservation",
+      "dateSystem": "1900",
+      "cells": {
+        "Data!B2": {
+          "value": 125
+        }
+      },
+      "scenario": {
+        "name": "unrelated literal edit",
+        "edits": [
+          {
+            "sheet": "Data",
+            "cell": "D2",
+            "value": "Reviewed"
+          }
+        ],
+        "expected": {
+          "Data!D2": "Reviewed"
+        }
+      },
+      "preservation": {
+        "allowedChanged": [
+          "xl/worksheets/sheet1.xml",
+          "xl/workbook.xml"
+        ],
+        "requiredByteIdentical": [
+          "xl/charts/chart1.xml",
+          "xl/drawings/drawing1.xml",
+          "xl/media/image1.png",
+          "xl/worksheets/sheet2.xml",
+          "customXml/item1.xml"
+        ]
+      },
+      "baselinePolicy": {
+        "desktopLiteralEdit": "supported",
+        "mcpExactEdit": "refused: chart/drawing/dependency profile"
+      }
+    },
+    "protected": {
+      "role": "workbook and worksheet protection refusal",
+      "dateSystem": "1900",
+      "baselinePolicy": {
+        "desktopLiteralEdit": "refused",
+        "mcpExactEdit": "refused"
+      },
+      "refusedScenario": {
+        "edits": [
+          {
+            "sheet": "Protected",
+            "cell": "A1",
+            "value": 150
+          }
+        ],
+        "reason": "Sheet/workbook protection remains a refusal; no output publication."
+      }
+    },
+    "scale-10000": {
+      "role": "synthetic 10000 used cells",
+      "dateSystem": "1900",
+      "usedCells": 10000,
+      "cells": {
+        "Scale!A1": {
+          "value": 1
+        },
+        "Scale!J1000": {
+          "formula": "A1000+B1000",
+          "calculated": 2001
+        }
+      },
+      "scenario": {
+        "name": "scale literal edit",
+        "edits": [
+          {
+            "sheet": "Scale",
+            "cell": "A1",
+            "value": 3
+          }
+        ],
+        "expected": {
+          "Scale!J1": 5
+        }
+      },
+      "preservation": {
+        "allowedChanged": [
+          "xl/worksheets/sheet1.xml",
+          "xl/workbook.xml"
+        ]
+      }
+    },
+    "scale-100000": {
+      "role": "synthetic 100000 used cells",
+      "dateSystem": "1900",
+      "usedCells": 100000,
+      "cells": {
+        "Scale!A1": {
+          "value": 1
+        },
+        "Scale!J10000": {
+          "formula": "A10000+B10000",
+          "calculated": 20001
+        }
+      },
+      "scenario": {
+        "name": "scale literal edit",
+        "edits": [
+          {
+            "sheet": "Scale",
+            "cell": "A1",
+            "value": 3
+          }
+        ],
+        "expected": {
+          "Scale!J1": 5
+        }
+      },
+      "preservation": {
+        "allowedChanged": [
+          "xl/worksheets/sheet1.xml",
+          "xl/workbook.xml"
+        ]
+      }
+    },
+    "dependency-chain": {
+      "role": "10000-cell dependency chain",
+      "dateSystem": "1900",
+      "usedCells": 10000,
+      "cells": {
+        "Chain!A10000": {
+          "formula": "A9999+1",
+          "calculated": 10000
+        }
+      }
+    },
+    "opaque-media": {
+      "role": "16MiB untouched opaque member",
+      "dateSystem": "1900",
+      "cells": {
+        "Data!A1": {
+          "value": 125
+        }
+      },
+      "scenario": {
+        "name": "unrelated literal edit",
+        "edits": [
+          {
+            "sheet": "Data",
+            "cell": "A1",
+            "value": 150
+          }
+        ],
+        "expected": {
+          "Data!A1": 150
+        }
+      },
+      "preservation": {
+        "allowedChanged": [
+          "xl/worksheets/sheet1.xml",
+          "xl/workbook.xml"
+        ],
+        "requiredByteIdentical": [
+          "xl/media/opaque.bin"
+        ]
+      }
+    }
+  }
+}

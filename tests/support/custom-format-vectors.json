@@ -1,0 +1,932 @@
+{
+  "schema": "workbook.xlsx.custom-format-vectors.v1",
+  "source": "documentation-derived",
+  "scope": "Authored documented syntax and retained editor rounding/date display policy; no observed Excel reference.",
+  "cases": [
+    {
+      "id": "active-positive",
+      "value": 7,
+      "format": "$#,##0.0000;[Red]($#,##0.0000)",
+      "expected": {
+        "text": "$7.0000",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "active-negative",
+      "value": -7,
+      "format": "$#,##0.0000;[Red]($#,##0.0000)",
+      "expected": {
+        "text": "($7.0000)",
+        "kind": "number",
+        "supported": true,
+        "color": "FF0000"
+      }
+    },
+    {
+      "id": "active-zero",
+      "value": 0,
+      "format": "$#,##0.0000;[Red]($#,##0.0000)",
+      "expected": {
+        "text": "$0.0000",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "active-round-positive",
+      "value": 1234.56789,
+      "format": "$#,##0.0000;[Red]($#,##0.0000)",
+      "expected": {
+        "text": "$1,234.5679",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "active-round-negative",
+      "value": -1234.56789,
+      "format": "$#,##0.0000;[Red]($#,##0.0000)",
+      "expected": {
+        "text": "($1,234.5679)",
+        "kind": "number",
+        "supported": true,
+        "color": "FF0000"
+      }
+    },
+    {
+      "id": "fixed-integer",
+      "value": 7,
+      "format": "0",
+      "expected": {
+        "text": "7",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "fixed-zero-padding",
+      "value": 7,
+      "format": "0000",
+      "expected": {
+        "text": "0007",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "optional-integer",
+      "value": 0,
+      "format": "#",
+      "expected": {
+        "text": "",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "optional-fraction",
+      "value": 8.9,
+      "format": "#.##",
+      "expected": {
+        "text": "8.9",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "required-fraction",
+      "value": 8.9,
+      "format": "#.000",
+      "expected": {
+        "text": "8.900",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "mixed-fraction",
+      "value": 12,
+      "format": "#.0#",
+      "expected": {
+        "text": "12.0",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "leading-decimal",
+      "value": 0.47,
+      "format": "#.##",
+      "expected": {
+        "text": ".47",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "leading-required-zero",
+      "value": 0.631,
+      "format": "0.#",
+      "expected": {
+        "text": "0.6",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "extra-integer-digits",
+      "value": 12345.67,
+      "format": "0.00",
+      "expected": {
+        "text": "12345.67",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "decimal-no-fraction",
+      "value": 7,
+      "format": "0.",
+      "expected": {
+        "text": "7.",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "single-negative",
+      "value": -7,
+      "format": "0.00",
+      "expected": {
+        "text": "-7.00",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "explicit-negative-minus",
+      "value": -7,
+      "format": "0.00;[Red]-0.00",
+      "expected": {
+        "text": "-7.00",
+        "kind": "number",
+        "supported": true,
+        "color": "FF0000"
+      }
+    },
+    {
+      "id": "hidden-negative",
+      "value": -7,
+      "format": "0.00;;",
+      "expected": {
+        "text": "",
+        "kind": "literal",
+        "supported": true
+      }
+    },
+    {
+      "id": "hidden-zero",
+      "value": 0,
+      "format": "0.00;;",
+      "expected": {
+        "text": "",
+        "kind": "literal",
+        "supported": true
+      }
+    },
+    {
+      "id": "explicit-zero",
+      "value": 0,
+      "format": "0.00;[Red](0.00);\"zero\"",
+      "expected": {
+        "text": "zero",
+        "kind": "literal",
+        "supported": true
+      }
+    },
+    {
+      "id": "empty-all",
+      "value": 7,
+      "format": ";;;",
+      "expected": {
+        "text": "",
+        "kind": "literal",
+        "supported": true
+      }
+    },
+    {
+      "id": "text-fourth",
+      "value": "June",
+      "format": "0.00;[Red](0.00);\"zero\";\"sales \"@",
+      "expected": {
+        "text": "sales June",
+        "kind": "text",
+        "supported": true
+      }
+    },
+    {
+      "id": "text-default",
+      "value": "June",
+      "format": "0.00;[Red](0.00);\"zero\"",
+      "expected": {
+        "text": "June",
+        "kind": "text",
+        "supported": true
+      }
+    },
+    {
+      "id": "text-hidden",
+      "value": "June",
+      "format": "0.00;0.00;0;\"\"",
+      "expected": {
+        "text": "",
+        "kind": "text",
+        "supported": true
+      }
+    },
+    {
+      "id": "text-simple",
+      "value": "June",
+      "format": "@",
+      "expected": {
+        "text": "June",
+        "kind": "text",
+        "supported": true
+      }
+    },
+    {
+      "id": "text-single-mask",
+      "value": "June",
+      "format": "\"sales \"@",
+      "expected": {
+        "text": "sales June",
+        "kind": "text",
+        "supported": true
+      }
+    },
+    {
+      "id": "numeric-at",
+      "value": 7,
+      "format": "@",
+      "expected": {
+        "text": "7",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "general",
+      "value": 7.25,
+      "format": "General",
+      "expected": {
+        "text": "7.25",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "general-red",
+      "value": 7.25,
+      "format": "[Red]General",
+      "expected": {
+        "text": "7.25",
+        "kind": "number",
+        "supported": true,
+        "color": "FF0000"
+      }
+    },
+    {
+      "id": "string-numeric-format",
+      "value": "7",
+      "format": "0.00",
+      "expected": {
+        "text": "7",
+        "kind": "text",
+        "supported": true
+      }
+    },
+    {
+      "id": "green-color",
+      "value": 7,
+      "format": "[Green]0.00",
+      "expected": {
+        "text": "7.00",
+        "kind": "number",
+        "supported": true,
+        "color": "00FF00"
+      }
+    },
+    {
+      "id": "blue-color-case",
+      "value": 7,
+      "format": "[bLuE]0",
+      "expected": {
+        "text": "7",
+        "kind": "number",
+        "supported": true,
+        "color": "0000FF"
+      }
+    },
+    {
+      "id": "percent",
+      "value": 0.08,
+      "format": "0%",
+      "expected": {
+        "text": "8%",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "percent-over-one",
+      "value": 2.8,
+      "format": "0%",
+      "expected": {
+        "text": "280%",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "percent-negative",
+      "value": -0.125,
+      "format": "0.00%;[Red]-0.00%",
+      "expected": {
+        "text": "-12.50%",
+        "kind": "number",
+        "supported": true,
+        "color": "FF0000"
+      }
+    },
+    {
+      "id": "quoted-percent",
+      "value": 0.08,
+      "format": "0.00\"%\"",
+      "expected": {
+        "text": "0.08%",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "escaped-percent",
+      "value": 0.08,
+      "format": "0.00\\%",
+      "expected": {
+        "text": "0.08%",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "group-thousands",
+      "value": 12000,
+      "format": "#,##0",
+      "expected": {
+        "text": "12,000",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "group-decimals",
+      "value": 1234.5,
+      "format": "#,##0.00",
+      "expected": {
+        "text": "1,234.50",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "scale-one",
+      "value": 12000,
+      "format": "#,",
+      "expected": {
+        "text": "12",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "scale-million",
+      "value": 12200000,
+      "format": "0.0,,\"M\"",
+      "expected": {
+        "text": "12.2M",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "scale-before-decimal",
+      "value": 12200000,
+      "format": "#,##0,,.0\"M\"",
+      "expected": {
+        "text": "12.2M",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "prefix-percent",
+      "value": 0.08,
+      "format": "%0.0",
+      "expected": {
+        "text": "%8.0",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "quote-date-letters",
+      "value": 7,
+      "format": "0.00\" days\"",
+      "expected": {
+        "text": "7.00 days",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "escape-date-letter",
+      "value": 7,
+      "format": "0.00\\d",
+      "expected": {
+        "text": "7.00d",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "quote-currency-letters",
+      "value": 7,
+      "format": "\"USD \"0.00",
+      "expected": {
+        "text": "USD 7.00",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "quoted-semicolon",
+      "value": 7,
+      "format": "0.00\";day\"",
+      "expected": {
+        "text": "7.00;day",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "escaped-semicolon",
+      "value": 7,
+      "format": "0.00\\;",
+      "expected": {
+        "text": "7.00;",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "escaped-quote",
+      "value": 32,
+      "format": "0\\\"",
+      "expected": {
+        "text": "32\"",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "literal-negative",
+      "value": -7,
+      "format": "\"constant\"",
+      "expected": {
+        "text": "constant",
+        "kind": "literal",
+        "supported": true
+      }
+    },
+    {
+      "id": "literal-bracket",
+      "value": 7,
+      "format": "\"[Red]\"0.00",
+      "expected": {
+        "text": "[Red]7.00",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "currency-us",
+      "value": 7,
+      "format": "[$USD-409]0.0000",
+      "expected": {
+        "text": "USD7.0000",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "currency-us-leading-zero",
+      "value": 7,
+      "format": "[$$-0409]#,##0.00",
+      "expected": {
+        "text": "$7.00",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "currency-us-empty",
+      "value": 7,
+      "format": "[$-409]0.00",
+      "expected": {
+        "text": "7.00",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "conditional-matched",
+      "value": 125,
+      "format": "[>100][Green]0.00;[<=100][Red]0.0",
+      "expected": {
+        "text": "125.00",
+        "kind": "number",
+        "supported": true,
+        "color": "00FF00"
+      }
+    },
+    {
+      "id": "conditional-boundary",
+      "value": 100,
+      "format": "[>100][Green]0.00;[<=100][Red]0.0",
+      "expected": {
+        "text": "100.0",
+        "kind": "number",
+        "supported": true,
+        "color": "FF0000"
+      }
+    },
+    {
+      "id": "conditional-fallback",
+      "value": 7,
+      "format": "[>100]0.00;[<=-100]0.00;[Cyan]0.0",
+      "expected": {
+        "text": "7.0",
+        "kind": "number",
+        "supported": true,
+        "color": "00FFFF"
+      }
+    },
+    {
+      "id": "conditional-negative-literal",
+      "value": -125,
+      "format": "[>100][Green]\"high\";[<=-100][Yellow]\"low\";[Cyan]\"middle\"",
+      "expected": {
+        "text": "low",
+        "kind": "literal",
+        "supported": true,
+        "color": "FFFF00"
+      }
+    },
+    {
+      "id": "conditional-equals",
+      "value": 0,
+      "format": "[=0]\"zero\";\"other\"",
+      "expected": {
+        "text": "zero",
+        "kind": "literal",
+        "supported": true
+      }
+    },
+    {
+      "id": "conditional-not-equals",
+      "value": 1,
+      "format": "[<>0]\"nonzero\";\"zero\"",
+      "expected": {
+        "text": "nonzero",
+        "kind": "literal",
+        "supported": true
+      }
+    },
+    {
+      "id": "conditional-less",
+      "value": 1,
+      "format": "[<2]\"less\";\"other\"",
+      "expected": {
+        "text": "less",
+        "kind": "literal",
+        "supported": true
+      }
+    },
+    {
+      "id": "conditional-greater-equal",
+      "value": 2,
+      "format": "[>=2]\"yes\";\"no\"",
+      "expected": {
+        "text": "yes",
+        "kind": "literal",
+        "supported": true
+      }
+    },
+    {
+      "id": "binary-rounding-retained",
+      "value": 2.675,
+      "format": "0.00",
+      "expected": {
+        "text": "2.67",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "grouped-rounding-retained",
+      "value": 2.675,
+      "format": "#,##0.00",
+      "expected": {
+        "text": "2.68",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "round-to-zero-retained",
+      "value": -0.0001,
+      "format": "0.00",
+      "expected": {
+        "text": "-0.00",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "iso-date",
+      "value": 61,
+      "format": "yyyy-mm-dd",
+      "expected": {
+        "text": "1900-03-01",
+        "kind": "date",
+        "supported": true
+      }
+    },
+    {
+      "id": "iso-date-fake-leap",
+      "value": 60,
+      "format": "yyyy-mm-dd",
+      "expected": {
+        "text": "1900-02-29",
+        "kind": "date",
+        "supported": true
+      }
+    },
+    {
+      "id": "iso-date-capital",
+      "value": 61,
+      "format": "YYYY-MM-DD",
+      "expected": {
+        "text": "1900-03-01",
+        "kind": "date",
+        "supported": true
+      }
+    },
+    {
+      "id": "iso-date-quoted-dashes",
+      "value": 61,
+      "format": "yyyy\"-\"mm\"-\"dd",
+      "expected": {
+        "text": "1900-03-01",
+        "kind": "date",
+        "supported": true
+      }
+    },
+    {
+      "id": "selected-section-not-date",
+      "value": -7,
+      "format": "yyyy-mm-dd;[Red]0.00",
+      "expected": {
+        "text": "7.00",
+        "kind": "number",
+        "supported": true,
+        "color": "FF0000"
+      }
+    },
+    {
+      "id": "red-not-date",
+      "value": 7,
+      "format": "[Red]0.00",
+      "expected": {
+        "text": "7.00",
+        "kind": "number",
+        "supported": true,
+        "color": "FF0000"
+      }
+    },
+    {
+      "id": "unknown-locale",
+      "value": 7,
+      "format": "[$USD-809]0.00",
+      "expected": null
+    },
+    {
+      "id": "unknown-palette",
+      "value": 7,
+      "format": "[Color3]0.00",
+      "expected": null
+    },
+    {
+      "id": "unknown-calendar",
+      "value": 7,
+      "format": "[$-F800]yyyy-mm-dd",
+      "expected": null
+    },
+    {
+      "id": "scientific",
+      "value": 7,
+      "format": "0.00E+00",
+      "expected": null
+    },
+    {
+      "id": "fraction",
+      "value": 7,
+      "format": "# ?/?",
+      "expected": null
+    },
+    {
+      "id": "digit-spacing",
+      "value": 7,
+      "format": "0.0?",
+      "expected": null
+    },
+    {
+      "id": "width-underscore-date-glyph",
+      "value": 7,
+      "format": "0.00_d",
+      "expected": null
+    },
+    {
+      "id": "width-star-date-glyph",
+      "value": 7,
+      "format": "0.00*d",
+      "expected": null
+    },
+    {
+      "id": "elapsed-time",
+      "value": 1.5,
+      "format": "[h]:mm",
+      "expected": null
+    },
+    {
+      "id": "custom-date-noniso",
+      "value": 61,
+      "format": "dd/mm/yyyy",
+      "expected": null
+    },
+    {
+      "id": "numeric-format-code-not-id",
+      "value": 7,
+      "format": "14",
+      "expected": null
+    },
+    {
+      "id": "conditional-negative-numeric",
+      "value": -7,
+      "format": "[<0]0.00;0.00",
+      "expected": null
+    },
+    {
+      "id": "conditional-unmatched",
+      "value": 0,
+      "format": "[>0]0.00;[<0]0.00",
+      "expected": null
+    },
+    {
+      "id": "multiple-percent",
+      "value": 0.08,
+      "format": "0%%",
+      "expected": null
+    },
+    {
+      "id": "integer-interleaved-placeholders",
+      "value": 7,
+      "format": "0#0",
+      "expected": null
+    },
+    {
+      "id": "malformed-quote",
+      "value": 7,
+      "format": "0.00\"broken",
+      "expected": null
+    },
+    {
+      "id": "malformed-escape",
+      "value": 7,
+      "format": "0.00\\",
+      "expected": null
+    },
+    {
+      "id": "malformed-bracket",
+      "value": 7,
+      "format": "[Red0.00",
+      "expected": null
+    },
+    {
+      "id": "too-many-sections",
+      "value": 7,
+      "format": "0;0;0;@;0",
+      "expected": null
+    },
+    {
+      "id": "conditional-late-condition",
+      "value": 7,
+      "format": "0;[>0]0",
+      "expected": null
+    },
+    {
+      "id": "ungrouped-exponential-runtime-fallback",
+      "value": 1e+21,
+      "format": "0.00",
+      "expected": null
+    },
+    {
+      "id": "iso-date-1904",
+      "value": 0,
+      "format": "yyyy-mm-dd",
+      "date1904": true,
+      "expected": {
+        "text": "1904-01-01",
+        "kind": "date",
+        "supported": true
+      }
+    },
+    {
+      "id": "quoted-backslash-is-literal",
+      "value": 7,
+      "format": "0\"day\\month\"",
+      "expected": {
+        "text": "7day\\month",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "named-color-black",
+      "value": 7,
+      "format": "[Black]0",
+      "expected": {
+        "text": "7",
+        "color": "000000",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "named-color-cyan",
+      "value": 7,
+      "format": "[Cyan]0",
+      "expected": {
+        "text": "7",
+        "color": "00FFFF",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "named-color-magenta",
+      "value": 7,
+      "format": "[Magenta]0",
+      "expected": {
+        "text": "7",
+        "color": "FF00FF",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "named-color-white",
+      "value": 7,
+      "format": "[White]0",
+      "expected": {
+        "text": "7",
+        "color": "FFFFFF",
+        "kind": "number",
+        "supported": true
+      }
+    },
+    {
+      "id": "named-color-yellow",
+      "value": 7,
+      "format": "[Yellow]0",
+      "expected": {
+        "text": "7",
+        "color": "FFFF00",
+        "kind": "number",
+        "supported": true
+      }
+    }
+  ]
+}

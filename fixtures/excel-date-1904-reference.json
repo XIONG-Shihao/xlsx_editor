@@ -1,0 +1,1814 @@
+{
+  "schema": "rpf.xlsx.excel-date-system-oracle.v1",
+  "excel": "16.113.3",
+  "sheet": "Cases",
+  "date1904": true,
+  "source": "excel-date-1904-source.xlsx",
+  "oracleWorkbook": "excel-date-1904-reference.xlsx",
+  "sourceSha256": "704595f3f4e0510cc0b8ed987205653747e7169a9f48df46349e1e7931082d80",
+  "oracleWorkbookSha256": "93717eb103b922c58ceccf627e065cf890a7ee5574c517648f79799b7be757f7",
+  "method": "Independent deterministic stdlib OOXML source opened through Finder UI in installed Microsoft Excel; active Cases worksheet recalculated with Shift-F9; native Save As to separate local reference; typed raw caches independently extracted by stdlib ZIP/XML, with strict generated-template shared-formula expansion. Workbook date system and every expanded formula checked unchanged. Original source bytes preserved. Manual calculation preference left unchanged.",
+  "capturedAt": "2026-09-30T10:49:30.370282+00:00",
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "cases": [
+    {
+      "ref": "E1",
+      "formula": "YEAR(B1)",
+      "expected": 1904.0,
+      "dataType": "number",
+      "rawValue": "1904"
+    },
+    {
+      "ref": "F1",
+      "formula": "E1+1",
+      "expected": 1905.0,
+      "dataType": "number",
+      "rawValue": "1905"
+    },
+    {
+      "ref": "G1",
+      "formula": "IFERROR(E1,-999)",
+      "expected": 1904.0,
+      "dataType": "number",
+      "rawValue": "1904"
+    },
+    {
+      "ref": "H1",
+      "formula": "DATE(YEAR(B1),MONTH(B1),DAY(B1))",
+      "expected": 0.0,
+      "dataType": "number",
+      "rawValue": "0"
+    },
+    {
+      "ref": "E2",
+      "formula": "MONTH(B2)",
+      "expected": 1.0,
+      "dataType": "number",
+      "rawValue": "1"
+    },
+    {
+      "ref": "F2",
+      "formula": "E2+1",
+      "expected": 2.0,
+      "dataType": "number",
+      "rawValue": "2"
+    },
+    {
+      "ref": "G2",
+      "formula": "IFERROR(E2,-999)",
+      "expected": 1.0,
+      "dataType": "number",
+      "rawValue": "1"
+    },
+    {
+      "ref": "E3",
+      "formula": "DAY(B3)",
+      "expected": 1.0,
+      "dataType": "number",
+      "rawValue": "1"
+    },
+    {
+      "ref": "F3",
+      "formula": "E3+1",
+      "expected": 2.0,
+      "dataType": "number",
+      "rawValue": "2"
+    },
+    {
+      "ref": "G3",
+      "formula": "IFERROR(E3,-999)",
+      "expected": 1.0,
+      "dataType": "number",
+      "rawValue": "1"
+    },
+    {
+      "ref": "E4",
+      "formula": "YEAR(B4)",
+      "expected": 1904.0,
+      "dataType": "number",
+      "rawValue": "1904"
+    },
+    {
+      "ref": "F4",
+      "formula": "E4+1",
+      "expected": 1905.0,
+      "dataType": "number",
+      "rawValue": "1905"
+    },
+    {
+      "ref": "G4",
+      "formula": "IFERROR(E4,-999)",
+      "expected": 1904.0,
+      "dataType": "number",
+      "rawValue": "1904"
+    },
+    {
+      "ref": "H4",
+      "formula": "DATE(YEAR(B4),MONTH(B4),DAY(B4))",
+      "expected": 0.0,
+      "dataType": "number",
+      "rawValue": "0"
+    },
+    {
+      "ref": "E5",
+      "formula": "MONTH(B5)",
+      "expected": 1.0,
+      "dataType": "number",
+      "rawValue": "1"
+    },
+    {
+      "ref": "F5",
+      "formula": "E5+1",
+      "expected": 2.0,
+      "dataType": "number",
+      "rawValue": "2"
+    },
+    {
+      "ref": "G5",
+      "formula": "IFERROR(E5,-999)",
+      "expected": 1.0,
+      "dataType": "number",
+      "rawValue": "1"
+    },
+    {
+      "ref": "E6",
+      "formula": "DAY(B6)",
+      "expected": 1.0,
+      "dataType": "number",
+      "rawValue": "1"
+    },
+    {
+      "ref": "F6",
+      "formula": "E6+1",
+      "expected": 2.0,
+      "dataType": "number",
+      "rawValue": "2"
+    },
+    {
+      "ref": "G6",
+      "formula": "IFERROR(E6,-999)",
+      "expected": 1.0,
+      "dataType": "number",
+      "rawValue": "1"
+    },
+    {
+      "ref": "E7",
+      "formula": "YEAR(B7)",
+      "expected": 1904.0,
+      "dataType": "number",
+      "rawValue": "1904"
+    },
+    {
+      "ref": "F7",
+      "formula": "E7+1",
+      "expected": 1905.0,
+      "dataType": "number",
+      "rawValue": "1905"
+    },
+    {
+      "ref": "G7",
+      "formula": "IFERROR(E7,-999)",
+      "expected": 1904.0,
+      "dataType": "number",
+      "rawValue": "1904"
+    },
+    {
+      "ref": "H7",
+      "formula": "DATE(YEAR(B7),MONTH(B7),DAY(B7))",
+      "expected": 1.0,
+      "dataType": "number",
+      "rawValue": "1"
+    },
+    {
+      "ref": "E8",
+      "formula": "MONTH(B8)",
+      "expected": 1.0,
+      "dataType": "number",
+      "rawValue": "1"
+    },
+    {
+      "ref": "F8",
+      "formula": "E8+1",
+      "expected": 2.0,
+      "dataType": "number",
+      "rawValue": "2"
+    },
+    {
+      "ref": "G8",
+      "formula": "IFERROR(E8,-999)",
+      "expected": 1.0,
+      "dataType": "number",
+      "rawValue": "1"
+    },
+    {
+      "ref": "E9",
+      "formula": "DAY(B9)",
+      "expected": 2.0,
+      "dataType": "number",
+      "rawValue": "2"
+    },
+    {
+      "ref": "F9",
+      "formula": "E9+1",
+      "expected": 3.0,
+      "dataType": "number",
+      "rawValue": "3"
+    },
+    {
+      "ref": "G9",
+      "formula": "IFERROR(E9,-999)",
+      "expected": 2.0,
+      "dataType": "number",
+      "rawValue": "2"
+    },
+    {
+      "ref": "E10",
+      "formula": "YEAR(B10)",
+      "expected": 1904.0,
+      "dataType": "number",
+      "rawValue": "1904"
+    },
+    {
+      "ref": "F10",
+      "formula": "E10+1",
+      "expected": 1905.0,
+      "dataType": "number",
+      "rawValue": "1905"
+    },
+    {
+      "ref": "G10",
+      "formula": "IFERROR(E10,-999)",
+      "expected": 1904.0,
+      "dataType": "number",
+      "rawValue": "1904"
+    },
+    {
+      "ref": "H10",
+      "formula": "DATE(YEAR(B10),MONTH(B10),DAY(B10))",
+      "expected": 59.0,
+      "dataType": "number",
+      "rawValue": "59"
+    },
+    {
+      "ref": "E11",
+      "formula": "MONTH(B11)",
+      "expected": 2.0,
+      "dataType": "number",
+      "rawValue": "2"
+    },
+    {
+      "ref": "F11",
+      "formula": "E11+1",
+      "expected": 3.0,
+      "dataType": "number",
+      "rawValue": "3"
+    },
+    {
+      "ref": "G11",
+      "formula": "IFERROR(E11,-999)",
+      "expected": 2.0,
+      "dataType": "number",
+      "rawValue": "2"
+    },
+    {
+      "ref": "E12",
+      "formula": "DAY(B12)",
+      "expected": 29.0,
+      "dataType": "number",
+      "rawValue": "29"
+    },
+    {
+      "ref": "F12",
+      "formula": "E12+1",
+      "expected": 30.0,
+      "dataType": "number",
+      "rawValue": "30"
+    },
+    {
+      "ref": "G12",
+      "formula": "IFERROR(E12,-999)",
+      "expected": 29.0,
+      "dataType": "number",
+      "rawValue": "29"
+    },
+    {
+      "ref": "E13",
+      "formula": "YEAR(B13)",
+      "expected": 1904.0,
+      "dataType": "number",
+      "rawValue": "1904"
+    },
+    {
+      "ref": "F13",
+      "formula": "E13+1",
+      "expected": 1905.0,
+      "dataType": "number",
+      "rawValue": "1905"
+    },
+    {
+      "ref": "G13",
+      "formula": "IFERROR(E13,-999)",
+      "expected": 1904.0,
+      "dataType": "number",
+      "rawValue": "1904"
+    },
+    {
+      "ref": "H13",
+      "formula": "DATE(YEAR(B13),MONTH(B13),DAY(B13))",
+      "expected": 59.0,
+      "dataType": "number",
+      "rawValue": "59"
+    },
+    {
+      "ref": "E14",
+      "formula": "MONTH(B14)",
+      "expected": 2.0,
+      "dataType": "number",
+      "rawValue": "2"
+    },
+    {
+      "ref": "F14",
+      "formula": "E14+1",
+      "expected": 3.0,
+      "dataType": "number",
+      "rawValue": "3"
+    },
+    {
+      "ref": "G14",
+      "formula": "IFERROR(E14,-999)",
+      "expected": 2.0,
+      "dataType": "number",
+      "rawValue": "2"
+    },
+    {
+      "ref": "E15",
+      "formula": "DAY(B15)",
+      "expected": 29.0,
+      "dataType": "number",
+      "rawValue": "29"
+    },
+    {
+      "ref": "F15",
+      "formula": "E15+1",
+      "expected": 30.0,
+      "dataType": "number",
+      "rawValue": "30"
+    },
+    {
+      "ref": "G15",
+      "formula": "IFERROR(E15,-999)",
+      "expected": 29.0,
+      "dataType": "number",
+      "rawValue": "29"
+    },
+    {
+      "ref": "E16",
+      "formula": "YEAR(B16)",
+      "expected": 1904.0,
+      "dataType": "number",
+      "rawValue": "1904"
+    },
+    {
+      "ref": "F16",
+      "formula": "E16+1",
+      "expected": 1905.0,
+      "dataType": "number",
+      "rawValue": "1905"
+    },
+    {
+      "ref": "G16",
+      "formula": "IFERROR(E16,-999)",
+      "expected": 1904.0,
+      "dataType": "number",
+      "rawValue": "1904"
+    },
+    {
+      "ref": "H16",
+      "formula": "DATE(YEAR(B16),MONTH(B16),DAY(B16))",
+      "expected": 60.0,
+      "dataType": "number",
+      "rawValue": "60"
+    },
+    {
+      "ref": "E17",
+      "formula": "MONTH(B17)",
+      "expected": 3.0,
+      "dataType": "number",
+      "rawValue": "3"
+    },
+    {
+      "ref": "F17",
+      "formula": "E17+1",
+      "expected": 4.0,
+      "dataType": "number",
+      "rawValue": "4"
+    },
+    {
+      "ref": "G17",
+      "formula": "IFERROR(E17,-999)",
+      "expected": 3.0,
+      "dataType": "number",
+      "rawValue": "3"
+    },
+    {
+      "ref": "E18",
+      "formula": "DAY(B18)",
+      "expected": 1.0,
+      "dataType": "number",
+      "rawValue": "1"
+    },
+    {
+      "ref": "F18",
+      "formula": "E18+1",
+      "expected": 2.0,
+      "dataType": "number",
+      "rawValue": "2"
+    },
+    {
+      "ref": "G18",
+      "formula": "IFERROR(E18,-999)",
+      "expected": 1.0,
+      "dataType": "number",
+      "rawValue": "1"
+    },
+    {
+      "ref": "E19",
+      "formula": "YEAR(B19)",
+      "expected": 1904.0,
+      "dataType": "number",
+      "rawValue": "1904"
+    },
+    {
+      "ref": "F19",
+      "formula": "E19+1",
+      "expected": 1905.0,
+      "dataType": "number",
+      "rawValue": "1905"
+    },
+    {
+      "ref": "G19",
+      "formula": "IFERROR(E19,-999)",
+      "expected": 1904.0,
+      "dataType": "number",
+      "rawValue": "1904"
+    },
+    {
+      "ref": "H19",
+      "formula": "DATE(YEAR(B19),MONTH(B19),DAY(B19))",
+      "expected": 60.0,
+      "dataType": "number",
+      "rawValue": "60"
+    },
+    {
+      "ref": "E20",
+      "formula": "MONTH(B20)",
+      "expected": 3.0,
+      "dataType": "number",
+      "rawValue": "3"
+    },
+    {
+      "ref": "F20",
+      "formula": "E20+1",
+      "expected": 4.0,
+      "dataType": "number",
+      "rawValue": "4"
+    },
+    {
+      "ref": "G20",
+      "formula": "IFERROR(E20,-999)",
+      "expected": 3.0,
+      "dataType": "number",
+      "rawValue": "3"
+    },
+    {
+      "ref": "E21",
+      "formula": "DAY(B21)",
+      "expected": 1.0,
+      "dataType": "number",
+      "rawValue": "1"
+    },
+    {
+      "ref": "F21",
+      "formula": "E21+1",
+      "expected": 2.0,
+      "dataType": "number",
+      "rawValue": "2"
+    },
+    {
+      "ref": "G21",
+      "formula": "IFERROR(E21,-999)",
+      "expected": 1.0,
+      "dataType": "number",
+      "rawValue": "1"
+    },
+    {
+      "ref": "E22",
+      "formula": "YEAR(B22)",
+      "expected": 1904.0,
+      "dataType": "number",
+      "rawValue": "1904"
+    },
+    {
+      "ref": "F22",
+      "formula": "E22+1",
+      "expected": 1905.0,
+      "dataType": "number",
+      "rawValue": "1905"
+    },
+    {
+      "ref": "G22",
+      "formula": "IFERROR(E22,-999)",
+      "expected": 1904.0,
+      "dataType": "number",
+      "rawValue": "1904"
+    },
+    {
+      "ref": "H22",
+      "formula": "DATE(YEAR(B22),MONTH(B22),DAY(B22))",
+      "expected": 61.0,
+      "dataType": "number",
+      "rawValue": "61"
+    },
+    {
+      "ref": "E23",
+      "formula": "MONTH(B23)",
+      "expected": 3.0,
+      "dataType": "number",
+      "rawValue": "3"
+    },
+    {
+      "ref": "F23",
+      "formula": "E23+1",
+      "expected": 4.0,
+      "dataType": "number",
+      "rawValue": "4"
+    },
+    {
+      "ref": "G23",
+      "formula": "IFERROR(E23,-999)",
+      "expected": 3.0,
+      "dataType": "number",
+      "rawValue": "3"
+    },
+    {
+      "ref": "E24",
+      "formula": "DAY(B24)",
+      "expected": 2.0,
+      "dataType": "number",
+      "rawValue": "2"
+    },
+    {
+      "ref": "F24",
+      "formula": "E24+1",
+      "expected": 3.0,
+      "dataType": "number",
+      "rawValue": "3"
+    },
+    {
+      "ref": "G24",
+      "formula": "IFERROR(E24,-999)",
+      "expected": 2.0,
+      "dataType": "number",
+      "rawValue": "2"
+    },
+    {
+      "ref": "E25",
+      "formula": "YEAR(B25)",
+      "expected": 1904.0,
+      "dataType": "number",
+      "rawValue": "1904"
+    },
+    {
+      "ref": "F25",
+      "formula": "E25+1",
+      "expected": 1905.0,
+      "dataType": "number",
+      "rawValue": "1905"
+    },
+    {
+      "ref": "G25",
+      "formula": "IFERROR(E25,-999)",
+      "expected": 1904.0,
+      "dataType": "number",
+      "rawValue": "1904"
+    },
+    {
+      "ref": "H25",
+      "formula": "DATE(YEAR(B25),MONTH(B25),DAY(B25))",
+      "expected": 61.0,
+      "dataType": "number",
+      "rawValue": "61"
+    },
+    {
+      "ref": "E26",
+      "formula": "MONTH(B26)",
+      "expected": 3.0,
+      "dataType": "number",
+      "rawValue": "3"
+    },
+    {
+      "ref": "F26",
+      "formula": "E26+1",
+      "expected": 4.0,
+      "dataType": "number",
+      "rawValue": "4"
+    },
+    {
+      "ref": "G26",
+      "formula": "IFERROR(E26,-999)",
+      "expected": 3.0,
+      "dataType": "number",
+      "rawValue": "3"
+    },
+    {
+      "ref": "E27",
+      "formula": "DAY(B27)",
+      "expected": 2.0,
+      "dataType": "number",
+      "rawValue": "2"
+    },
+    {
+      "ref": "F27",
+      "formula": "E27+1",
+      "expected": 3.0,
+      "dataType": "number",
+      "rawValue": "3"
+    },
+    {
+      "ref": "G27",
+      "formula": "IFERROR(E27,-999)",
+      "expected": 2.0,
+      "dataType": "number",
+      "rawValue": "2"
+    },
+    {
+      "ref": "E28",
+      "formula": "YEAR(B28)",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "F28",
+      "formula": "E28+1",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "G28",
+      "formula": "IFERROR(E28,-999)",
+      "expected": -999.0,
+      "dataType": "number",
+      "rawValue": "-999"
+    },
+    {
+      "ref": "H28",
+      "formula": "DATE(YEAR(B28),MONTH(B28),DAY(B28))",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "E29",
+      "formula": "MONTH(B29)",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "F29",
+      "formula": "E29+1",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "G29",
+      "formula": "IFERROR(E29,-999)",
+      "expected": -999.0,
+      "dataType": "number",
+      "rawValue": "-999"
+    },
+    {
+      "ref": "E30",
+      "formula": "DAY(B30)",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "F30",
+      "formula": "E30+1",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "G30",
+      "formula": "IFERROR(E30,-999)",
+      "expected": -999.0,
+      "dataType": "number",
+      "rawValue": "-999"
+    },
+    {
+      "ref": "E31",
+      "formula": "YEAR(B31)",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "F31",
+      "formula": "E31+1",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "G31",
+      "formula": "IFERROR(E31,-999)",
+      "expected": -999.0,
+      "dataType": "number",
+      "rawValue": "-999"
+    },
+    {
+      "ref": "H31",
+      "formula": "DATE(YEAR(B31),MONTH(B31),DAY(B31))",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "E32",
+      "formula": "MONTH(B32)",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "F32",
+      "formula": "E32+1",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "G32",
+      "formula": "IFERROR(E32,-999)",
+      "expected": -999.0,
+      "dataType": "number",
+      "rawValue": "-999"
+    },
+    {
+      "ref": "E33",
+      "formula": "DAY(B33)",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "F33",
+      "formula": "E33+1",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "G33",
+      "formula": "IFERROR(E33,-999)",
+      "expected": -999.0,
+      "dataType": "number",
+      "rawValue": "-999"
+    },
+    {
+      "ref": "E34",
+      "formula": "YEAR(B34)",
+      "expected": 9999.0,
+      "dataType": "number",
+      "rawValue": "9999"
+    },
+    {
+      "ref": "F34",
+      "formula": "E34+1",
+      "expected": 10000.0,
+      "dataType": "number",
+      "rawValue": "10000"
+    },
+    {
+      "ref": "G34",
+      "formula": "IFERROR(E34,-999)",
+      "expected": 9999.0,
+      "dataType": "number",
+      "rawValue": "9999"
+    },
+    {
+      "ref": "H34",
+      "formula": "DATE(YEAR(B34),MONTH(B34),DAY(B34))",
+      "expected": 2957003.0,
+      "dataType": "number",
+      "rawValue": "2957003"
+    },
+    {
+      "ref": "E35",
+      "formula": "MONTH(B35)",
+      "expected": 12.0,
+      "dataType": "number",
+      "rawValue": "12"
+    },
+    {
+      "ref": "F35",
+      "formula": "E35+1",
+      "expected": 13.0,
+      "dataType": "number",
+      "rawValue": "13"
+    },
+    {
+      "ref": "G35",
+      "formula": "IFERROR(E35,-999)",
+      "expected": 12.0,
+      "dataType": "number",
+      "rawValue": "12"
+    },
+    {
+      "ref": "E36",
+      "formula": "DAY(B36)",
+      "expected": 31.0,
+      "dataType": "number",
+      "rawValue": "31"
+    },
+    {
+      "ref": "F36",
+      "formula": "E36+1",
+      "expected": 32.0,
+      "dataType": "number",
+      "rawValue": "32"
+    },
+    {
+      "ref": "G36",
+      "formula": "IFERROR(E36,-999)",
+      "expected": 31.0,
+      "dataType": "number",
+      "rawValue": "31"
+    },
+    {
+      "ref": "E37",
+      "formula": "YEAR(B37)",
+      "expected": 9999.0,
+      "dataType": "number",
+      "rawValue": "9999"
+    },
+    {
+      "ref": "F37",
+      "formula": "E37+1",
+      "expected": 10000.0,
+      "dataType": "number",
+      "rawValue": "10000"
+    },
+    {
+      "ref": "G37",
+      "formula": "IFERROR(E37,-999)",
+      "expected": 9999.0,
+      "dataType": "number",
+      "rawValue": "9999"
+    },
+    {
+      "ref": "H37",
+      "formula": "DATE(YEAR(B37),MONTH(B37),DAY(B37))",
+      "expected": 2957003.0,
+      "dataType": "number",
+      "rawValue": "2957003"
+    },
+    {
+      "ref": "E38",
+      "formula": "MONTH(B38)",
+      "expected": 12.0,
+      "dataType": "number",
+      "rawValue": "12"
+    },
+    {
+      "ref": "F38",
+      "formula": "E38+1",
+      "expected": 13.0,
+      "dataType": "number",
+      "rawValue": "13"
+    },
+    {
+      "ref": "G38",
+      "formula": "IFERROR(E38,-999)",
+      "expected": 12.0,
+      "dataType": "number",
+      "rawValue": "12"
+    },
+    {
+      "ref": "E39",
+      "formula": "DAY(B39)",
+      "expected": 31.0,
+      "dataType": "number",
+      "rawValue": "31"
+    },
+    {
+      "ref": "F39",
+      "formula": "E39+1",
+      "expected": 32.0,
+      "dataType": "number",
+      "rawValue": "32"
+    },
+    {
+      "ref": "G39",
+      "formula": "IFERROR(E39,-999)",
+      "expected": 31.0,
+      "dataType": "number",
+      "rawValue": "31"
+    },
+    {
+      "ref": "E40",
+      "formula": "YEAR(B40)",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "F40",
+      "formula": "E40+1",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "G40",
+      "formula": "IFERROR(E40,-999)",
+      "expected": -999.0,
+      "dataType": "number",
+      "rawValue": "-999"
+    },
+    {
+      "ref": "H40",
+      "formula": "DATE(YEAR(B40),MONTH(B40),DAY(B40))",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "E41",
+      "formula": "MONTH(B41)",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "F41",
+      "formula": "E41+1",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "G41",
+      "formula": "IFERROR(E41,-999)",
+      "expected": -999.0,
+      "dataType": "number",
+      "rawValue": "-999"
+    },
+    {
+      "ref": "E42",
+      "formula": "DAY(B42)",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "F42",
+      "formula": "E42+1",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "G42",
+      "formula": "IFERROR(E42,-999)",
+      "expected": -999.0,
+      "dataType": "number",
+      "rawValue": "-999"
+    },
+    {
+      "ref": "E43",
+      "formula": "YEAR(B43)",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "F43",
+      "formula": "E43+1",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "G43",
+      "formula": "IFERROR(E43,-999)",
+      "expected": -999.0,
+      "dataType": "number",
+      "rawValue": "-999"
+    },
+    {
+      "ref": "H43",
+      "formula": "DATE(YEAR(B43),MONTH(B43),DAY(B43))",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "E44",
+      "formula": "MONTH(B44)",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "F44",
+      "formula": "E44+1",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "G44",
+      "formula": "IFERROR(E44,-999)",
+      "expected": -999.0,
+      "dataType": "number",
+      "rawValue": "-999"
+    },
+    {
+      "ref": "E45",
+      "formula": "DAY(B45)",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "F45",
+      "formula": "E45+1",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "G45",
+      "formula": "IFERROR(E45,-999)",
+      "expected": -999.0,
+      "dataType": "number",
+      "rawValue": "-999"
+    },
+    {
+      "ref": "E46",
+      "formula": "YEAR(B46)",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "F46",
+      "formula": "E46+1",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "G46",
+      "formula": "IFERROR(E46,-999)",
+      "expected": -999.0,
+      "dataType": "number",
+      "rawValue": "-999"
+    },
+    {
+      "ref": "H46",
+      "formula": "DATE(YEAR(B46),MONTH(B46),DAY(B46))",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "E47",
+      "formula": "MONTH(B47)",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "F47",
+      "formula": "E47+1",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "G47",
+      "formula": "IFERROR(E47,-999)",
+      "expected": -999.0,
+      "dataType": "number",
+      "rawValue": "-999"
+    },
+    {
+      "ref": "E48",
+      "formula": "DAY(B48)",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "F48",
+      "formula": "E48+1",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "G48",
+      "formula": "IFERROR(E48,-999)",
+      "expected": -999.0,
+      "dataType": "number",
+      "rawValue": "-999"
+    },
+    {
+      "ref": "E49",
+      "formula": "YEAR(B49)",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "F49",
+      "formula": "E49+1",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "G49",
+      "formula": "IFERROR(E49,-999)",
+      "expected": -999.0,
+      "dataType": "number",
+      "rawValue": "-999"
+    },
+    {
+      "ref": "H49",
+      "formula": "DATE(YEAR(B49),MONTH(B49),DAY(B49))",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "E50",
+      "formula": "MONTH(B50)",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "F50",
+      "formula": "E50+1",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "G50",
+      "formula": "IFERROR(E50,-999)",
+      "expected": -999.0,
+      "dataType": "number",
+      "rawValue": "-999"
+    },
+    {
+      "ref": "E51",
+      "formula": "DAY(B51)",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "F51",
+      "formula": "E51+1",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "G51",
+      "formula": "IFERROR(E51,-999)",
+      "expected": -999.0,
+      "dataType": "number",
+      "rawValue": "-999"
+    },
+    {
+      "ref": "E52",
+      "formula": "DATE(B52,C52,D52)",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "F52",
+      "formula": "E52+1",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "G52",
+      "formula": "IFERROR(E52,-999)",
+      "expected": -999.0,
+      "dataType": "number",
+      "rawValue": "-999"
+    },
+    {
+      "ref": "E53",
+      "formula": "DATE(B53,C53,D53)",
+      "expected": 692136.0,
+      "dataType": "number",
+      "rawValue": "692136"
+    },
+    {
+      "ref": "F53",
+      "formula": "E53+1",
+      "expected": 692137.0,
+      "dataType": "number",
+      "rawValue": "692137"
+    },
+    {
+      "ref": "G53",
+      "formula": "IFERROR(E53,-999)",
+      "expected": 692136.0,
+      "dataType": "number",
+      "rawValue": "692136"
+    },
+    {
+      "ref": "E54",
+      "formula": "DATE(B54,C54,D54)",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "F54",
+      "formula": "E54+1",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "G54",
+      "formula": "IFERROR(E54,-999)",
+      "expected": -999.0,
+      "dataType": "number",
+      "rawValue": "-999"
+    },
+    {
+      "ref": "E55",
+      "formula": "DATE(B55,C55,D55)",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "F55",
+      "formula": "E55+1",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "G55",
+      "formula": "IFERROR(E55,-999)",
+      "expected": -999.0,
+      "dataType": "number",
+      "rawValue": "-999"
+    },
+    {
+      "ref": "E56",
+      "formula": "DATE(B56,C56,D56)",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "F56",
+      "formula": "E56+1",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "G56",
+      "formula": "IFERROR(E56,-999)",
+      "expected": -999.0,
+      "dataType": "number",
+      "rawValue": "-999"
+    },
+    {
+      "ref": "E57",
+      "formula": "DATE(B57,C57,D57)",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "F57",
+      "formula": "E57+1",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "G57",
+      "formula": "IFERROR(E57,-999)",
+      "expected": -999.0,
+      "dataType": "number",
+      "rawValue": "-999"
+    },
+    {
+      "ref": "E58",
+      "formula": "DATE(B58,C58,D58)",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "F58",
+      "formula": "E58+1",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "G58",
+      "formula": "IFERROR(E58,-999)",
+      "expected": -999.0,
+      "dataType": "number",
+      "rawValue": "-999"
+    },
+    {
+      "ref": "E59",
+      "formula": "DATE(B59,C59,D59)",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "F59",
+      "formula": "E59+1",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "G59",
+      "formula": "IFERROR(E59,-999)",
+      "expected": -999.0,
+      "dataType": "number",
+      "rawValue": "-999"
+    },
+    {
+      "ref": "E60",
+      "formula": "DATE(B60,C60,D60)",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "F60",
+      "formula": "E60+1",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "G60",
+      "formula": "IFERROR(E60,-999)",
+      "expected": -999.0,
+      "dataType": "number",
+      "rawValue": "-999"
+    },
+    {
+      "ref": "E61",
+      "formula": "DATE(B61,C61,D61)",
+      "expected": 0.0,
+      "dataType": "number",
+      "rawValue": "0"
+    },
+    {
+      "ref": "F61",
+      "formula": "E61+1",
+      "expected": 1.0,
+      "dataType": "number",
+      "rawValue": "1"
+    },
+    {
+      "ref": "G61",
+      "formula": "IFERROR(E61,-999)",
+      "expected": 0.0,
+      "dataType": "number",
+      "rawValue": "0"
+    },
+    {
+      "ref": "E62",
+      "formula": "DATE(B62,C62,D62)",
+      "expected": 59.0,
+      "dataType": "number",
+      "rawValue": "59"
+    },
+    {
+      "ref": "F62",
+      "formula": "E62+1",
+      "expected": 60.0,
+      "dataType": "number",
+      "rawValue": "60"
+    },
+    {
+      "ref": "G62",
+      "formula": "IFERROR(E62,-999)",
+      "expected": 59.0,
+      "dataType": "number",
+      "rawValue": "59"
+    },
+    {
+      "ref": "E63",
+      "formula": "DATE(B63,C63,D63)",
+      "expected": 35123.0,
+      "dataType": "number",
+      "rawValue": "35123"
+    },
+    {
+      "ref": "F63",
+      "formula": "E63+1",
+      "expected": 35124.0,
+      "dataType": "number",
+      "rawValue": "35124"
+    },
+    {
+      "ref": "G63",
+      "formula": "IFERROR(E63,-999)",
+      "expected": 35123.0,
+      "dataType": "number",
+      "rawValue": "35123"
+    },
+    {
+      "ref": "E64",
+      "formula": "DATE(B64,C64,D64)",
+      "expected": 71648.0,
+      "dataType": "number",
+      "rawValue": "71648"
+    },
+    {
+      "ref": "F64",
+      "formula": "E64+1",
+      "expected": 71649.0,
+      "dataType": "number",
+      "rawValue": "71649"
+    },
+    {
+      "ref": "G64",
+      "formula": "IFERROR(E64,-999)",
+      "expected": 71648.0,
+      "dataType": "number",
+      "rawValue": "71648"
+    },
+    {
+      "ref": "E65",
+      "formula": "DATE(B65,C65,D65)",
+      "expected": 44196.0,
+      "dataType": "number",
+      "rawValue": "44196"
+    },
+    {
+      "ref": "F65",
+      "formula": "E65+1",
+      "expected": 44197.0,
+      "dataType": "number",
+      "rawValue": "44197"
+    },
+    {
+      "ref": "G65",
+      "formula": "IFERROR(E65,-999)",
+      "expected": 44196.0,
+      "dataType": "number",
+      "rawValue": "44196"
+    },
+    {
+      "ref": "E66",
+      "formula": "DATE(B66,C66,D66)",
+      "expected": 43799.0,
+      "dataType": "number",
+      "rawValue": "43799"
+    },
+    {
+      "ref": "F66",
+      "formula": "E66+1",
+      "expected": 43800.0,
+      "dataType": "number",
+      "rawValue": "43800"
+    },
+    {
+      "ref": "G66",
+      "formula": "IFERROR(E66,-999)",
+      "expected": 43799.0,
+      "dataType": "number",
+      "rawValue": "43799"
+    },
+    {
+      "ref": "E67",
+      "formula": "DATE(B67,C67,D67)",
+      "expected": 43829.0,
+      "dataType": "number",
+      "rawValue": "43829"
+    },
+    {
+      "ref": "F67",
+      "formula": "E67+1",
+      "expected": 43830.0,
+      "dataType": "number",
+      "rawValue": "43830"
+    },
+    {
+      "ref": "G67",
+      "formula": "IFERROR(E67,-999)",
+      "expected": 43829.0,
+      "dataType": "number",
+      "rawValue": "43829"
+    },
+    {
+      "ref": "E68",
+      "formula": "DATE(B68,C68,D68)",
+      "expected": 43828.0,
+      "dataType": "number",
+      "rawValue": "43828"
+    },
+    {
+      "ref": "F68",
+      "formula": "E68+1",
+      "expected": 43829.0,
+      "dataType": "number",
+      "rawValue": "43829"
+    },
+    {
+      "ref": "G68",
+      "formula": "IFERROR(E68,-999)",
+      "expected": 43828.0,
+      "dataType": "number",
+      "rawValue": "43828"
+    },
+    {
+      "ref": "E69",
+      "formula": "DATE(B69,C69,D69)",
+      "expected": 43769.0,
+      "dataType": "number",
+      "rawValue": "43769"
+    },
+    {
+      "ref": "F69",
+      "formula": "E69+1",
+      "expected": 43770.0,
+      "dataType": "number",
+      "rawValue": "43770"
+    },
+    {
+      "ref": "G69",
+      "formula": "IFERROR(E69,-999)",
+      "expected": 43769.0,
+      "dataType": "number",
+      "rawValue": "43769"
+    },
+    {
+      "ref": "E70",
+      "formula": "DATE(B70,C70,D70)",
+      "expected": 43890.0,
+      "dataType": "number",
+      "rawValue": "43890"
+    },
+    {
+      "ref": "F70",
+      "formula": "E70+1",
+      "expected": 43891.0,
+      "dataType": "number",
+      "rawValue": "43891"
+    },
+    {
+      "ref": "G70",
+      "formula": "IFERROR(E70,-999)",
+      "expected": 43890.0,
+      "dataType": "number",
+      "rawValue": "43890"
+    },
+    {
+      "ref": "E71",
+      "formula": "DATE(B71,C71,D71)",
+      "expected": 43524.0,
+      "dataType": "number",
+      "rawValue": "43524"
+    },
+    {
+      "ref": "F71",
+      "formula": "E71+1",
+      "expected": 43525.0,
+      "dataType": "number",
+      "rawValue": "43525"
+    },
+    {
+      "ref": "G71",
+      "formula": "IFERROR(E71,-999)",
+      "expected": 43524.0,
+      "dataType": "number",
+      "rawValue": "43524"
+    },
+    {
+      "ref": "E72",
+      "formula": "DATE(B72,C72,D72)",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "F72",
+      "formula": "E72+1",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "G72",
+      "formula": "IFERROR(E72,-999)",
+      "expected": -999.0,
+      "dataType": "number",
+      "rawValue": "-999"
+    },
+    {
+      "ref": "E73",
+      "formula": "DATE(B73,C73,D73)",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "F73",
+      "formula": "E73+1",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "G73",
+      "formula": "IFERROR(E73,-999)",
+      "expected": -999.0,
+      "dataType": "number",
+      "rawValue": "-999"
+    },
+    {
+      "ref": "E74",
+      "formula": "DATE(B74,C74,D74)",
+      "expected": 2957003.0,
+      "dataType": "number",
+      "rawValue": "2957003"
+    },
+    {
+      "ref": "F74",
+      "formula": "E74+1",
+      "expected": 2957004.0,
+      "dataType": "number",
+      "rawValue": "2957004"
+    },
+    {
+      "ref": "G74",
+      "formula": "IFERROR(E74,-999)",
+      "expected": 2957003.0,
+      "dataType": "number",
+      "rawValue": "2957003"
+    },
+    {
+      "ref": "E75",
+      "formula": "DATE(B75,C75,D75)",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "F75",
+      "formula": "E75+1",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "G75",
+      "formula": "IFERROR(E75,-999)",
+      "expected": -999.0,
+      "dataType": "number",
+      "rawValue": "-999"
+    },
+    {
+      "ref": "E76",
+      "formula": "DATE(B76,C76,D76)",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "F76",
+      "formula": "E76+1",
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!"
+    },
+    {
+      "ref": "G76",
+      "formula": "IFERROR(E76,-999)",
+      "expected": -999.0,
+      "dataType": "number",
+      "rawValue": "-999"
+    },
+    {
+      "ref": "E77",
+      "formula": "DATE(B77,C77,D77)",
+      "expected": 43767.0,
+      "dataType": "number",
+      "rawValue": "43767"
+    },
+    {
+      "ref": "F77",
+      "formula": "E77+1",
+      "expected": 43768.0,
+      "dataType": "number",
+      "rawValue": "43768"
+    },
+    {
+      "ref": "G77",
+      "formula": "IFERROR(E77,-999)",
+      "expected": 43767.0,
+      "dataType": "number",
+      "rawValue": "43767"
+    },
+    {
+      "ref": "E78",
+      "formula": "DATE(B78,C78,D78)",
+      "expected": 43830.0,
+      "dataType": "number",
+      "rawValue": "43830"
+    },
+    {
+      "ref": "F78",
+      "formula": "E78+1",
+      "expected": 43831.0,
+      "dataType": "number",
+      "rawValue": "43831"
+    },
+    {
+      "ref": "G78",
+      "formula": "IFERROR(E78,-999)",
+      "expected": 43830.0,
+      "dataType": "number",
+      "rawValue": "43830"
+    },
+    {
+      "ref": "E79",
+      "formula": "YEAR(B79)",
+      "expected": 2024.0,
+      "dataType": "number",
+      "rawValue": "2024"
+    },
+    {
+      "ref": "F79",
+      "formula": "E79+1",
+      "expected": 2025.0,
+      "dataType": "number",
+      "rawValue": "2025"
+    },
+    {
+      "ref": "G79",
+      "formula": "IFERROR(E79,-999)",
+      "expected": 2024.0,
+      "dataType": "number",
+      "rawValue": "2024"
+    },
+    {
+      "ref": "E80",
+      "formula": "DAY(B80)",
+      "expected": "#VALUE!",
+      "dataType": "error",
+      "rawValue": "#VALUE!"
+    },
+    {
+      "ref": "F80",
+      "formula": "E80+1",
+      "expected": "#VALUE!",
+      "dataType": "error",
+      "rawValue": "#VALUE!"
+    },
+    {
+      "ref": "G80",
+      "formula": "IFERROR(E80,-999)",
+      "expected": -999.0,
+      "dataType": "number",
+      "rawValue": "-999"
+    }
+  ]
+}

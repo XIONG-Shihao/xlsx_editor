@@ -1,0 +1,94 @@
+{
+  "schema": "workbook.xlsx.real-source-protected-case.v1",
+  "id": "financial-project-cost-opaque-filter",
+  "classification": "intentional-protection-regression; not a formula/value defect",
+  "source": {
+    "path": "supplied financial workbook, not in Git (XLSX_EDITOR_FINANCIAL_WORKBOOK)",
+    "sha256": "39ce613ef2b6ebab41c4879786aafdefbd401469bd1f5a4c4e2d4f7c329bb11f",
+    "bytes": 15093281,
+    "provenance": "Existing authorized financial workbook; no customer pricing workflow or external refresh is claimed."
+  },
+  "fixture": {
+    "path": "fixtures/financial-project-cost-opaque-filter.xlsx",
+    "sha256": "059e2d9f0f262061401a926b87438aa9216ea33f4480b6c73f44f99086c1ee6d",
+    "bytes": 9249
+  },
+  "operation": {
+    "operation": "insertRow",
+    "sheet": "项目成本",
+    "index": 3,
+    "count": 1
+  },
+  "expected": {
+    "refused": true,
+    "sourceUnchanged": true,
+    "publicStateUnchanged": true,
+    "cell": "D4",
+    "rawValue": "254063.62",
+    "styleId": 127
+  },
+  "retainedFragments": [
+    {
+      "part": "xl/worksheets/sheet10.xml",
+      "kind": "worksheet-opening",
+      "start": 57,
+      "end": 500,
+      "sha256": "c5d5c2a386363bcf6ca60a19480a0ad438c74a8e12cd127710c848c45e047d21"
+    },
+    {
+      "part": "xl/worksheets/sheet10.xml",
+      "kind": "original-row4-opening",
+      "start": 2088,
+      "end": 2136,
+      "sha256": "e5768eeaa0c0cd4c93ddd8425d46d4dc9988e84a2a81d5cf4f20615a033072de"
+    },
+    {
+      "part": "xl/worksheets/sheet10.xml",
+      "kind": "original-cost-cell",
+      "start": 2213,
+      "end": 2251,
+      "sha256": "b1dd74f32b553c6ee061a5c926b46b0869b4af6f538861b8b2c1fc701551f7e5"
+    },
+    {
+      "part": "xl/worksheets/sheet10.xml",
+      "kind": "original-opaque-autofilter",
+      "start": 19208,
+      "end": 19354,
+      "sha256": "8c100357437e24975cf4573fd07aa9701c27a33cbc48236ceff4572faa402e93"
+    },
+    {
+      "part": "xl/workbook.xml",
+      "kind": "original-sheet-reference",
+      "start": 1023,
+      "end": 1077,
+      "sha256": "fd44ef0a8202c8e82219566bd4a797d2e58dbd816fb2d2c9264b492ad552bea9"
+    }
+  ],
+  "retainedWholeParts": [
+    {
+      "part": "xl/styles.xml",
+      "sha256": "c37515ab747588ae0d0be298054d357c6a9e225780ac913138195e7bc15ec98d"
+    },
+    {
+      "part": "xl/theme/theme1.xml",
+      "sha256": "1eb40b4d75bc06590c86decc86b5a2d7e5784771dbf4594730c136bbc38affbf"
+    }
+  ],
+  "recipe": {
+    "generator": "tests/support/minimize-financial-filter.py",
+    "retained": "One original literal cost cell, its row/opening, original WPS autoFilter extension and exact styles/theme; original sheet name/ID/relationship identity.",
+    "removed": "All other cells, formulas, worksheets, links, media, embeddings, properties and unrelated package members.",
+    "generated": "Minimal package root/content-type/workbook relationship scaffolding and sheetData wrapper; no new business values or formulas.",
+    "zip": "Sorted parts, fixed 1980 timestamps, deflate9, fixed regular-file permissions.",
+    "counterfactual": "Remove only the retained autoFilter fragment; ordinary row insertion must then qualify."
+  },
+  "partSha256": {
+    "[Content_Types].xml": "09b7f46b95658610bbfa11173b5abbb9618d9ccf42aa0950d0f533a933f17568",
+    "_rels/.rels": "9f96bb683e71c45171c7ae310bf6c37fb5a834bb9738497ac7084c42ac9c2d9a",
+    "xl/_rels/workbook.xml.rels": "77b843a4569af078c6445a4fa3955e51296d396fa596f528dea559b566d154dc",
+    "xl/styles.xml": "c37515ab747588ae0d0be298054d357c6a9e225780ac913138195e7bc15ec98d",
+    "xl/theme/theme1.xml": "1eb40b4d75bc06590c86decc86b5a2d7e5784771dbf4594730c136bbc38affbf",
+    "xl/workbook.xml": "e06c60549147550e7194118eed63bb28a07e5b80232f4d50985197dcd74ccdbe",
+    "xl/worksheets/sheet10.xml": "9a38f2b6fe664f50def5df4b9aa74479ebf2390aa8d18a3ff7671b1552879c94"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "version": "1.4.3",
+  "platform": "darwin-arm64",
+  "executable": "package/bin/bun",
+  "url": "https://registry.npmjs.org/@oven/bun-darwin-aarch64/-/bun-darwin-aarch64-1.4.3.tgz",
+  "integrity": "sha512-u2wAM9RzqyF4baO5oFVhcFUVWO1CCMLG6yC5/aPWCYGZPfL5ULMbeHt+0/3I0h3yaPx1m+PKSANO/61jPtDZcQ==",
+  "checksumSource": "https://registry.npmjs.org/@oven/bun-darwin-aarch64/1.4.3"
+}

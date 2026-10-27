@@ -1,0 +1,19 @@
+{
+  "_about": "Engine operations that only read a workbook session. The engine needs no journal space for them (src/quota.rs), and test stand-ins that simulate edits send them to the real engine (tests/support/engine-questions.mjs).",
+  "operations": [
+    "range",
+    "used-range",
+    "trace",
+    "formula",
+    "query",
+    "filter-values",
+    "dedup-preview",
+    "keys",
+    "summary",
+    "stats",
+    "diff",
+    "diff-bases",
+    "export-styles",
+    "workbook-view"
+  ]
+}

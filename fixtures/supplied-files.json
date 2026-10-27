@@ -1,0 +1,40 @@
+{
+  "schema": "workbook.xlsx.supplied-file-scopes.v1",
+  "recordedDate": "2026-09-22",
+  "inventoryScope": "Repository files excluding generated outputs and dependency/build directories. No independent supplied pricing or budget workbook was found.",
+  "files": [
+    {
+      "id": "supplied-financial",
+      "path": "supplied financial workbook, not in Git (XLSX_EDITOR_FINANCIAL_WORKBOOK)",
+      "sha256": "39ce613ef2b6ebab41c4879786aafdefbd401469bd1f5a4c4e2d4f7c329bb11f",
+      "provenance": "Existing authorized financial workbook; original remains immutable.",
+      "bytes": 15093281,
+      "usedCells": 10322,
+      "formulas": 2133,
+      "sheets": 21,
+      "features": { "imagesOrMedia": 119, "externalLinks": 2, "embeddings": 10, "tables": 0, "charts": 0, "pivots": 0 },
+      "baselinePolicy": "Read-only: external links and embeddings, shared formulas, and extended worksheet features. No sheet/workbook protection or array formulas found.",
+      "candidateQualification": {
+        "scope": "Guarded literal cost update in a temporary copy. This can qualify a real-file preserving-writer roundtrip; it does not demonstrate a real pricing quantity/price workflow or external-data refresh.",
+        "sheet": "项目成本",
+        "part": "xl/worksheets/sheet10.xml",
+        "cell": "D4",
+        "originalRawValue": "254063.62",
+        "originalFormula": null,
+        "originalStyleId": "127",
+        "newRawValue": "254064.62",
+        "targetSheetFeatures": { "sharedFormulaCells": 59, "extLst": 1 },
+        "preservation": "Preserve all unedited members byte-for-byte and all non-target cell values/formulas/styles. Any intentional formula-cache invalidation or workbook calculation metadata change must be individually identified and semantically checked. Do not use an allowed worksheet path to excuse arbitrary changes in it.",
+        "baselineResult": "Refused before creating output. Requalification of narrowed literal/format guards belongs to the new implementation evidence."
+      }
+    },
+    {
+      "id": "independent-producer",
+      "path": "fixtures/supplied/producer.xlsx",
+      "sha256": "e0fbec1f91321aa96f76275706c0615545096b75cc44d9d640985c782bf08953",
+      "provenance": "Existing synthetic openpyxl 3.1.5 producer fixture, not a real customer pricing workbook.",
+      "baselinePolicy": "Read/inventory; Copied from the retired OfficeMCP test corpus."
+    }
+  ],
+  "unmetRealWorkflow": "A real supplied pricing workbook with an existing quantity, unit-price and total workflow has not been identified. Adding a synthetic block to the financial workbook would be mixed-provenance coverage, not evidence of that existing real workflow."
+}

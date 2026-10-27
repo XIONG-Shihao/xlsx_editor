@@ -1,0 +1,126 @@
+{
+  "excel": "16.113",
+  "cases": [
+    {
+      "ref": "B1",
+      "formula": "\"12\"+1",
+      "expected": 13,
+      "scope": "native"
+    },
+    {
+      "ref": "B2",
+      "formula": "\" 12 \"+1",
+      "expected": 13,
+      "scope": "native"
+    },
+    {
+      "ref": "B3",
+      "formula": "\"12.5\"*2",
+      "expected": 25,
+      "scope": "compatibility/diagnostic"
+    },
+    {
+      "ref": "B4",
+      "formula": "\"-2.5\"/2",
+      "expected": -1.25,
+      "scope": "compatibility/diagnostic"
+    },
+    {
+      "ref": "B5",
+      "formula": "\"1e2\"-1",
+      "expected": 99,
+      "scope": "native"
+    },
+    {
+      "ref": "B6",
+      "formula": "TRUE+2",
+      "expected": 3,
+      "scope": "native"
+    },
+    {
+      "ref": "B7",
+      "formula": "FALSE*3",
+      "expected": 0,
+      "scope": "native"
+    },
+    {
+      "ref": "B8",
+      "formula": "A1+1",
+      "expected": 13,
+      "scope": "native"
+    },
+    {
+      "ref": "B9",
+      "formula": "A2+1",
+      "expected": 2,
+      "scope": "native"
+    },
+    {
+      "ref": "B10",
+      "formula": "A3+1",
+      "expected": 1,
+      "scope": "native"
+    },
+    {
+      "ref": "B11",
+      "formula": "IFERROR(\"\"+1,\"bad\")",
+      "expected": "bad",
+      "scope": "native"
+    },
+    {
+      "ref": "B12",
+      "formula": "IFERROR(\"x\"+1,\"bad\")",
+      "expected": "bad",
+      "scope": "compatibility/diagnostic"
+    },
+    {
+      "ref": "B13",
+      "formula": "-\"12\"",
+      "expected": -12,
+      "scope": "native"
+    },
+    {
+      "ref": "B14",
+      "formula": "\"12\"%",
+      "expected": 0.12,
+      "scope": "compatibility/diagnostic"
+    },
+    {
+      "ref": "B15",
+      "formula": "IFERROR(\"  \"+1,\"bad\")",
+      "expected": "bad",
+      "scope": "native"
+    },
+    {
+      "ref": "B16",
+      "formula": "IF(TRUE,\"12\",0)+1",
+      "expected": 13,
+      "scope": "native"
+    },
+    {
+      "ref": "B17",
+      "formula": "(\"0.1\"+\"0.2\"-\"0.3\")",
+      "expected": 5.551115123125783e-17,
+      "scope": "compatibility/diagnostic"
+    },
+    {
+      "ref": "B18",
+      "formula": "\"0.1\"+\"0.2\"-\"0.3\"",
+      "expected": 0,
+      "scope": "compatibility/diagnostic"
+    },
+    {
+      "ref": "B19",
+      "formula": "IFERROR(\"1,200\"+1,\"bad\")",
+      "expected": 1201,
+      "scope": "compatibility/diagnostic"
+    },
+    {
+      "ref": "B20",
+      "formula": "IFERROR(\"12%\"+1,\"bad\")",
+      "expected": 1.12,
+      "scope": "compatibility/diagnostic"
+    }
+  ],
+  "qualification": "Native arithmetic coercion is limited to exact safe-integer operations; fractional, locale and large-number conversions retain previous compatibility semantics. No frozen arithmetic policy changed."
+}

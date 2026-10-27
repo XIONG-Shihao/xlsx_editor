@@ -1,0 +1,1777 @@
+{
+  "schema": "rpf.xlsx.excel-dec2hex-oracle.v1",
+  "excel": "16.113.3",
+  "sheet": "Cases",
+  "source": "excel-dec2hex-source.xlsx",
+  "oracleWorkbook": "excel-dec2hex-reference.xlsx",
+  "sourceSha256": "713d124f3e9547ccbe484c8201dbc509c4871c8288bcf27472b747cde70646c3",
+  "oracleWorkbookSha256": "461c5fff9fcabcdc72497db7dfd0a056b90d4ce96f63bd329d94b3868c16a1c2",
+  "capturedAt": "2026-09-30T11:51:15.781901+00:00",
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "method": "Deterministic uncached OOXML source opened without a repair prompt through native Finder UI in installed Microsoft Excel 16.113.3 on macOS; active Cases worksheet recalculated with Shift-F9, then native Save As to a separate local reference. Original input hash retained. Independent stdlib ZIP/XML extraction records typed raw caches, saved formula attributes, output geometry, styles, merges and rich errors. Every authored formula checked against the saved spelling, with only the two independently observed closed translations at E106 (-0 to 0) and E109 (+1 to 1). No generated expected values; no benchmark or application-calculated workbook substituted as Excel evidence.",
+  "authoredFormulas": {
+    "E1": "DEC2HEX(0)",
+    "F1": "LEN(E1)",
+    "G1": "ISTEXT(E1)",
+    "H1": "E1&\":hex\"",
+    "I1": "VLOOKUP(E1,$N$1:$O$3,2,FALSE)",
+    "E4": "DEC2HEX(1)",
+    "F4": "LEN(E4)",
+    "G4": "ISTEXT(E4)",
+    "H4": "E4&\":hex\"",
+    "I4": "VLOOKUP(E4,$N$1:$O$3,2,FALSE)",
+    "E7": "DEC2HEX(15)",
+    "F7": "LEN(E7)",
+    "G7": "ISTEXT(E7)",
+    "H7": "E7&\":hex\"",
+    "I7": "VLOOKUP(E7,$N$1:$O$3,2,FALSE)",
+    "E10": "DEC2HEX(16)",
+    "F10": "LEN(E10)",
+    "G10": "ISTEXT(E10)",
+    "H10": "E10&\":hex\"",
+    "I10": "VLOOKUP(E10,$N$1:$O$3,2,FALSE)",
+    "E13": "DEC2HEX(255)",
+    "F13": "LEN(E13)",
+    "G13": "ISTEXT(E13)",
+    "H13": "E13&\":hex\"",
+    "I13": "VLOOKUP(E13,$N$1:$O$3,2,FALSE)",
+    "E16": "DEC2HEX(2147483647)",
+    "F16": "LEN(E16)",
+    "G16": "ISTEXT(E16)",
+    "H16": "E16&\":hex\"",
+    "I16": "VLOOKUP(E16,$N$1:$O$3,2,FALSE)",
+    "E19": "DEC2HEX($B$1)",
+    "E22": "DEC2HEX($B$2+1)",
+    "E25": "DEC2HEX(128+127)",
+    "E28": "DEC2HEX(-1)",
+    "E31": "DEC2HEX(1.5)",
+    "E34": "DEC2HEX(2147483648)",
+    "E37": "DEC2HEX(549755813887)",
+    "E40": "DEC2HEX(549755813888)",
+    "E43": "DEC2HEX(255,4)",
+    "E46": "DEC2HEX(255,1)",
+    "E49": "DEC2HEX(\"255\")",
+    "E52": "DEC2HEX($B$3)",
+    "E55": "DEC2HEX(TRUE)",
+    "E58": "DEC2HEX($B$4)",
+    "E61": "DEC2HEX($B$5)",
+    "E64": "DEC2HEX($B$6)",
+    "E67": "DEC2HEX(1/0)",
+    "E70": "IFERROR(DEC2HEX(1/0),\"caught\")",
+    "E73": "IFERROR(DEC2HEX(-1),\"incorrect-catch\")",
+    "E76": "LEN(DEC2HEX(255))",
+    "E79": "ISTEXT(DEC2HEX(255))",
+    "E82": "DEC2HEX(255)&\":hex\"",
+    "E85": "VLOOKUP(DEC2HEX($B$1),$N$1:$O$3,2,FALSE)",
+    "E88": "LEN(E13)",
+    "E91": "ISTEXT(E13)",
+    "E94": "E13&\":hex\"",
+    "E97": "IF(TRUE,DEC2HEX(255),DEC2HEX(1.5))",
+    "E100": "IF(FALSE,DEC2HEX(1.5),DEC2HEX(255))",
+    "E103": "IFERROR(DEC2HEX(255),\"caught\")",
+    "E106": "DEC2HEX(-0)",
+    "E109": "DEC2HEX(+1)",
+    "E112": "DEC2HEX(\"not-a-number\")",
+    "E115": "DEC2HEX(255,0)",
+    "E118": "DEC2HEX(InputNumber)",
+    "E124": "DEC2HEX($B$7:$B$8)",
+    "I124": "SUM(_xlfn.ANCHORARRAY(E124))",
+    "E130": "DEC2HEX({1,2})",
+    "I130": "SUM(_xlfn.ANCHORARRAY(E130))",
+    "E136": "DEC2HEX($B$7:$B$8)",
+    "I136": "SUM(_xlfn.ANCHORARRAY(E136))",
+    "E142": "DEC2HEX($B$7:$B$8)",
+    "I142": "SUM(_xlfn.ANCHORARRAY(E142))",
+    "E148": "DEC2HEX($B$7:$B$8)",
+    "I148": "SUM(_xlfn.ANCHORARRAY(E148))",
+    "E154": "DEC2HEX({15,16})",
+    "I154": "SUM(_xlfn.ANCHORARRAY(E154))",
+    "E160": "DEC2HEX({255,16},4)",
+    "I160": "SUM(_xlfn.ANCHORARRAY(E160))"
+  },
+  "cells": {
+    "A1": {
+      "expected": "one-argument integer 0",
+      "dataType": "text",
+      "rawValue": "0",
+      "cellAttributes": {
+        "r": "A1",
+        "t": "s"
+      }
+    },
+    "B1": {
+      "expected": 255.0,
+      "dataType": "number",
+      "rawValue": "255",
+      "cellAttributes": {
+        "r": "B1"
+      }
+    },
+    "E1": {
+      "expected": "0",
+      "dataType": "text",
+      "rawValue": "0",
+      "cellAttributes": {
+        "r": "E1",
+        "t": "str"
+      },
+      "formula": "DEC2HEX(0)",
+      "formulaAttributes": {}
+    },
+    "F1": {
+      "expected": 1.0,
+      "dataType": "number",
+      "rawValue": "1",
+      "cellAttributes": {
+        "r": "F1"
+      },
+      "formula": "LEN(E1)",
+      "formulaAttributes": {}
+    },
+    "G1": {
+      "expected": true,
+      "dataType": "boolean",
+      "rawValue": "1",
+      "cellAttributes": {
+        "r": "G1",
+        "t": "b"
+      },
+      "formula": "ISTEXT(E1)",
+      "formulaAttributes": {}
+    },
+    "H1": {
+      "expected": "0:hex",
+      "dataType": "text",
+      "rawValue": "0:hex",
+      "cellAttributes": {
+        "r": "H1",
+        "t": "str"
+      },
+      "formula": "E1&\":hex\"",
+      "formulaAttributes": {}
+    },
+    "I1": {
+      "expected": 10.0,
+      "dataType": "number",
+      "rawValue": "10",
+      "cellAttributes": {
+        "r": "I1"
+      },
+      "formula": "VLOOKUP(E1,$N$1:$O$3,2,FALSE)",
+      "formulaAttributes": {}
+    },
+    "N1": {
+      "expected": "FF",
+      "dataType": "text",
+      "rawValue": "1",
+      "cellAttributes": {
+        "r": "N1",
+        "t": "s"
+      }
+    },
+    "O1": {
+      "expected": 42.0,
+      "dataType": "number",
+      "rawValue": "42",
+      "cellAttributes": {
+        "r": "O1"
+      }
+    },
+    "B2": {
+      "expected": 254.0,
+      "dataType": "number",
+      "rawValue": "254",
+      "cellAttributes": {
+        "r": "B2"
+      }
+    },
+    "N2": {
+      "expected": "0",
+      "dataType": "text",
+      "rawValue": "2",
+      "cellAttributes": {
+        "r": "N2",
+        "t": "s"
+      }
+    },
+    "O2": {
+      "expected": 10.0,
+      "dataType": "number",
+      "rawValue": "10",
+      "cellAttributes": {
+        "r": "O2"
+      }
+    },
+    "B3": {
+      "expected": "255",
+      "dataType": "text",
+      "rawValue": "3",
+      "cellAttributes": {
+        "r": "B3",
+        "t": "s"
+      }
+    },
+    "N3": {
+      "expected": "7FFFFFFF",
+      "dataType": "text",
+      "rawValue": "4",
+      "cellAttributes": {
+        "r": "N3",
+        "t": "s"
+      }
+    },
+    "O3": {
+      "expected": 99.0,
+      "dataType": "number",
+      "rawValue": "99",
+      "cellAttributes": {
+        "r": "O3"
+      }
+    },
+    "A4": {
+      "expected": "one-argument integer 1",
+      "dataType": "text",
+      "rawValue": "5",
+      "cellAttributes": {
+        "r": "A4",
+        "t": "s"
+      }
+    },
+    "B4": {
+      "expected": true,
+      "dataType": "boolean",
+      "rawValue": "1",
+      "cellAttributes": {
+        "r": "B4",
+        "t": "b"
+      }
+    },
+    "E4": {
+      "expected": "1",
+      "dataType": "text",
+      "rawValue": "1",
+      "cellAttributes": {
+        "r": "E4",
+        "t": "str"
+      },
+      "formula": "DEC2HEX(1)",
+      "formulaAttributes": {}
+    },
+    "F4": {
+      "expected": 1.0,
+      "dataType": "number",
+      "rawValue": "1",
+      "cellAttributes": {
+        "r": "F4"
+      },
+      "formula": "LEN(E4)",
+      "formulaAttributes": {}
+    },
+    "G4": {
+      "expected": true,
+      "dataType": "boolean",
+      "rawValue": "1",
+      "cellAttributes": {
+        "r": "G4",
+        "t": "b"
+      },
+      "formula": "ISTEXT(E4)",
+      "formulaAttributes": {}
+    },
+    "H4": {
+      "expected": "1:hex",
+      "dataType": "text",
+      "rawValue": "1:hex",
+      "cellAttributes": {
+        "r": "H4",
+        "t": "str"
+      },
+      "formula": "E4&\":hex\"",
+      "formulaAttributes": {}
+    },
+    "I4": {
+      "expected": "#N/A",
+      "dataType": "error",
+      "rawValue": "#N/A",
+      "cellAttributes": {
+        "r": "I4",
+        "t": "e"
+      },
+      "formula": "VLOOKUP(E4,$N$1:$O$3,2,FALSE)",
+      "formulaAttributes": {}
+    },
+    "B6": {
+      "expected": "#N/A",
+      "dataType": "error",
+      "rawValue": "#N/A",
+      "cellAttributes": {
+        "r": "B6",
+        "t": "e"
+      }
+    },
+    "A7": {
+      "expected": "one-argument integer 15",
+      "dataType": "text",
+      "rawValue": "6",
+      "cellAttributes": {
+        "r": "A7",
+        "t": "s"
+      }
+    },
+    "B7": {
+      "expected": 15.0,
+      "dataType": "number",
+      "rawValue": "15",
+      "cellAttributes": {
+        "r": "B7"
+      }
+    },
+    "E7": {
+      "expected": "F",
+      "dataType": "text",
+      "rawValue": "F",
+      "cellAttributes": {
+        "r": "E7",
+        "t": "str"
+      },
+      "formula": "DEC2HEX(15)",
+      "formulaAttributes": {}
+    },
+    "F7": {
+      "expected": 1.0,
+      "dataType": "number",
+      "rawValue": "1",
+      "cellAttributes": {
+        "r": "F7"
+      },
+      "formula": "LEN(E7)",
+      "formulaAttributes": {}
+    },
+    "G7": {
+      "expected": true,
+      "dataType": "boolean",
+      "rawValue": "1",
+      "cellAttributes": {
+        "r": "G7",
+        "t": "b"
+      },
+      "formula": "ISTEXT(E7)",
+      "formulaAttributes": {}
+    },
+    "H7": {
+      "expected": "F:hex",
+      "dataType": "text",
+      "rawValue": "F:hex",
+      "cellAttributes": {
+        "r": "H7",
+        "t": "str"
+      },
+      "formula": "E7&\":hex\"",
+      "formulaAttributes": {}
+    },
+    "I7": {
+      "expected": "#N/A",
+      "dataType": "error",
+      "rawValue": "#N/A",
+      "cellAttributes": {
+        "r": "I7",
+        "t": "e"
+      },
+      "formula": "VLOOKUP(E7,$N$1:$O$3,2,FALSE)",
+      "formulaAttributes": {}
+    },
+    "B8": {
+      "expected": 16.0,
+      "dataType": "number",
+      "rawValue": "16",
+      "cellAttributes": {
+        "r": "B8"
+      }
+    },
+    "A10": {
+      "expected": "one-argument integer 16",
+      "dataType": "text",
+      "rawValue": "7",
+      "cellAttributes": {
+        "r": "A10",
+        "t": "s"
+      }
+    },
+    "E10": {
+      "expected": "10",
+      "dataType": "text",
+      "rawValue": "10",
+      "cellAttributes": {
+        "r": "E10",
+        "t": "str"
+      },
+      "formula": "DEC2HEX(16)",
+      "formulaAttributes": {}
+    },
+    "F10": {
+      "expected": 2.0,
+      "dataType": "number",
+      "rawValue": "2",
+      "cellAttributes": {
+        "r": "F10"
+      },
+      "formula": "LEN(E10)",
+      "formulaAttributes": {}
+    },
+    "G10": {
+      "expected": true,
+      "dataType": "boolean",
+      "rawValue": "1",
+      "cellAttributes": {
+        "r": "G10",
+        "t": "b"
+      },
+      "formula": "ISTEXT(E10)",
+      "formulaAttributes": {}
+    },
+    "H10": {
+      "expected": "10:hex",
+      "dataType": "text",
+      "rawValue": "10:hex",
+      "cellAttributes": {
+        "r": "H10",
+        "t": "str"
+      },
+      "formula": "E10&\":hex\"",
+      "formulaAttributes": {}
+    },
+    "I10": {
+      "expected": "#N/A",
+      "dataType": "error",
+      "rawValue": "#N/A",
+      "cellAttributes": {
+        "r": "I10",
+        "t": "e"
+      },
+      "formula": "VLOOKUP(E10,$N$1:$O$3,2,FALSE)",
+      "formulaAttributes": {}
+    },
+    "A13": {
+      "expected": "one-argument integer 255",
+      "dataType": "text",
+      "rawValue": "8",
+      "cellAttributes": {
+        "r": "A13",
+        "t": "s"
+      }
+    },
+    "E13": {
+      "expected": "FF",
+      "dataType": "text",
+      "rawValue": "FF",
+      "cellAttributes": {
+        "r": "E13",
+        "t": "str"
+      },
+      "formula": "DEC2HEX(255)",
+      "formulaAttributes": {}
+    },
+    "F13": {
+      "expected": 2.0,
+      "dataType": "number",
+      "rawValue": "2",
+      "cellAttributes": {
+        "r": "F13"
+      },
+      "formula": "LEN(E13)",
+      "formulaAttributes": {}
+    },
+    "G13": {
+      "expected": true,
+      "dataType": "boolean",
+      "rawValue": "1",
+      "cellAttributes": {
+        "r": "G13",
+        "t": "b"
+      },
+      "formula": "ISTEXT(E13)",
+      "formulaAttributes": {}
+    },
+    "H13": {
+      "expected": "FF:hex",
+      "dataType": "text",
+      "rawValue": "FF:hex",
+      "cellAttributes": {
+        "r": "H13",
+        "t": "str"
+      },
+      "formula": "E13&\":hex\"",
+      "formulaAttributes": {}
+    },
+    "I13": {
+      "expected": 42.0,
+      "dataType": "number",
+      "rawValue": "42",
+      "cellAttributes": {
+        "r": "I13"
+      },
+      "formula": "VLOOKUP(E13,$N$1:$O$3,2,FALSE)",
+      "formulaAttributes": {}
+    },
+    "A16": {
+      "expected": "one-argument integer 2147483647",
+      "dataType": "text",
+      "rawValue": "9",
+      "cellAttributes": {
+        "r": "A16",
+        "t": "s"
+      }
+    },
+    "E16": {
+      "expected": "7FFFFFFF",
+      "dataType": "text",
+      "rawValue": "7FFFFFFF",
+      "cellAttributes": {
+        "r": "E16",
+        "t": "str"
+      },
+      "formula": "DEC2HEX(2147483647)",
+      "formulaAttributes": {}
+    },
+    "F16": {
+      "expected": 8.0,
+      "dataType": "number",
+      "rawValue": "8",
+      "cellAttributes": {
+        "r": "F16"
+      },
+      "formula": "LEN(E16)",
+      "formulaAttributes": {}
+    },
+    "G16": {
+      "expected": true,
+      "dataType": "boolean",
+      "rawValue": "1",
+      "cellAttributes": {
+        "r": "G16",
+        "t": "b"
+      },
+      "formula": "ISTEXT(E16)",
+      "formulaAttributes": {}
+    },
+    "H16": {
+      "expected": "7FFFFFFF:hex",
+      "dataType": "text",
+      "rawValue": "7FFFFFFF:hex",
+      "cellAttributes": {
+        "r": "H16",
+        "t": "str"
+      },
+      "formula": "E16&\":hex\"",
+      "formulaAttributes": {}
+    },
+    "I16": {
+      "expected": 99.0,
+      "dataType": "number",
+      "rawValue": "99",
+      "cellAttributes": {
+        "r": "I16"
+      },
+      "formula": "VLOOKUP(E16,$N$1:$O$3,2,FALSE)",
+      "formulaAttributes": {}
+    },
+    "A19": {
+      "expected": "numeric reference",
+      "dataType": "text",
+      "rawValue": "10",
+      "cellAttributes": {
+        "r": "A19",
+        "t": "s"
+      }
+    },
+    "E19": {
+      "expected": "FF",
+      "dataType": "text",
+      "rawValue": "FF",
+      "cellAttributes": {
+        "r": "E19",
+        "t": "str"
+      },
+      "formula": "DEC2HEX($B$1)",
+      "formulaAttributes": {}
+    },
+    "A22": {
+      "expected": "numeric reference plus expression",
+      "dataType": "text",
+      "rawValue": "11",
+      "cellAttributes": {
+        "r": "A22",
+        "t": "s"
+      }
+    },
+    "E22": {
+      "expected": "FF",
+      "dataType": "text",
+      "rawValue": "FF",
+      "cellAttributes": {
+        "r": "E22",
+        "t": "str"
+      },
+      "formula": "DEC2HEX($B$2+1)",
+      "formulaAttributes": {}
+    },
+    "A25": {
+      "expected": "numeric expression",
+      "dataType": "text",
+      "rawValue": "12",
+      "cellAttributes": {
+        "r": "A25",
+        "t": "s"
+      }
+    },
+    "E25": {
+      "expected": "FF",
+      "dataType": "text",
+      "rawValue": "FF",
+      "cellAttributes": {
+        "r": "E25",
+        "t": "str"
+      },
+      "formula": "DEC2HEX(128+127)",
+      "formulaAttributes": {}
+    },
+    "A28": {
+      "expected": "negative number",
+      "dataType": "text",
+      "rawValue": "13",
+      "cellAttributes": {
+        "r": "A28",
+        "t": "s"
+      }
+    },
+    "E28": {
+      "expected": "FFFFFFFFFF",
+      "dataType": "text",
+      "rawValue": "FFFFFFFFFF",
+      "cellAttributes": {
+        "r": "E28",
+        "t": "str"
+      },
+      "formula": "DEC2HEX(-1)",
+      "formulaAttributes": {}
+    },
+    "A31": {
+      "expected": "fraction",
+      "dataType": "text",
+      "rawValue": "14",
+      "cellAttributes": {
+        "r": "A31",
+        "t": "s"
+      }
+    },
+    "E31": {
+      "expected": "1",
+      "dataType": "text",
+      "rawValue": "1",
+      "cellAttributes": {
+        "r": "E31",
+        "t": "str"
+      },
+      "formula": "DEC2HEX(1.5)",
+      "formulaAttributes": {}
+    },
+    "A34": {
+      "expected": "outside proposed native bound",
+      "dataType": "text",
+      "rawValue": "15",
+      "cellAttributes": {
+        "r": "A34",
+        "t": "s"
+      }
+    },
+    "E34": {
+      "expected": "80000000",
+      "dataType": "text",
+      "rawValue": "80000000",
+      "cellAttributes": {
+        "r": "E34",
+        "t": "str"
+      },
+      "formula": "DEC2HEX(2147483648)",
+      "formulaAttributes": {}
+    },
+    "A37": {
+      "expected": "Excel positive bound",
+      "dataType": "text",
+      "rawValue": "16",
+      "cellAttributes": {
+        "r": "A37",
+        "t": "s"
+      }
+    },
+    "E37": {
+      "expected": "7FFFFFFFFF",
+      "dataType": "text",
+      "rawValue": "7FFFFFFFFF",
+      "cellAttributes": {
+        "r": "E37",
+        "t": "str"
+      },
+      "formula": "DEC2HEX(549755813887)",
+      "formulaAttributes": {}
+    },
+    "A40": {
+      "expected": "above Excel positive bound",
+      "dataType": "text",
+      "rawValue": "17",
+      "cellAttributes": {
+        "r": "A40",
+        "t": "s"
+      }
+    },
+    "E40": {
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!",
+      "cellAttributes": {
+        "r": "E40",
+        "t": "e"
+      },
+      "formula": "DEC2HEX(549755813888)",
+      "formulaAttributes": {}
+    },
+    "A43": {
+      "expected": "optional places padding",
+      "dataType": "text",
+      "rawValue": "18",
+      "cellAttributes": {
+        "r": "A43",
+        "t": "s"
+      }
+    },
+    "E43": {
+      "expected": "00FF",
+      "dataType": "text",
+      "rawValue": "00FF",
+      "cellAttributes": {
+        "r": "E43",
+        "t": "str"
+      },
+      "formula": "DEC2HEX(255,4)",
+      "formulaAttributes": {}
+    },
+    "A46": {
+      "expected": "optional places too short",
+      "dataType": "text",
+      "rawValue": "19",
+      "cellAttributes": {
+        "r": "A46",
+        "t": "s"
+      }
+    },
+    "E46": {
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!",
+      "cellAttributes": {
+        "r": "E46",
+        "t": "e"
+      },
+      "formula": "DEC2HEX(255,1)",
+      "formulaAttributes": {}
+    },
+    "A49": {
+      "expected": "quoted numeric text",
+      "dataType": "text",
+      "rawValue": "20",
+      "cellAttributes": {
+        "r": "A49",
+        "t": "s"
+      }
+    },
+    "E49": {
+      "expected": "FF",
+      "dataType": "text",
+      "rawValue": "FF",
+      "cellAttributes": {
+        "r": "E49",
+        "t": "str"
+      },
+      "formula": "DEC2HEX(\"255\")",
+      "formulaAttributes": {}
+    },
+    "A52": {
+      "expected": "referenced numeric text",
+      "dataType": "text",
+      "rawValue": "21",
+      "cellAttributes": {
+        "r": "A52",
+        "t": "s"
+      }
+    },
+    "E52": {
+      "expected": "FF",
+      "dataType": "text",
+      "rawValue": "FF",
+      "cellAttributes": {
+        "r": "E52",
+        "t": "str"
+      },
+      "formula": "DEC2HEX($B$3)",
+      "formulaAttributes": {}
+    },
+    "A55": {
+      "expected": "literal boolean",
+      "dataType": "text",
+      "rawValue": "22",
+      "cellAttributes": {
+        "r": "A55",
+        "t": "s"
+      }
+    },
+    "E55": {
+      "expected": "#VALUE!",
+      "dataType": "error",
+      "rawValue": "#VALUE!",
+      "cellAttributes": {
+        "r": "E55",
+        "t": "e"
+      },
+      "formula": "DEC2HEX(TRUE)",
+      "formulaAttributes": {}
+    },
+    "A58": {
+      "expected": "referenced boolean",
+      "dataType": "text",
+      "rawValue": "23",
+      "cellAttributes": {
+        "r": "A58",
+        "t": "s"
+      }
+    },
+    "E58": {
+      "expected": "#VALUE!",
+      "dataType": "error",
+      "rawValue": "#VALUE!",
+      "cellAttributes": {
+        "r": "E58",
+        "t": "e"
+      },
+      "formula": "DEC2HEX($B$4)",
+      "formulaAttributes": {}
+    },
+    "A61": {
+      "expected": "referenced blank",
+      "dataType": "text",
+      "rawValue": "24",
+      "cellAttributes": {
+        "r": "A61",
+        "t": "s"
+      }
+    },
+    "E61": {
+      "expected": "0",
+      "dataType": "text",
+      "rawValue": "0",
+      "cellAttributes": {
+        "r": "E61",
+        "t": "str"
+      },
+      "formula": "DEC2HEX($B$5)",
+      "formulaAttributes": {}
+    },
+    "A64": {
+      "expected": "referenced error",
+      "dataType": "text",
+      "rawValue": "25",
+      "cellAttributes": {
+        "r": "A64",
+        "t": "s"
+      }
+    },
+    "E64": {
+      "expected": "#N/A",
+      "dataType": "error",
+      "rawValue": "#N/A",
+      "cellAttributes": {
+        "r": "E64",
+        "t": "e"
+      },
+      "formula": "DEC2HEX($B$6)",
+      "formulaAttributes": {}
+    },
+    "A67": {
+      "expected": "formula error input",
+      "dataType": "text",
+      "rawValue": "26",
+      "cellAttributes": {
+        "r": "A67",
+        "t": "s"
+      }
+    },
+    "E67": {
+      "expected": "#DIV/0!",
+      "dataType": "error",
+      "rawValue": "#DIV/0!",
+      "cellAttributes": {
+        "r": "E67",
+        "t": "e"
+      },
+      "formula": "DEC2HEX(1/0)",
+      "formulaAttributes": {}
+    },
+    "A70": {
+      "expected": "caught formula error",
+      "dataType": "text",
+      "rawValue": "27",
+      "cellAttributes": {
+        "r": "A70",
+        "t": "s"
+      }
+    },
+    "E70": {
+      "expected": "caught",
+      "dataType": "text",
+      "rawValue": "caught",
+      "cellAttributes": {
+        "r": "E70",
+        "t": "str"
+      },
+      "formula": "IFERROR(DEC2HEX(1/0),\"caught\")",
+      "formulaAttributes": {}
+    },
+    "A73": {
+      "expected": "negative input is not a missing-subset error",
+      "dataType": "text",
+      "rawValue": "28",
+      "cellAttributes": {
+        "r": "A73",
+        "t": "s"
+      }
+    },
+    "E73": {
+      "expected": "FFFFFFFFFF",
+      "dataType": "text",
+      "rawValue": "FFFFFFFFFF",
+      "cellAttributes": {
+        "r": "E73",
+        "t": "str"
+      },
+      "formula": "IFERROR(DEC2HEX(-1),\"incorrect-catch\")",
+      "formulaAttributes": {}
+    },
+    "A76": {
+      "expected": "native LEN expression dependent",
+      "dataType": "text",
+      "rawValue": "29",
+      "cellAttributes": {
+        "r": "A76",
+        "t": "s"
+      }
+    },
+    "E76": {
+      "expected": 2.0,
+      "dataType": "number",
+      "rawValue": "2",
+      "cellAttributes": {
+        "r": "E76"
+      },
+      "formula": "LEN(DEC2HEX(255))",
+      "formulaAttributes": {}
+    },
+    "A79": {
+      "expected": "native ISTEXT expression dependent",
+      "dataType": "text",
+      "rawValue": "30",
+      "cellAttributes": {
+        "r": "A79",
+        "t": "s"
+      }
+    },
+    "E79": {
+      "expected": true,
+      "dataType": "boolean",
+      "rawValue": "1",
+      "cellAttributes": {
+        "r": "E79",
+        "t": "b"
+      },
+      "formula": "ISTEXT(DEC2HEX(255))",
+      "formulaAttributes": {}
+    },
+    "A82": {
+      "expected": "native concatenation expression dependent",
+      "dataType": "text",
+      "rawValue": "31",
+      "cellAttributes": {
+        "r": "A82",
+        "t": "s"
+      }
+    },
+    "E82": {
+      "expected": "FF:hex",
+      "dataType": "text",
+      "rawValue": "FF:hex",
+      "cellAttributes": {
+        "r": "E82",
+        "t": "str"
+      },
+      "formula": "DEC2HEX(255)&\":hex\"",
+      "formulaAttributes": {}
+    },
+    "A85": {
+      "expected": "compatibility VLOOKUP expression dependent",
+      "dataType": "text",
+      "rawValue": "32",
+      "cellAttributes": {
+        "r": "A85",
+        "t": "s"
+      }
+    },
+    "E85": {
+      "expected": 42.0,
+      "dataType": "number",
+      "rawValue": "42",
+      "cellAttributes": {
+        "r": "E85"
+      },
+      "formula": "VLOOKUP(DEC2HEX($B$1),$N$1:$O$3,2,FALSE)",
+      "formulaAttributes": {}
+    },
+    "A88": {
+      "expected": "LEN reference dependent",
+      "dataType": "text",
+      "rawValue": "33",
+      "cellAttributes": {
+        "r": "A88",
+        "t": "s"
+      }
+    },
+    "E88": {
+      "expected": 2.0,
+      "dataType": "number",
+      "rawValue": "2",
+      "cellAttributes": {
+        "r": "E88"
+      },
+      "formula": "LEN(E13)",
+      "formulaAttributes": {}
+    },
+    "A91": {
+      "expected": "ISTEXT reference dependent",
+      "dataType": "text",
+      "rawValue": "34",
+      "cellAttributes": {
+        "r": "A91",
+        "t": "s"
+      }
+    },
+    "E91": {
+      "expected": true,
+      "dataType": "boolean",
+      "rawValue": "1",
+      "cellAttributes": {
+        "r": "E91",
+        "t": "b"
+      },
+      "formula": "ISTEXT(E13)",
+      "formulaAttributes": {}
+    },
+    "A94": {
+      "expected": "concatenation reference dependent",
+      "dataType": "text",
+      "rawValue": "35",
+      "cellAttributes": {
+        "r": "A94",
+        "t": "s"
+      }
+    },
+    "E94": {
+      "expected": "FF:hex",
+      "dataType": "text",
+      "rawValue": "FF:hex",
+      "cellAttributes": {
+        "r": "E94",
+        "t": "str"
+      },
+      "formula": "E13&\":hex\"",
+      "formulaAttributes": {}
+    },
+    "A97": {
+      "expected": "inactive fractional branch",
+      "dataType": "text",
+      "rawValue": "36",
+      "cellAttributes": {
+        "r": "A97",
+        "t": "s"
+      }
+    },
+    "E97": {
+      "expected": "FF",
+      "dataType": "text",
+      "rawValue": "FF",
+      "cellAttributes": {
+        "r": "E97",
+        "t": "str"
+      },
+      "formula": "IF(TRUE,DEC2HEX(255),DEC2HEX(1.5))",
+      "formulaAttributes": {}
+    },
+    "A100": {
+      "expected": "selected qualified branch",
+      "dataType": "text",
+      "rawValue": "37",
+      "cellAttributes": {
+        "r": "A100",
+        "t": "s"
+      }
+    },
+    "E100": {
+      "expected": "FF",
+      "dataType": "text",
+      "rawValue": "FF",
+      "cellAttributes": {
+        "r": "E100",
+        "t": "str"
+      },
+      "formula": "IF(FALSE,DEC2HEX(1.5),DEC2HEX(255))",
+      "formulaAttributes": {}
+    },
+    "A103": {
+      "expected": "qualified result through IFERROR",
+      "dataType": "text",
+      "rawValue": "38",
+      "cellAttributes": {
+        "r": "A103",
+        "t": "s"
+      }
+    },
+    "E103": {
+      "expected": "FF",
+      "dataType": "text",
+      "rawValue": "FF",
+      "cellAttributes": {
+        "r": "E103",
+        "t": "str"
+      },
+      "formula": "IFERROR(DEC2HEX(255),\"caught\")",
+      "formulaAttributes": {}
+    },
+    "A106": {
+      "expected": "negative zero",
+      "dataType": "text",
+      "rawValue": "39",
+      "cellAttributes": {
+        "r": "A106",
+        "t": "s"
+      }
+    },
+    "E106": {
+      "expected": "0",
+      "dataType": "text",
+      "rawValue": "0",
+      "cellAttributes": {
+        "r": "E106",
+        "t": "str"
+      },
+      "formula": "DEC2HEX(0)",
+      "formulaAttributes": {}
+    },
+    "A109": {
+      "expected": "positive unary input",
+      "dataType": "text",
+      "rawValue": "40",
+      "cellAttributes": {
+        "r": "A109",
+        "t": "s"
+      }
+    },
+    "E109": {
+      "expected": "1",
+      "dataType": "text",
+      "rawValue": "1",
+      "cellAttributes": {
+        "r": "E109",
+        "t": "str"
+      },
+      "formula": "DEC2HEX(1)",
+      "formulaAttributes": {}
+    },
+    "A112": {
+      "expected": "invalid text",
+      "dataType": "text",
+      "rawValue": "41",
+      "cellAttributes": {
+        "r": "A112",
+        "t": "s"
+      }
+    },
+    "E112": {
+      "expected": "#VALUE!",
+      "dataType": "error",
+      "rawValue": "#VALUE!",
+      "cellAttributes": {
+        "r": "E112",
+        "t": "e"
+      },
+      "formula": "DEC2HEX(\"not-a-number\")",
+      "formulaAttributes": {}
+    },
+    "A115": {
+      "expected": "zero places",
+      "dataType": "text",
+      "rawValue": "42",
+      "cellAttributes": {
+        "r": "A115",
+        "t": "s"
+      }
+    },
+    "E115": {
+      "expected": "#NUM!",
+      "dataType": "error",
+      "rawValue": "#NUM!",
+      "cellAttributes": {
+        "r": "E115",
+        "t": "e"
+      },
+      "formula": "DEC2HEX(255,0)",
+      "formulaAttributes": {}
+    },
+    "A118": {
+      "expected": "static numeric defined name",
+      "dataType": "text",
+      "rawValue": "43",
+      "cellAttributes": {
+        "r": "A118",
+        "t": "s"
+      }
+    },
+    "E118": {
+      "expected": "FF",
+      "dataType": "text",
+      "rawValue": "FF",
+      "cellAttributes": {
+        "r": "E118",
+        "t": "str"
+      },
+      "formula": "DEC2HEX(InputNumber)",
+      "formulaAttributes": {}
+    },
+    "A124": {
+      "expected": "vertical numeric range with free destination",
+      "dataType": "text",
+      "rawValue": "44",
+      "cellAttributes": {
+        "r": "A124",
+        "t": "s"
+      }
+    },
+    "E124": {
+      "expected": "#VALUE!",
+      "dataType": "error",
+      "rawValue": "#VALUE!",
+      "cellAttributes": {
+        "r": "E124",
+        "t": "e",
+        "cm": "1"
+      },
+      "formula": "DEC2HEX($B$7:$B$8)",
+      "formulaAttributes": {
+        "t": "array",
+        "ref": "E124"
+      }
+    },
+    "I124": {
+      "expected": "#VALUE!",
+      "dataType": "error",
+      "rawValue": "#VALUE!",
+      "cellAttributes": {
+        "r": "I124",
+        "t": "e",
+        "cm": "1"
+      },
+      "formula": "SUM(_xlfn.ANCHORARRAY(E124))",
+      "formulaAttributes": {
+        "t": "array",
+        "ref": "I124"
+      }
+    },
+    "A130": {
+      "expected": "horizontal array with free destination",
+      "dataType": "text",
+      "rawValue": "45",
+      "cellAttributes": {
+        "r": "A130",
+        "t": "s"
+      }
+    },
+    "E130": {
+      "expected": "1",
+      "dataType": "text",
+      "rawValue": "1",
+      "cellAttributes": {
+        "r": "E130",
+        "t": "str",
+        "cm": "1"
+      },
+      "formula": "DEC2HEX({1,2})",
+      "formulaAttributes": {
+        "t": "array",
+        "ref": "E130:F130"
+      }
+    },
+    "F130": {
+      "expected": "2",
+      "dataType": "text",
+      "rawValue": "2",
+      "cellAttributes": {
+        "r": "F130",
+        "t": "str"
+      }
+    },
+    "I130": {
+      "expected": 0.0,
+      "dataType": "number",
+      "rawValue": "0",
+      "cellAttributes": {
+        "r": "I130",
+        "cm": "1"
+      },
+      "formula": "SUM(_xlfn.ANCHORARRAY(E130))",
+      "formulaAttributes": {
+        "t": "array",
+        "ref": "I130"
+      }
+    },
+    "A136": {
+      "expected": "vertical range with literal blocker",
+      "dataType": "text",
+      "rawValue": "46",
+      "cellAttributes": {
+        "r": "A136",
+        "t": "s"
+      }
+    },
+    "E136": {
+      "expected": "#VALUE!",
+      "dataType": "error",
+      "rawValue": "#VALUE!",
+      "cellAttributes": {
+        "r": "E136",
+        "t": "e",
+        "cm": "1"
+      },
+      "formula": "DEC2HEX($B$7:$B$8)",
+      "formulaAttributes": {
+        "t": "array",
+        "ref": "E136"
+      }
+    },
+    "I136": {
+      "expected": "#VALUE!",
+      "dataType": "error",
+      "rawValue": "#VALUE!",
+      "cellAttributes": {
+        "r": "I136",
+        "t": "e",
+        "cm": "1"
+      },
+      "formula": "SUM(_xlfn.ANCHORARRAY(E136))",
+      "formulaAttributes": {
+        "t": "array",
+        "ref": "I136"
+      }
+    },
+    "E137": {
+      "expected": "occupied",
+      "dataType": "text",
+      "rawValue": "47",
+      "cellAttributes": {
+        "r": "E137",
+        "t": "s"
+      }
+    },
+    "A142": {
+      "expected": "vertical range with styled blank destination",
+      "dataType": "text",
+      "rawValue": "48",
+      "cellAttributes": {
+        "r": "A142",
+        "t": "s"
+      }
+    },
+    "E142": {
+      "expected": "#VALUE!",
+      "dataType": "error",
+      "rawValue": "#VALUE!",
+      "cellAttributes": {
+        "r": "E142",
+        "t": "e",
+        "cm": "1"
+      },
+      "formula": "DEC2HEX($B$7:$B$8)",
+      "formulaAttributes": {
+        "t": "array",
+        "ref": "E142"
+      }
+    },
+    "I142": {
+      "expected": "#VALUE!",
+      "dataType": "error",
+      "rawValue": "#VALUE!",
+      "cellAttributes": {
+        "r": "I142",
+        "t": "e",
+        "cm": "1"
+      },
+      "formula": "SUM(_xlfn.ANCHORARRAY(E142))",
+      "formulaAttributes": {
+        "t": "array",
+        "ref": "I142"
+      }
+    },
+    "E143": {
+      "expected": null,
+      "dataType": "blank",
+      "rawValue": null,
+      "cellAttributes": {
+        "r": "E143",
+        "s": "1"
+      }
+    },
+    "A148": {
+      "expected": "vertical range with zero blocker",
+      "dataType": "text",
+      "rawValue": "49",
+      "cellAttributes": {
+        "r": "A148",
+        "t": "s"
+      }
+    },
+    "E148": {
+      "expected": "#VALUE!",
+      "dataType": "error",
+      "rawValue": "#VALUE!",
+      "cellAttributes": {
+        "r": "E148",
+        "t": "e",
+        "cm": "1"
+      },
+      "formula": "DEC2HEX($B$7:$B$8)",
+      "formulaAttributes": {
+        "t": "array",
+        "ref": "E148"
+      }
+    },
+    "I148": {
+      "expected": "#VALUE!",
+      "dataType": "error",
+      "rawValue": "#VALUE!",
+      "cellAttributes": {
+        "r": "I148",
+        "t": "e",
+        "cm": "1"
+      },
+      "formula": "SUM(_xlfn.ANCHORARRAY(E148))",
+      "formulaAttributes": {
+        "t": "array",
+        "ref": "I148"
+      }
+    },
+    "E149": {
+      "expected": 0.0,
+      "dataType": "number",
+      "rawValue": "0",
+      "cellAttributes": {
+        "r": "E149"
+      }
+    },
+    "A154": {
+      "expected": "horizontal array with merged destination",
+      "dataType": "text",
+      "rawValue": "50",
+      "cellAttributes": {
+        "r": "A154",
+        "t": "s"
+      }
+    },
+    "E154": {
+      "expected": "#SPILL!",
+      "dataType": "error",
+      "rawValue": "#VALUE!",
+      "cellAttributes": {
+        "r": "E154",
+        "t": "e",
+        "cm": "1",
+        "vm": "1"
+      },
+      "formula": "DEC2HEX({15,16})",
+      "formulaAttributes": {
+        "t": "array",
+        "aca": "1",
+        "ref": "E154",
+        "ca": "1"
+      },
+      "richError": {
+        "colOffset": 1,
+        "errorType": 8,
+        "rwOffset": 0,
+        "subType": 6
+      },
+      "rawCachedValue": "#VALUE!",
+      "semanticStatus": "qualified-rich-error"
+    },
+    "F154": {
+      "expected": null,
+      "dataType": "blank",
+      "rawValue": null,
+      "cellAttributes": {
+        "r": "F154",
+        "s": "2"
+      }
+    },
+    "G154": {
+      "expected": null,
+      "dataType": "blank",
+      "rawValue": null,
+      "cellAttributes": {
+        "r": "G154",
+        "s": "2"
+      }
+    },
+    "I154": {
+      "expected": "#SPILL!",
+      "dataType": "error",
+      "rawValue": "#VALUE!",
+      "cellAttributes": {
+        "r": "I154",
+        "t": "e",
+        "cm": "1",
+        "vm": "2"
+      },
+      "formula": "SUM(_xlfn.ANCHORARRAY(E154))",
+      "formulaAttributes": {
+        "t": "array",
+        "aca": "1",
+        "ref": "I154",
+        "ca": "1"
+      },
+      "richError": {
+        "errorType": 8,
+        "propagated": 1
+      },
+      "rawCachedValue": "#VALUE!",
+      "semanticStatus": "qualified-rich-error"
+    },
+    "A160": {
+      "expected": "horizontal padded array with free destination",
+      "dataType": "text",
+      "rawValue": "51",
+      "cellAttributes": {
+        "r": "A160",
+        "t": "s"
+      }
+    },
+    "E160": {
+      "expected": "00FF",
+      "dataType": "text",
+      "rawValue": "00FF",
+      "cellAttributes": {
+        "r": "E160",
+        "t": "str",
+        "cm": "1"
+      },
+      "formula": "DEC2HEX({255,16},4)",
+      "formulaAttributes": {
+        "t": "array",
+        "ref": "E160:F160"
+      }
+    },
+    "F160": {
+      "expected": "0010",
+      "dataType": "text",
+      "rawValue": "0010",
+      "cellAttributes": {
+        "r": "F160",
+        "t": "str"
+      }
+    },
+    "I160": {
+      "expected": 0.0,
+      "dataType": "number",
+      "rawValue": "0",
+      "cellAttributes": {
+        "r": "I160",
+        "cm": "1"
+      },
+      "formula": "SUM(_xlfn.ANCHORARRAY(E160))",
+      "formulaAttributes": {
+        "t": "array",
+        "ref": "I160"
+      }
+    }
+  },
+  "metadata": {
+    "xl/metadata.xml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\r\n<metadata xmlns=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\" xmlns:xlrd=\"http://schemas.microsoft.com/office/spreadsheetml/2017/richdata\" xmlns:xda=\"http://schemas.microsoft.com/office/spreadsheetml/2017/dynamicarray\"><metadataTypes count=\"2\"><metadataType name=\"XLDAPR\" minSupportedVersion=\"120000\" copy=\"1\" pasteAll=\"1\" pasteValues=\"1\" merge=\"1\" splitFirst=\"1\" rowColShift=\"1\" clearFormats=\"1\" clearComments=\"1\" assign=\"1\" coerce=\"1\" cellMeta=\"1\"/><metadataType name=\"XLRICHVALUE\" minSupportedVersion=\"120000\" copy=\"1\" pasteAll=\"1\" pasteValues=\"1\" merge=\"1\" splitFirst=\"1\" rowColShift=\"1\" clearFormats=\"1\" clearComments=\"1\" assign=\"1\" coerce=\"1\"/></metadataTypes><futureMetadata name=\"XLDAPR\" count=\"1\"><bk><extLst><ext uri=\"{bdbb8cdc-fa1e-496e-a857-3c3f30c029c3}\"><xda:dynamicArrayProperties fDynamic=\"1\" fCollapsed=\"0\"/></ext></extLst></bk></futureMetadata><futureMetadata name=\"XLRICHVALUE\" count=\"2\"><bk><extLst><ext uri=\"{3e2802c4-a4d2-4d8b-9148-e3be6c30e623}\"><xlrd:rvb i=\"0\"/></ext></extLst></bk><bk><extLst><ext uri=\"{3e2802c4-a4d2-4d8b-9148-e3be6c30e623}\"><xlrd:rvb i=\"1\"/></ext></extLst></bk></futureMetadata><cellMetadata count=\"1\"><bk><rc t=\"1\" v=\"0\"/></bk></cellMetadata><valueMetadata count=\"2\"><bk><rc t=\"2\" v=\"0\"/></bk><bk><rc t=\"2\" v=\"1\"/></bk></valueMetadata></metadata>",
+    "xl/richData/rdrichvalue.xml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\r\n<rvData xmlns=\"http://schemas.microsoft.com/office/spreadsheetml/2017/richdata\" count=\"2\"><rv s=\"0\"><v>1</v><v>8</v><v>0</v><v>6</v></rv><rv s=\"1\"><v>8</v><v>1</v></rv></rvData>",
+    "xl/richData/rdrichvaluestructure.xml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\r\n<rvStructures xmlns=\"http://schemas.microsoft.com/office/spreadsheetml/2017/richdata\" count=\"2\"><s t=\"_error\"><k n=\"colOffset\" t=\"i\"/><k n=\"errorType\" t=\"i\"/><k n=\"rwOffset\" t=\"i\"/><k n=\"subType\" t=\"i\"/></s><s t=\"_error\"><k n=\"errorType\" t=\"i\"/><k n=\"propagated\" t=\"b\"/></s></rvStructures>",
+    "xl/richData/rdRichValueTypes.xml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\r\n<rvTypesInfo xmlns=\"http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" mc:Ignorable=\"x\" xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\"><global><keyFlags><key name=\"_Self\"><flag name=\"ExcludeFromFile\" value=\"1\"/><flag name=\"ExcludeFromCalcComparison\" value=\"1\"/></key><key name=\"_DisplayString\"><flag name=\"ExcludeFromCalcComparison\" value=\"1\"/></key><key name=\"_Flags\"><flag name=\"ExcludeFromCalcComparison\" value=\"1\"/></key><key name=\"_Format\"><flag name=\"ExcludeFromCalcComparison\" value=\"1\"/></key><key name=\"_SubLabel\"><flag name=\"ExcludeFromCalcComparison\" value=\"1\"/></key><key name=\"_Attribution\"><flag name=\"ExcludeFromCalcComparison\" value=\"1\"/></key><key name=\"_Icon\"><flag name=\"ExcludeFromCalcComparison\" value=\"1\"/></key><key name=\"_Display\"><flag name=\"ExcludeFromCalcComparison\" value=\"1\"/></key><key name=\"_CanonicalPropertyNames\"><flag name=\"ExcludeFromCalcComparison\" value=\"1\"/></key><key name=\"_ClassificationId\"><flag name=\"ExcludeFromCalcComparison\" value=\"1\"/></key></keyFlags></global></rvTypesInfo>"
+  },
+  "specificationSources": [
+    "https://learn.microsoft.com/en-us/openspecs/office_standards/ms-xlsx/7a27b5fb-48a8-4a1c-b67a-2ca5edc07514",
+    "https://learn.microsoft.com/en-us/openspecs/office_standards/ms-xlsx/1d44a793-c90a-47da-8943-08802dfad1fd"
+  ],
+  "merges": [
+    "F154:G154"
+  ],
+  "labels": {
+    "A1": "one-argument integer 0",
+    "A4": "one-argument integer 1",
+    "A7": "one-argument integer 15",
+    "A10": "one-argument integer 16",
+    "A13": "one-argument integer 255",
+    "A16": "one-argument integer 2147483647",
+    "A19": "numeric reference",
+    "A22": "numeric reference plus expression",
+    "A25": "numeric expression",
+    "A28": "negative number",
+    "A31": "fraction",
+    "A34": "outside proposed native bound",
+    "A37": "Excel positive bound",
+    "A40": "above Excel positive bound",
+    "A43": "optional places padding",
+    "A46": "optional places too short",
+    "A49": "quoted numeric text",
+    "A52": "referenced numeric text",
+    "A55": "literal boolean",
+    "A58": "referenced boolean",
+    "A61": "referenced blank",
+    "A64": "referenced error",
+    "A67": "formula error input",
+    "A70": "caught formula error",
+    "A73": "negative input is not a missing-subset error",
+    "A76": "native LEN expression dependent",
+    "A79": "native ISTEXT expression dependent",
+    "A82": "native concatenation expression dependent",
+    "A85": "compatibility VLOOKUP expression dependent",
+    "A88": "LEN reference dependent",
+    "A91": "ISTEXT reference dependent",
+    "A94": "concatenation reference dependent",
+    "A97": "inactive fractional branch",
+    "A100": "selected qualified branch",
+    "A103": "qualified result through IFERROR",
+    "A106": "negative zero",
+    "A109": "positive unary input",
+    "A112": "invalid text",
+    "A115": "zero places",
+    "A118": "static numeric defined name",
+    "A124": "vertical numeric range with free destination",
+    "A130": "horizontal array with free destination",
+    "A136": "vertical range with literal blocker",
+    "A142": "vertical range with styled blank destination",
+    "A148": "vertical range with zero blocker",
+    "A154": "horizontal array with merged destination",
+    "A160": "horizontal padded array with free destination"
+  },
+  "sourceArrayMasters": [
+    "E124",
+    "I124",
+    "E130",
+    "I130",
+    "E136",
+    "I136",
+    "E142",
+    "I142",
+    "E148",
+    "I148",
+    "E154",
+    "I154",
+    "E160",
+    "I160"
+  ],
+  "savedFormulas": {
+    "E1": "DEC2HEX(0)",
+    "F1": "LEN(E1)",
+    "G1": "ISTEXT(E1)",
+    "H1": "E1&\":hex\"",
+    "I1": "VLOOKUP(E1,$N$1:$O$3,2,FALSE)",
+    "E4": "DEC2HEX(1)",
+    "F4": "LEN(E4)",
+    "G4": "ISTEXT(E4)",
+    "H4": "E4&\":hex\"",
+    "I4": "VLOOKUP(E4,$N$1:$O$3,2,FALSE)",
+    "E7": "DEC2HEX(15)",
+    "F7": "LEN(E7)",
+    "G7": "ISTEXT(E7)",
+    "H7": "E7&\":hex\"",
+    "I7": "VLOOKUP(E7,$N$1:$O$3,2,FALSE)",
+    "E10": "DEC2HEX(16)",
+    "F10": "LEN(E10)",
+    "G10": "ISTEXT(E10)",
+    "H10": "E10&\":hex\"",
+    "I10": "VLOOKUP(E10,$N$1:$O$3,2,FALSE)",
+    "E13": "DEC2HEX(255)",
+    "F13": "LEN(E13)",
+    "G13": "ISTEXT(E13)",
+    "H13": "E13&\":hex\"",
+    "I13": "VLOOKUP(E13,$N$1:$O$3,2,FALSE)",
+    "E16": "DEC2HEX(2147483647)",
+    "F16": "LEN(E16)",
+    "G16": "ISTEXT(E16)",
+    "H16": "E16&\":hex\"",
+    "I16": "VLOOKUP(E16,$N$1:$O$3,2,FALSE)",
+    "E19": "DEC2HEX($B$1)",
+    "E22": "DEC2HEX($B$2+1)",
+    "E25": "DEC2HEX(128+127)",
+    "E28": "DEC2HEX(-1)",
+    "E31": "DEC2HEX(1.5)",
+    "E34": "DEC2HEX(2147483648)",
+    "E37": "DEC2HEX(549755813887)",
+    "E40": "DEC2HEX(549755813888)",
+    "E43": "DEC2HEX(255,4)",
+    "E46": "DEC2HEX(255,1)",
+    "E49": "DEC2HEX(\"255\")",
+    "E52": "DEC2HEX($B$3)",
+    "E55": "DEC2HEX(TRUE)",
+    "E58": "DEC2HEX($B$4)",
+    "E61": "DEC2HEX($B$5)",
+    "E64": "DEC2HEX($B$6)",
+    "E67": "DEC2HEX(1/0)",
+    "E70": "IFERROR(DEC2HEX(1/0),\"caught\")",
+    "E73": "IFERROR(DEC2HEX(-1),\"incorrect-catch\")",
+    "E76": "LEN(DEC2HEX(255))",
+    "E79": "ISTEXT(DEC2HEX(255))",
+    "E82": "DEC2HEX(255)&\":hex\"",
+    "E85": "VLOOKUP(DEC2HEX($B$1),$N$1:$O$3,2,FALSE)",
+    "E88": "LEN(E13)",
+    "E91": "ISTEXT(E13)",
+    "E94": "E13&\":hex\"",
+    "E97": "IF(TRUE,DEC2HEX(255),DEC2HEX(1.5))",
+    "E100": "IF(FALSE,DEC2HEX(1.5),DEC2HEX(255))",
+    "E103": "IFERROR(DEC2HEX(255),\"caught\")",
+    "E106": "DEC2HEX(0)",
+    "E109": "DEC2HEX(1)",
+    "E112": "DEC2HEX(\"not-a-number\")",
+    "E115": "DEC2HEX(255,0)",
+    "E118": "DEC2HEX(InputNumber)",
+    "E124": "DEC2HEX($B$7:$B$8)",
+    "I124": "SUM(_xlfn.ANCHORARRAY(E124))",
+    "E130": "DEC2HEX({1,2})",
+    "I130": "SUM(_xlfn.ANCHORARRAY(E130))",
+    "E136": "DEC2HEX($B$7:$B$8)",
+    "I136": "SUM(_xlfn.ANCHORARRAY(E136))",
+    "E142": "DEC2HEX($B$7:$B$8)",
+    "I142": "SUM(_xlfn.ANCHORARRAY(E142))",
+    "E148": "DEC2HEX($B$7:$B$8)",
+    "I148": "SUM(_xlfn.ANCHORARRAY(E148))",
+    "E154": "DEC2HEX({15,16})",
+    "I154": "SUM(_xlfn.ANCHORARRAY(E154))",
+    "E160": "DEC2HEX({255,16},4)",
+    "I160": "SUM(_xlfn.ANCHORARRAY(E160))"
+  },
+  "formulaNormalizations": {
+    "E106": {
+      "authored": "DEC2HEX(-0)",
+      "saved": "DEC2HEX(0)"
+    },
+    "E109": {
+      "authored": "DEC2HEX(+1)",
+      "saved": "DEC2HEX(1)"
+    }
+  }
+}

@@ -1,0 +1,2205 @@
+.spreadsheet-editor {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+}
+.shared-file-editor.spreadsheet-expanded {
+  position: fixed;
+  inset: 8px;
+  z-index: 90;
+  background: var(--bg-panel, #fff);
+  border: 1px solid var(--border, #ddd);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 10px var(--bg, #fff),
+    0 12px 44px #0003;
+}
+.sheet-expanded-title {
+  margin-right: auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+  color: var(--text, #242a30);
+}
+.spreadsheet-expanded .shared-toolbar-status {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0 8px;
+  overflow: visible;
+  clip: auto;
+  font-size: 11px;
+  color: var(--text-dim, #68716e);
+}
+.sheet-ribbon-menu > div {
+  box-sizing: border-box;
+}
+.sheet-home-tab {
+  white-space: nowrap;
+  flex: none;
+}
+.sheet-ribbon-shell {
+  --sheet-accent: #217346;
+  flex: none;
+  min-width: 0;
+  font:
+    12px -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+  color: var(--text, #242a30);
+  background: var(--bg-panel, #fff);
+}
+[data-theme='dark'] .sheet-ribbon-shell {
+  --sheet-accent: #70c69a;
+}
+.sheet-quick-access {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  height: 34px;
+  padding: 0 10px;
+  border-bottom: 1px solid var(--border, #e0e3e6);
+}
+.sheet-history-tools {
+  display: flex;
+  gap: 3px;
+  padding-right: 10px;
+  border-right: 1px solid var(--border, #e0e3e6);
+}
+.sheet-quick-access button {
+  display: grid;
+  place-items: center;
+  width: 27px;
+  height: 26px;
+  padding: 3px;
+  border: 0;
+  border-radius: 4px;
+  color: inherit;
+  background: transparent;
+  cursor: pointer;
+}
+.sheet-quick-access button:hover:not(:disabled) {
+  background: var(--bg-hover, #edf1ee);
+}
+.sheet-quick-access button:disabled {
+  opacity: 0.35;
+}
+.sheet-home-tab {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  padding: 0 6px;
+  border-bottom: 3px solid var(--sheet-accent);
+  font-weight: 600;
+  color: var(--sheet-accent);
+}
+.sheet-quick-access [role='status'] {
+  margin-left: auto;
+  color: var(--text-dim, #68716e);
+  font-size: 11px;
+}
+.sheet-ribbon {
+  display: flex;
+  flex: none;
+  align-items: stretch;
+  min-height: 104px;
+  max-width: 100%;
+  padding: 4px 5px;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--border, #ddd);
+  background: var(--bg-raised, #f8f9fa);
+  scrollbar-width: thin;
+}
+.sheet-a11y-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.sheet-ribbon-group {
+  flex: none;
+  padding: 0 7px;
+  border-right: 1px solid var(--border, #ddd);
+}
+.sheet-ribbon-group:last-child {
+  border-right: 0;
+}
+.sheet-ribbon-group-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+  height: 100%;
+}
+.sheet-ribbon-group-content[hidden] {
+  display: none;
+}
+.sheet-ribbon-group-content > small {
+  color: var(--text-dim, #68716e);
+  text-align: center;
+  font-size: 10px;
+  line-height: 16px;
+}
+.sheet-ribbon-body {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 72px;
+}
+.sheet-ribbon-columns {
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  gap: 6px;
+}
+.sheet-ribbon-row {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  min-height: 28px;
+}
+.sheet-ribbon-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  gap: 0;
+}
+.sheet-ribbon-editing .sheet-ribbon-body.sheet-ribbon-stack {
+  display: grid;
+  grid-template-columns: max-content 64px 64px;
+  grid-template-rows: repeat(3, 27px);
+  align-content: center;
+  column-gap: 3px;
+}
+.sheet-ribbon-editing .sheet-ribbon-body > :nth-child(-n + 3) {
+  grid-column: 1;
+}
+.sheet-ribbon-editing .sheet-ribbon-body > :nth-child(4) {
+  grid-column: 2;
+  grid-row: 1 / 4;
+}
+.sheet-ribbon-editing .sheet-ribbon-body > :nth-child(5) {
+  grid-column: 3;
+  grid-row: 1 / 4;
+}
+.sheet-ribbon-editing .sheet-ribbon-body > :nth-child(n + 4) > summary {
+  flex-direction: column;
+  justify-content: center;
+  height: 81px;
+  box-sizing: border-box;
+  width: 64px;
+  gap: 3px;
+}
+.sheet-ribbon-editing .sheet-ribbon-body > :nth-child(n + 4) > summary span {
+  text-align: center;
+  white-space: normal;
+  line-height: 15px;
+}
+.sheet-ribbon-editing .sheet-ribbon-body > :nth-child(n + 4) > summary > svg:last-child {
+  margin-left: 0;
+}
+.sheet-ribbon button,
+.sheet-ribbon summary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 27px;
+  padding: 3px 5px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.sheet-ribbon svg {
+  flex: none;
+  stroke-width: 1.6;
+}
+.sheet-ribbon-stack > button,
+.sheet-ribbon-stack > details > summary {
+  justify-content: flex-start;
+}
+.sheet-ribbon summary > svg:last-child:not(:first-child) {
+  margin-left: auto;
+}
+.sheet-ribbon button:hover:not(:disabled),
+.sheet-ribbon summary:hover,
+.sheet-ribbon button.active,
+.sheet-ribbon details[open] > summary {
+  background: var(--bg-hover, #e9edeb);
+  border-color: var(--border, #d8dfe0);
+}
+.sheet-ribbon button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.sheet-ribbon button[aria-pressed='mixed'],
+.sheet-ribbon .sheet-color-control.mixed {
+  outline: 1px dashed var(--text-dim, #788296);
+  outline-offset: -3px;
+}
+.sheet-ribbon button[aria-pressed='true'] {
+  background: color-mix(in srgb, var(--sheet-accent) 12%, transparent);
+  border-color: color-mix(in srgb, var(--sheet-accent) 35%, transparent);
+}
+.sheet-ribbon select {
+  height: 28px;
+  min-width: 0;
+  padding: 2px 4px;
+  border-radius: 4px;
+  border: 1px solid var(--border, #ccd2d6);
+  background: var(--bg-panel, #fff);
+  color: inherit;
+  font: inherit;
+}
+.sheet-ribbon-font select[aria-label] {
+  max-width: 134px;
+}
+.sheet-ribbon-font .sheet-ribbon-row:first-child select:first-child {
+  width: 123px;
+}
+.sheet-ribbon-font .sheet-ribbon-row:first-child select:nth-child(2) {
+  width: 49px;
+}
+.sheet-ribbon-font .sheet-ribbon-row:nth-child(2) > button {
+  min-width: 28px;
+}
+.sheet-ribbon-font b,
+.sheet-ribbon-font i,
+.sheet-ribbon-font u {
+  font-size: 15px;
+}
+.sheet-color-control {
+  position: relative;
+  display: inline-flex;
+  flex: none;
+  justify-content: center;
+  align-items: flex-start;
+  width: 29px;
+  height: 28px;
+  padding: 3px 4px 7px;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.sheet-color-control:hover {
+  background: var(--bg-hover, #e9edeb);
+  border-color: var(--border, #d8dfe0);
+}
+.sheet-color-control:has(input:disabled) {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.sheet-color-control:focus-within {
+  outline: 2px solid var(--sheet-accent);
+  outline-offset: -1px;
+}
+.sheet-color-control input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  opacity: 0;
+  cursor: inherit;
+}
+.sheet-color-swatch {
+  position: absolute;
+  bottom: 2px;
+  left: 4px;
+  right: 4px;
+  height: 4px;
+  border: 1px solid #8884;
+}
+.sheet-font-color-letter {
+  font:
+    600 17px Georgia,
+    serif;
+  line-height: 17px;
+}
+.sheet-ribbon-number .sheet-ribbon-columns > select {
+  width: 155px;
+}
+.sheet-ribbon-number .sheet-ribbon-row {
+  justify-content: space-between;
+}
+.sheet-ribbon-number .sheet-ribbon-row button {
+  min-width: 25px;
+  font-size: 15px;
+}
+.sheet-ribbon-large {
+  flex-direction: column;
+  width: 49px;
+}
+.sheet-ribbon-paste {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sheet-ribbon-paste .sheet-ribbon-large {
+  min-height: 53px;
+  gap: 4px;
+}
+.sheet-ribbon-paste .sheet-ribbon-large svg {
+  color: #b7842d;
+}
+.sheet-ribbon-paste summary {
+  min-height: 18px;
+  width: 49px;
+  padding: 0;
+}
+.sheet-ribbon-alignment .sheet-ribbon-row > button:not(:last-child) {
+  width: 27px;
+  padding: 3px;
+}
+.sheet-ribbon-styles .sheet-ribbon-stack > details:nth-child(1) > summary > svg:first-child {
+  color: #ad6540;
+}
+.sheet-ribbon-styles .sheet-ribbon-stack > details:nth-child(2) > summary > svg:first-child {
+  color: #357dae;
+}
+.sheet-ribbon-styles .sheet-ribbon-stack > details:nth-child(3) > summary > svg:first-child {
+  color: #39845c;
+}
+.sheet-ribbon button:focus-visible,
+.sheet-ribbon summary:focus-visible,
+.sheet-quick-access button:focus-visible {
+  outline: 2px solid var(--sheet-accent);
+  outline-offset: -1px;
+}
+.sheet-ribbon-group.is-collapsed {
+  padding: 0 2px;
+}
+.sheet-ribbon .sheet-ribbon-group-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;
+  width: 61px;
+  min-height: 93px;
+  padding: 5px 2px;
+}
+.sheet-ribbon-group-toggle span {
+  font-size: 11px;
+}
+.sheet-ribbon-group-toggle[aria-expanded='true'] {
+  background: var(--bg-hover, #e9edeb);
+  border-color: var(--border, #d8dfe0);
+}
+.sheet-ribbon-group.is-collapsed > .sheet-ribbon-group-content:not([hidden]) {
+  position: fixed;
+  z-index: 110;
+  height: auto;
+  padding: 12px;
+  border: 1px solid var(--border, #d8dfe0);
+  border-radius: 7px;
+  background: var(--bg-panel, #fff);
+  box-shadow: 0 8px 28px #0002;
+  max-width: calc(100vw - 16px);
+}
+.sheet-ribbon-menu {
+  position: relative;
+}
+.sheet-ribbon-menu summary {
+  list-style: none;
+}
+.sheet-ribbon-menu summary::-webkit-details-marker {
+  display: none;
+}
+.sheet-ribbon-menu > div {
+  position: fixed;
+  z-index: 120;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 4px;
+  min-width: 195px;
+  max-width: min(320px, calc(100vw - 16px));
+  max-height: calc(100vh - 24px);
+  overflow-y: auto;
+  padding: 8px;
+  border: 1px solid var(--border, #ddd);
+  border-radius: 7px;
+  background: var(--bg-panel, #fff);
+  box-shadow: 0 8px 24px #0002;
+}
+.sheet-ribbon-menu > div button,
+.sheet-ribbon-menu > div label {
+  justify-content: flex-start;
+  text-align: left;
+}
+.sheet-ribbon-menu > div button {
+  min-height: 30px;
+}
+.sheet-ribbon-menu > div label {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 4px;
+  font-size: 11px;
+  margin: 3px 0;
+}
+.sheet-ribbon-menu > div label:has(input[type='checkbox']) {
+  flex-direction: row;
+  align-items: center;
+}
+.sheet-ribbon-menu > div select[multiple] {
+  height: auto;
+  min-height: 65px;
+}
+.sheet-ribbon-menu > div input:not([type='checkbox']) {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 27px;
+  border: 1px solid var(--border, #ccd2d6);
+  border-radius: 4px;
+  color: inherit;
+  background: var(--bg-panel, #fff);
+}
+.sheet-ribbon-menu > div small {
+  white-space: normal;
+  max-width: 240px;
+  line-height: 1.5;
+  color: var(--text-dim, #68716e);
+}
+.sheet-filter-values {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.sheet-filter-values > div {
+  max-height: 200px;
+  overflow-y: auto;
+}
+.sheet-filter-values label {
+  overflow-wrap: anywhere;
+}
+.sheet-style-sample {
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid #0001;
+}
+.sheet-style-sample.good {
+  color: #006100;
+  background: #c6efce;
+}
+.sheet-style-sample.bad {
+  color: #9c0006;
+  background: #ffc7ce;
+}
+.sheet-style-sample.heading {
+  color: #fff;
+  background: #244062;
+}
+.sheet-find {
+  display: flex;
+  flex: none;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 8px;
+  border-bottom: 1px solid var(--border, #ddd);
+  background: var(--bg-raised, #f7f8fa);
+  font-size: 11px;
+}
+.sheet-find input {
+  width: 140px;
+  min-width: 100px;
+}
+.sheet-find select {
+  max-width: 132px;
+}
+.sheet-find [role='status'] {
+  color: var(--text-dim, #788296);
+}
+.sheet-find-preview {
+  display: flex;
+  flex: 1 0 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 0;
+}
+.sheet-find-preview strong {
+  margin-right: 6px;
+}
+.sheet-find-preview button {
+  max-width: 230px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.sheet-grid-error {
+  padding: 5px 8px;
+  color: #8a3024;
+  background: #fff0ed;
+  font-size: 11px;
+}
+.sheet-special-status {
+  padding: 4px 8px;
+  border-bottom: 1px solid var(--border, #ddd);
+  background: var(--bg-raised, #f7f8fa);
+  color: var(--text-dim, #788296);
+  font-size: 11px;
+}
+.sheet-tabs {
+  display: flex;
+  align-items: center;
+  flex: none;
+  gap: 3px;
+  min-height: 28px;
+  padding: 2px 7px;
+  border-bottom: 1px solid var(--border, #ddd);
+  background: var(--bg-raised, #f7f8fa);
+}
+.sheet-tabs button {
+  border: 0;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  padding: 3px 9px;
+  font-size: 11px;
+}
+.sheet-tabs button.active {
+  border-bottom-color: var(--accent, #2878d0);
+  font-weight: 600;
+}
+.sheet-tabs select {
+  margin-left: auto;
+  max-width: 150px;
+  font-size: 11px;
+}
+.sheet-tab-action {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 8px;
+  border-bottom: 1px solid var(--border, #ddd);
+  background: var(--bg-raised, #f7f8fa);
+  font-size: 11px;
+}
+.sheet-tab-action label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.sheet-tab-action input {
+  width: 180px;
+  max-width: 35vw;
+}
+.sheet-limitations {
+  position: relative;
+  z-index: 7;
+  flex: none;
+  border-bottom: 1px solid color-mix(in srgb, #c99422 35%, var(--border, #ddd));
+  color: #795918;
+  background: #fff8e7;
+  font-size: 11px;
+}
+.sheet-limitations summary {
+  padding: 6px 11px;
+  cursor: pointer;
+}
+.sheet-limitations ul {
+  position: absolute;
+  top: 100%;
+  left: 8px;
+  right: 8px;
+  max-height: 180px;
+  overflow: auto;
+  margin: 0;
+  padding: 10px 12px 10px 30px;
+  border: 1px solid #e3c77e;
+  border-radius: 6px;
+  background: #fff8e7;
+  box-shadow: 0 8px 24px #0002;
+}
+.sheet-toolbar {
+  display: flex;
+  min-height: 34px;
+  padding: 3px 8px;
+  gap: 3px;
+  align-items: center;
+  border-bottom: 1px solid var(--border, #ddd);
+  font-size: 11px;
+  flex: none;
+  background: var(--bg-raised, #f7f8fa);
+}
+.sheet-toolbar button {
+  min-width: 27px;
+  min-height: 27px;
+  padding: 3px 7px;
+  border-color: transparent;
+  background: transparent;
+}
+.sheet-toolbar button:hover:not(:disabled),
+.sheet-toolbar button.active {
+  background: var(--bg-hover, #e9edf4);
+  border-color: var(--border, #d8dce5);
+}
+.sheet-redo svg {
+  transform: scaleX(-1);
+}
+.sheet-toolbar-divider {
+  width: 1px;
+  height: 20px;
+  margin: 0 3px;
+  background: var(--border, #ddd);
+}
+.sheet-formula-bar {
+  display: flex;
+  flex: none;
+  align-items: center;
+  min-height: 37px;
+  gap: 4px;
+  padding: 3px 6px;
+  font:
+    12px -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+  border-bottom: 1px solid var(--border, #ddd);
+  background: var(--bg-panel, #fff);
+}
+.sheet-formula-bar > input {
+  flex: 1;
+  min-width: 120px;
+  height: 30px;
+  padding: 4px 8px;
+  background: transparent;
+  color: inherit;
+  border: 0;
+  outline: 0;
+}
+.sheet-formula-bar > input.sheet-cell-reference {
+  flex: none;
+  width: 82px;
+  min-width: 82px;
+  padding: 4px 6px;
+  text-align: left;
+  border-right: 1px solid var(--border, #ddd);
+  font:
+    11px ui-monospace,
+    SFMono-Regular,
+    monospace;
+}
+.sheet-formula-bar > button {
+  height: 25px;
+  padding: 2px 7px;
+  border: 1px solid var(--border, #ccd2d6);
+  border-radius: 4px;
+  color: inherit;
+  background: var(--bg-raised, #f8f9fa);
+  font: inherit;
+  font-size: 11px;
+  cursor: pointer;
+}
+.sheet-formula-bar > input:focus {
+  box-shadow: inset 0 -2px 0 var(--accent, #2878d0);
+}
+.sheet-validation-input {
+  display: flex;
+  flex: none;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-bottom: 1px solid var(--border, #ddd);
+  background: var(--bg-panel, #fff);
+}
+.sheet-validation-input select {
+  color: inherit;
+  background: var(--bg-raised, #f8f9fa);
+  font: inherit;
+  max-width: 280px;
+}
+.sheet-cell-reference {
+  width: 58px;
+  padding: 0 8px;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font:
+    11px ui-monospace,
+    SFMono-Regular,
+    monospace;
+}
+.sheet-fx {
+  padding: 0 9px;
+  border-left: 1px solid var(--border, #ddd);
+  border-right: 1px solid var(--border, #ddd);
+  color: var(--text-dim, #788296);
+  font:
+    italic 12px Georgia,
+    serif;
+}
+.sheet-toolbar select {
+  max-width: 160px;
+  height: 27px;
+  padding: 2px 25px 2px 7px;
+  background: var(--bg-panel, #fff);
+  color: inherit;
+  border: 1px solid var(--border, #ccc);
+  border-radius: 4px;
+}
+.sheet-structure-menu {
+  position: relative;
+  margin-left: auto;
+}
+.sheet-structure-menu summary {
+  cursor: pointer;
+  padding: 5px 7px;
+  border-radius: 4px;
+}
+.sheet-structure-menu[open] summary,
+.sheet-structure-menu summary:hover {
+  background: var(--bg-hover, #e9edf4);
+}
+.sheet-structure-menu > div {
+  position: absolute;
+  z-index: 10;
+  top: calc(100% + 5px);
+  right: 0;
+  width: 210px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  padding: 7px;
+  border: 1px solid var(--border, #ddd);
+  border-radius: 6px;
+  background: var(--bg-panel, #fff);
+  box-shadow: 0 8px 24px #0002;
+}
+.sheet-structure-menu > div small {
+  grid-column: 1 / -1;
+  padding: 5px;
+  line-height: 1.35;
+  color: var(--text-dim, #788296);
+}
+.sheet-grid-scroll {
+  flex: 1;
+  overflow: auto;
+  overflow-anchor: none;
+  background: var(--bg-panel, #fff);
+}
+.sheet-grid {
+  border-collapse: collapse;
+  font-size: 12px;
+  width: max-content;
+  table-layout: fixed;
+}
+.sheet-formula-bar[hidden] {
+  display: none;
+}
+.sheet-grid[data-zoom] th {
+  min-width: 0;
+  padding: 0;
+  font-size: calc(11px * var(--sheet-scale));
+  overflow: hidden;
+}
+.sheet-grid[data-zoom] thead th {
+  height: var(--sheet-header-height);
+}
+.sheet-grid[data-zoom] tbody th {
+  height: auto;
+}
+.sheet-grid[data-zoom] td {
+  border: 0;
+  max-width: none;
+  box-shadow: inset -1px -1px var(--border, #e1e5ec);
+}
+.sheet-grid[data-gridlines='false'] td {
+  box-shadow: none;
+}
+.sheet-grid[data-zoom] td input {
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: none;
+  min-height: 0;
+  height: 100%;
+  padding: 0 calc(2px * var(--sheet-scale));
+}
+.sheet-grid[data-zoom] .sheet-wrapped-display {
+  top: 0;
+  left: calc(2px * var(--sheet-scale));
+  right: calc(2px * var(--sheet-scale));
+  max-height: 100%;
+}
+.sheet-grid th {
+  background: var(--bg-hover, #f0f2f7);
+  color: #69768d;
+  font-size: 11px;
+  font-weight: 400;
+  height: 25px;
+  padding: 3px 6px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  min-width: 35px;
+}
+.sheet-grid th:first-child {
+  left: 0;
+  z-index: 2;
+}
+.sheet-grid td {
+  border: 1px solid var(--border, #e1e5ec);
+  padding: 0;
+  position: relative;
+  max-width: 350px;
+}
+.sheet-grid .sheet-spacer-row td {
+  padding: 0;
+  border: 0;
+  max-width: none;
+  min-height: 0;
+  background: transparent;
+}
+.sheet-grid .sheet-spacer-column {
+  padding: 0;
+  border: 0;
+  max-width: none;
+  height: 1px;
+  background: transparent;
+}
+.sheet-grid td.selected {
+  outline: 2px solid var(--accent, #2878d0);
+  outline-offset: -2px;
+}
+.sheet-grid td.fill-preview {
+  outline: 2px dashed var(--accent, #2878d0);
+  outline-offset: -2px;
+}
+.sheet-grid td .sheet-fill-handle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  width: 10px;
+  height: 10px;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  border: 1px solid var(--bg-panel, white);
+  border-radius: 1px;
+  background: var(--accent, #2878d0);
+  cursor: crosshair;
+}
+.sheet-grid td input {
+  border: 0;
+  outline: 0;
+  width: 100%;
+  min-width: 95px;
+  max-width: 350px;
+  min-height: 27px;
+  padding: 4px 7px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+}
+.sheet-cell-wrapped {
+  position: relative;
+}
+.sheet-cell-wrapped input {
+  color: transparent !important;
+}
+.sheet-cell-wrapped input[data-editing='true'] {
+  color: inherit !important;
+}
+.sheet-wrapped-display {
+  position: absolute;
+  top: 3px;
+  left: 6px;
+  right: 6px;
+  max-height: calc(100% - 6px);
+  overflow: hidden;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.25;
+  pointer-events: none;
+}
+.sheet-cell-wrapped:has(input[data-editing='true']) .sheet-wrapped-display {
+  display: none;
+}
+.sheet-grid td small:not(.sheet-a11y-status) {
+  display: block;
+  text-align: right;
+  padding: 0 6px 4px;
+  color: #66816e;
+  font-size: 10px;
+}
+.spreadsheet-editor footer {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  min-height: 27px;
+  padding: 2px 7px;
+  font-size: 10px;
+  border-top: 1px solid var(--border, #ddd);
+}
+.spreadsheet-editor footer button {
+  width: 24px;
+  height: 22px;
+  padding: 0;
+}
+.sheet-footer-status {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  color: var(--text-dim, #788296);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* Bounded metadata lists share the grid's owner; long formulas scroll locally. */
+.sheet-metadata-controls {
+  padding: 3px 8px;
+}
+.sheet-name-manager {
+  max-height: 28vh;
+  overflow: auto;
+  padding: 8px;
+  border-bottom: 1px solid var(--border-color, #ddd);
+}
+.sheet-name-manager form,
+.sheet-name-manager [aria-label] > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 5px;
+}
+.sheet-name-manager [aria-label] > div > span {
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+.sheet-name-manager label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.sheet-name-manager small {
+  display: block;
+  margin-top: 5px;
+}
+
+/* Commands live in the ribbon; one dock shares space with the worksheet. */
+.sheet-ribbon-tabpanel[hidden],
+.sheet-task-pane[hidden],
+.sheet-tool-content[hidden] {
+  display: none !important;
+}
+.sheet-ribbon-tab-list {
+  display: flex;
+  align-self: stretch;
+  gap: 8px;
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.sheet-quick-access .sheet-ribbon-tab {
+  display: inline-flex;
+  flex: none;
+  width: auto;
+  height: 100%;
+  min-width: 54px;
+  padding: 0 10px;
+  border-radius: 0;
+  border-bottom: 3px solid transparent;
+  font: inherit;
+  font-size: 12px;
+}
+.sheet-quick-access .sheet-ribbon-tab.is-active {
+  border-bottom-color: var(--sheet-accent);
+  color: var(--sheet-accent);
+  font-weight: 600;
+}
+.sheet-ribbon-tabpanel {
+  min-width: 0;
+}
+.sheet-ribbon-tools {
+  align-items: stretch;
+  gap: 8px;
+}
+.sheet-name-picker-anchor {
+  position: relative;
+  display: inline-flex;
+}
+.sheet-name-picker {
+  position: fixed;
+  z-index: 130;
+  width: 360px;
+  max-width: calc(100vw - 16px);
+  max-height: 360px;
+  overflow: auto;
+  padding: 12px;
+  color: var(--text, #242a30);
+  background: var(--bg-panel, #fff);
+  border: 1px solid var(--border, #ccd6d0);
+  border-radius: 7px;
+  box-shadow: 0 8px 28px #0003;
+}
+.sheet-name-picker header,
+.sheet-name-picker nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.sheet-name-picker p {
+  margin: 8px 0;
+  line-height: 1.45;
+}
+.sheet-ribbon .sheet-name-picker input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 30px;
+  margin-bottom: 8px;
+}
+.sheet-name-picker ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sheet-name-picker li {
+  padding: 4px 0;
+  border-bottom: 1px solid var(--border, #e4e8e5);
+}
+.sheet-ribbon .sheet-name-picker li button {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px 12px;
+  width: 100%;
+  height: auto;
+  text-align: left;
+  padding: 7px;
+}
+.sheet-name-picker li button span {
+  grid-column: 1 / -1;
+  overflow-wrap: anywhere;
+  font-size: 11px;
+}
+.sheet-name-picker li small {
+  display: block;
+  color: var(--text-dim, #68716e);
+}
+.sheet-ribbon .sheet-ribbon-tool {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;
+  min-width: 94px;
+  max-width: 134px;
+  padding: 8px 10px;
+  white-space: normal;
+}
+.sheet-ribbon-tool-icon {
+  color: var(--sheet-accent);
+}
+.sheet-ribbon-tool-label {
+  text-align: center;
+  line-height: 1.35;
+}
+.sheet-ribbon .sheet-ribbon-tool.is-active {
+  background: color-mix(in srgb, var(--sheet-accent) 10%, transparent);
+  border-color: color-mix(in srgb, var(--sheet-accent) 30%, transparent);
+}
+.sheet-workspace {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+.sheet-worksheet {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+.sheet-worksheet .sheet-grid-scroll {
+  min-height: 0;
+  min-width: 0;
+}
+.sheet-grid-viewport {
+  position: relative;
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+}
+.sheet-grid-viewport[hidden] {
+  display: none !important;
+}
+.sheet-worksheet .sheet-tabs {
+  border-top: 1px solid var(--border, #ddd);
+  overflow-x: auto;
+}
+.sheet-worksheet .sheet-tabs > button {
+  flex: none;
+}
+.sheet-worksheet .sheet-formula-bar > input:not(.sheet-cell-reference) {
+  min-width: 0;
+}
+.sheet-task-pane {
+  display: flex;
+  flex-direction: column;
+  flex: none;
+  width: clamp(280px, 32%, 380px);
+  max-width: 48%;
+  min-width: 0;
+  min-height: 0;
+  border-left: 1px solid var(--border, #ddd);
+  background: var(--bg-panel, #fff);
+  color: var(--text, #242a30);
+  font:
+    12px/1.5 -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+}
+.sheet-task-pane-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: none;
+  gap: 12px;
+  padding: 13px 16px;
+  border-bottom: 1px solid var(--border, #ddd);
+  background: var(--bg-raised, #f8f9fa);
+}
+.sheet-task-pane-header > div {
+  min-width: 0;
+}
+.sheet-task-pane-header small {
+  color: var(--text-dim, #68716e);
+  font-size: 10px;
+}
+.sheet-task-pane-header h2 {
+  margin: 1px 0 0;
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.sheet-task-pane-header h2:focus {
+  outline: none;
+}
+.sheet-task-pane-header > button {
+  flex: none;
+  width: 29px;
+  height: 29px;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: inherit;
+  font-size: 22px;
+  line-height: 1;
+}
+.sheet-task-pane-header > button:hover {
+  background: var(--bg-hover, #edf1ee);
+}
+.sheet-task-pane-body {
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+}
+.sheet-tool-content {
+  height: 100%;
+  min-width: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+  padding: 16px;
+  scrollbar-gutter: stable;
+}
+.sheet-task-pane .sheet-name-manager {
+  max-height: none;
+  overflow: visible;
+  padding: 0;
+  border: 0;
+}
+.sheet-task-pane section {
+  min-width: 0;
+  padding: 0 !important;
+}
+.sheet-task-pane p {
+  margin: 0 0 12px;
+  color: var(--text-dim, #68716e);
+  overflow-wrap: anywhere;
+}
+.sheet-task-pane p[role='alert'] {
+  color: var(--text-error, #a12d24);
+}
+.sheet-task-pane p[role='status'] {
+  color: var(--text, #242a30);
+}
+.sheet-task-pane fieldset {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 10px !important;
+  min-width: 0;
+  margin: 0 0 16px;
+  padding: 12px;
+  border: 1px solid var(--border, #ddd);
+  border-radius: 6px;
+}
+.sheet-task-pane legend {
+  padding: 0 4px;
+  font-weight: 600;
+}
+.sheet-task-pane label {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 5px;
+  min-width: 0;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.sheet-task-pane label:has(input[type='checkbox']) {
+  flex-direction: row;
+  align-items: center;
+  font-weight: 400;
+}
+.sheet-task-pane input:not([type='checkbox']),
+.sheet-task-pane select,
+.sheet-task-pane textarea {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  min-height: 31px;
+  padding: 5px 7px;
+  border: 1px solid var(--border, #ccd2d6);
+  border-radius: 4px;
+  background: var(--bg-panel, #fff);
+  color: inherit;
+  font: inherit;
+}
+.sheet-task-pane input[type='checkbox'] {
+  flex: none;
+  margin: 0 4px 0 0;
+  accent-color: var(--sheet-accent, #217346);
+}
+.sheet-task-pane input[type='color'] {
+  width: 54px;
+  padding: 3px;
+}
+.sheet-task-pane textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+.sheet-task-pane button {
+  max-width: 100%;
+  min-height: 30px;
+  margin: 2px 3px 4px 0;
+  padding: 5px 9px;
+  border: 1px solid var(--border, #ccd2d6);
+  border-radius: 4px;
+  background: var(--bg-raised, #f8f9fa);
+  color: inherit;
+  font: inherit;
+  white-space: normal;
+}
+.sheet-task-pane button:hover:not(:disabled) {
+  background: var(--bg-hover, #edf1ee);
+}
+.sheet-task-pane button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+.sheet-task-pane button:focus-visible,
+.sheet-task-pane input:focus-visible,
+.sheet-task-pane select:focus-visible,
+.sheet-task-pane textarea:focus-visible {
+  outline: 2px solid var(--sheet-accent, #217346);
+  outline-offset: 1px;
+}
+.sheet-task-pane .sheet-name-manager form,
+.sheet-task-pane .sheet-name-manager [aria-label] > div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  gap: 5px;
+  margin-bottom: 14px;
+}
+.sheet-task-pane small,
+.sheet-task-pane span {
+  overflow-wrap: anywhere;
+}
+.sheet-task-pane ol {
+  padding-left: 20px;
+}
+.sheet-task-pane li {
+  margin-bottom: 12px;
+}
+.sheet-task-pane .workbook-queries > label {
+  margin-top: 8px;
+}
+.sheet-task-pane [aria-label='Query preview'] {
+  max-width: 100%;
+  overflow: auto;
+}
+.sheet-task-pane [aria-label='Query preview'] table {
+  border-collapse: collapse;
+  font-size: 11px;
+}
+.sheet-task-pane [aria-label='Query preview'] td {
+  padding: 5px 7px;
+  border: 1px solid var(--border, #ddd);
+  white-space: nowrap;
+}
+.sheet-task-pane .sheet-task-pane-header > button {
+  width: 29px;
+  min-height: 29px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: 22px;
+}
+.sheet-print-preview {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 0 0 1px var(--border, #aaa);
+}
+
+/* Read-only accepted physical pages share the existing worksheet area. */
+.sheet-grid-scroll[hidden],
+.sheet-formula-bar[hidden] {
+  display: none !important;
+}
+.sheet-page-layout {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+}
+.sheet-page-layout-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border, #ddd);
+}
+.sheet-page-layout-toolbar p {
+  margin: 3px 0;
+}
+.sheet-page-layout > p {
+  margin: 5px 14px;
+}
+.sheet-page-layout-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  padding: 22px;
+  background: var(--bg-raised, #eceeef);
+}
+.sheet-page-layout-paper {
+  position: relative;
+  margin: 0 auto;
+  background: white;
+  box-shadow: 0 2px 12px #0002;
+}
+.sheet-page-layout-paper iframe {
+  display: block;
+}
+.sheet-functions fieldset {
+  min-width: 0;
+  padding: 12px;
+  margin: 0 0 14px;
+  border: 1px solid var(--border, #ddd);
+  border-radius: 5px;
+}
+.sheet-functions legend {
+  padding: 0 4px;
+  font-weight: 600;
+}
+.sheet-functions fieldset > div {
+  padding: 0 0 10px;
+  margin: 0 0 10px;
+  border-bottom: 1px solid var(--border, #ddd);
+}
+.sheet-functions output {
+  display: block;
+  padding: 7px 9px;
+  margin-top: 4px;
+  background: var(--bg-raised, #f5f7f6);
+  border-radius: 4px;
+  overflow-wrap: anywhere;
+}
+.sheet-function-limits {
+  margin: 0 0 14px;
+}
+.sheet-function-limits summary {
+  cursor: pointer;
+  color: var(--text-dim, #68716e);
+}
+.sheet-function-limits ul {
+  padding-left: 18px;
+}
+.sheet-formula-result-preview {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 10px;
+  min-height: 24px;
+  font-size: 12px;
+  color: var(--text-dim, #68716e);
+  border-bottom: 1px solid var(--border, #ddd);
+}
+.sheet-formula-result-preview output {
+  min-width: 0;
+  max-height: 4.5em;
+  overflow: auto;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+.sheet-formula-result-preview button {
+  flex: 0 0 auto;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+.sheet-functions .sheet-formula-result-preview {
+  padding: 6px 0;
+  border-bottom: 0;
+}
+.sheet-functions .sheet-formula-result-preview output {
+  padding: 0;
+  margin: 0;
+  background: none;
+}
+
+.sheet-watch ol {
+  list-style: none;
+  padding: 0;
+}
+.sheet-watch li {
+  border: 1px solid var(--border, #ddd);
+  border-radius: 5px;
+  padding: 10px;
+}
+.sheet-watch li > span {
+  display: block;
+  color: var(--text-dim, #68716e);
+}
+.sheet-watch output {
+  display: block;
+  margin: 4px 0;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.sheet-errors ol {
+  list-style: none;
+  padding: 0;
+}
+.sheet-errors li {
+  border: 1px solid var(--border, #ddd);
+  border-radius: 5px;
+  padding: 10px;
+}
+.sheet-errors li[data-selected='true'] {
+  border-color: var(--accent, #167551);
+}
+.sheet-errors li > span {
+  display: block;
+  color: var(--text-dim, #68716e);
+}
+.sheet-errors output {
+  display: block;
+  margin: 4px 0;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.sheet-text-columns label {
+  display: block;
+  margin: 8px 0;
+}
+.sheet-text-columns table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+.sheet-text-columns td,
+.sheet-text-columns th {
+  border: 1px solid var(--border, #ddd);
+  padding: 5px;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+.sheet-text-columns output {
+  display: block;
+}
+
+.sheet-calculation-options {
+  display: grid;
+  gap: 12px;
+}
+.sheet-calculation-options p {
+  margin: 0;
+}
+.sheet-calculation-options fieldset {
+  display: grid;
+  gap: 8px;
+}
+.sheet-calculation-options label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.sheet-task-pane .sheet-calculation-options label {
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 0;
+  font-weight: 400;
+}
+.sheet-task-pane .sheet-calculation-options input:is([type='radio'], [type='checkbox']) {
+  flex: 0 0 16px;
+  width: 16px;
+  height: 16px;
+  min-height: 16px;
+  max-width: 16px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  accent-color: var(--sheet-accent, #217346);
+}
+.sheet-calculation-options ul {
+  margin: 0;
+  padding-left: 20px;
+}
+.sheet-calculation-options li {
+  margin-bottom: 8px;
+  overflow-wrap: anywhere;
+}
+
+.sheet-create-names .sheet-name-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 4px 10px 4px 0;
+}
+.sheet-create-names input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+  min-height: 0;
+  margin: 0;
+  flex: 0 0 16px;
+}
+.sheet-create-names table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+.sheet-create-names td,
+.sheet-create-names th {
+  vertical-align: top;
+  text-align: left;
+  padding: 5px 3px;
+  border-bottom: 1px solid var(--border, #ddd);
+}
+.sheet-create-names td:first-child {
+  width: 22px;
+}
+.sheet-create-names output,
+.sheet-create-names small {
+  display: block;
+  overflow-wrap: anywhere;
+}
+.sheet-create-names output {
+  max-height: 4.5em;
+  overflow: auto;
+  line-height: 1.5;
+}
+.sheet-create-names td input:not([type='checkbox']) {
+  width: 100%;
+  min-width: 0;
+}
+
+.sheet-sort fieldset {
+  border: 0;
+  padding: 0;
+  margin: 12px 0;
+  min-width: 0;
+}
+.sheet-sort fieldset > label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 10px 0;
+}
+.sheet-sort fieldset > label input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+  min-height: 0;
+  flex: none;
+  margin: 0;
+}
+.sheet-sort ol {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+}
+.sheet-sort li {
+  border-bottom: 1px solid var(--border, #e1e5ec);
+  padding: 10px 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(90px, 0.7fr);
+  gap: 8px;
+}
+.sheet-sort li label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+.sheet-sort li select {
+  width: 100%;
+  min-width: 0;
+  height: 30px;
+}
+.sheet-sort li > div {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 6px;
+}
+.sheet-sort li button {
+  min-width: 30px;
+}
+
+/* Remove Duplicates stays in the retained workbook dock. */
+.sheet-duplicates fieldset {
+  border: 0;
+  padding: 0;
+  margin: 12px 0;
+  min-width: 0;
+}
+.sheet-duplicates fieldset label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 7px 0;
+  overflow-wrap: anywhere;
+}
+.sheet-duplicates input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+  min-height: 0;
+  margin: 0;
+  flex: none;
+}
+.sheet-duplicates table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 10px 0;
+  font-size: 12px;
+}
+.sheet-duplicates th,
+.sheet-duplicates td {
+  padding: 5px 7px;
+  text-align: left;
+  border-bottom: 1px solid var(--border, #e1e5ec);
+}
+.sheet-duplicates details {
+  font-size: 12px;
+  margin: 10px 0;
+}
+
+/* Fill actions stay above the independently scrolling numeric preview. */
+.sheet-fill > p {
+  margin: 8px 0;
+  font-size: 12px;
+  line-height: 1.4;
+}
+.sheet-fill .sheet-fill-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 6px;
+  margin: 8px 0;
+}
+.sheet-fill .sheet-fill-actions button {
+  margin: 0;
+}
+.sheet-fill dl {
+  display: grid;
+  grid-template-columns: minmax(80px, 0.8fr) minmax(0, 1.2fr);
+  gap: 4px 10px;
+  margin: 10px 0;
+  font-size: 12px;
+  line-height: 1.4;
+}
+.sheet-fill dt {
+  font-weight: 600;
+}
+.sheet-fill dd {
+  margin: 0;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.sheet-fill .sheet-fill-destinations {
+  max-height: min(220px, 28vh);
+  overflow: auto;
+  overscroll-behavior: contain;
+  border: 1px solid var(--border, #e1e5ec);
+  border-radius: 4px;
+}
+.sheet-fill table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  font-size: 12px;
+}
+.sheet-fill th,
+.sheet-fill td {
+  padding: 4px 7px;
+  text-align: left;
+  border-bottom: 1px solid var(--border, #e1e5ec);
+}
+
+/* Complete replacement actions stay reachable above the paged inspection. */
+.sheet-replace > p {
+  margin: 8px 0;
+  font-size: 12px;
+  line-height: 1.4;
+}
+.sheet-replace .sheet-replace-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0;
+}
+.sheet-replace .sheet-replace-actions button {
+  margin: 0;
+}
+.sheet-replace dl {
+  display: grid;
+  grid-template-columns: minmax(80px, 0.8fr) minmax(0, 1.2fr);
+  gap: 4px 10px;
+  margin: 10px 0;
+  font-size: 12px;
+  line-height: 1.4;
+}
+.sheet-replace dt {
+  font-weight: 600;
+}
+.sheet-replace dd {
+  margin: 0;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.sheet-replace pre {
+  margin: 0;
+  font: inherit;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.sheet-replace .sheet-replace-rows {
+  max-height: min(220px, 28vh);
+  overflow: auto;
+  overscroll-behavior: contain;
+  border: 1px solid var(--border, #e1e5ec);
+  border-radius: 4px;
+}
+.sheet-replace table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 0;
+  font-size: 12px;
+}
+.sheet-replace th,
+.sheet-replace td {
+  padding: 4px 7px;
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid var(--border, #e1e5ec);
+}
+
+/* Owned drawings occupy worksheet coordinates; tool panes remain beside it. */
+.sheet-object-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+  overflow: hidden;
+}
+.sheet-object-layer[hidden] {
+  display: none !important;
+}
+.sheet-worksheet-object {
+  position: absolute;
+  pointer-events: auto;
+  touch-action: none;
+  box-sizing: border-box;
+  cursor: move;
+  outline: none;
+}
+.sheet-worksheet-object[data-object-selected='true'] {
+  outline: 2px solid #217346;
+}
+/* Selection handles stay reachable across overlapping drawings; saved order is unchanged. */
+.sheet-worksheet-object[data-object-selected='true'] .sheet-object-delete,
+.sheet-worksheet-object[data-object-selected='true'] .sheet-object-resize {
+  z-index: 1;
+}
+.sheet-object-content {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  background: white;
+  color: #171717;
+}
+.sheet-worksheet-object[data-object-kind='shape'] .sheet-object-content,
+.sheet-worksheet-object[data-object-kind='smartart'] .sheet-object-content,
+.sheet-worksheet-object[data-object-kind='model3d'] .sheet-object-content,
+.sheet-worksheet-object[data-object-kind='ink'] .sheet-object-content {
+  background: transparent;
+}
+.sheet-object-content figure {
+  width: 100%;
+  height: 100%;
+}
+.sheet-object-delete {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  line-height: 20px;
+}
+.sheet-object-resize {
+  position: absolute;
+  right: -5px;
+  bottom: -5px;
+  width: 12px;
+  height: 12px;
+  min-width: 12px;
+  padding: 0;
+  background: #217346;
+  border: 1px solid white;
+  cursor: nwse-resize;
+  touch-action: none;
+}
+.sheet-object-message {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  max-width: 360px;
+  margin: 0;
+  padding: 6px 10px;
+  background: var(--editor-bg, #fff);
+  border: 1px solid #ddd;
+  pointer-events: none;
+}
+
+.sheet-grid td input.sheet-boolean-toggle {
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  accent-color: #217346;
+  z-index: 1;
+}
+
+/* Sample choices stay visible beside their local preview. */
+.sheet-page-style-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.sheet-page-style-gallery button[aria-pressed='true'] {
+  border-color: #217346;
+  background: #e8f3eb;
+  box-shadow: inset 0 0 0 1px #217346;
+}
+
+/* Findings remain near the top of the shared accessibility dock. */
+.sheet-accessibility p {
+  margin: 0;
+  line-height: 1.4;
+}
+.sheet-accessibility h3 {
+  margin: 4px 0;
+}
+.sheet-accessibility ol {
+  margin: 0;
+  padding-left: 24px;
+}
+.sheet-accessibility li p {
+  margin: 4px 0;
+  font-size: 0.9em;
+}
+
+.sheet-worksheet-object[data-object-kind='ink'] {
+  cursor: default;
+}
+
+.sheet-ink-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 7;
+  touch-action: none;
+  cursor: crosshair;
+  background: transparent;
+  outline: none;
+  overflow: hidden;
+}
+.sheet-ink-layer[hidden] {
+  display: none !important;
+}
+
+.sheet-ink-palette {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.sheet-ink-palette-options {
+  display: flex;
+  gap: 5px;
+}
+.sheet-ink-palette-options button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  min-width: 90px;
+  padding: 5px 9px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: transparent;
+}
+.sheet-ink-palette-options button[aria-pressed='true'] {
+  border-color: #217346;
+  background: #e7f2eb;
+}
+.sheet-ink-palette-options button small {
+  color: #666;
+}
+.sheet-ink-preference-warning {
+  max-width: 320px;
+  font-size: 11px;
+  color: #805500;
+}
+
+/* Formulas uses Excel-style large launchers beside compact command stacks. */
+.sheet-ribbon-formula-toggle-icon {
+  display: none;
+}
+.sheet-ribbon[data-ribbon-tab='Formulas'] {
+  flex-wrap: wrap;
+  gap: 6px 0;
+  box-sizing: border-box;
+}
+.sheet-ribbon[data-ribbon-tab='Formulas'] > .sheet-ribbon-group {
+  box-sizing: border-box;
+  max-width: 100%;
+  min-width: 0;
+}
+.sheet-ribbon[data-ribbon-tab='Formulas'] .sheet-ribbon-tools {
+  display: grid;
+  align-items: stretch;
+  gap: 3px;
+  min-height: 108px;
+}
+.sheet-ribbon[data-ribbon-tab='Formulas'] [data-ribbon-group='Function library'] {
+  flex: 0 1 410px;
+  width: 410px;
+}
+.sheet-ribbon[data-ribbon-tab='Formulas'] [data-ribbon-group='Function library'] .sheet-ribbon-tools {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+.sheet-ribbon[data-ribbon-tab='Formulas'] .sheet-ribbon-tools > * {
+  min-width: 0;
+}
+.sheet-ribbon[data-ribbon-tab='Formulas'] :is(.sheet-ribbon-tools > button, .sheet-ribbon-tools > span > button) {
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: none;
+  width: 100%;
+  height: 100%;
+  padding: 3px 4px;
+  gap: 4px;
+  white-space: normal;
+}
+.sheet-ribbon[data-ribbon-tab='Formulas'] .sheet-ribbon-tool-icon {
+  width: 22px;
+  height: 22px;
+}
+.sheet-ribbon[data-ribbon-tab='Formulas'] .sheet-ribbon-tool-label {
+  line-height: 14px;
+  overflow-wrap: normal;
+}
+.sheet-ribbon[data-ribbon-tab='Formulas'] [data-ribbon-group='Defined names'] {
+  width: 230px;
+}
+.sheet-ribbon[data-ribbon-tab='Formulas'] [data-ribbon-group='Defined names'] .sheet-ribbon-tools {
+  grid-template-columns: 66px minmax(0, 1fr);
+  grid-template-rows: repeat(3, minmax(34px, 1fr));
+}
+.sheet-ribbon[data-ribbon-tab='Formulas'] [data-ribbon-group='Formula auditing'] {
+  width: 370px;
+}
+.sheet-ribbon[data-ribbon-tab='Formulas'] [data-ribbon-group='Formula auditing'] .sheet-ribbon-tools {
+  grid-template-columns: minmax(0, 1fr) repeat(3, 64px);
+  grid-template-rows: repeat(3, minmax(34px, 1fr));
+}
+.sheet-ribbon[data-ribbon-tab='Formulas'] [data-ribbon-group='Calculation'] {
+  width: 230px;
+}
+.sheet-ribbon[data-ribbon-tab='Formulas'] [data-ribbon-group='Calculation'] .sheet-ribbon-tools {
+  grid-template-columns: 78px minmax(0, 1fr);
+  grid-template-rows: repeat(2, minmax(52px, 1fr));
+}
+.sheet-ribbon[data-ribbon-tab='Formulas'] .sheet-ribbon-tools > label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  text-align: center;
+  line-height: 14px;
+  white-space: normal;
+}
+.sheet-ribbon[data-ribbon-tab='Formulas'] .sheet-ribbon-formula-toggle-icon {
+  display: block;
+  width: 22px;
+  height: 22px;
+  color: var(--sheet-accent);
+}
+.sheet-ribbon[data-formula-library-layout='row'] [data-ribbon-group='Function library'] {
+  flex-basis: 750px;
+  width: 750px;
+}
+.sheet-ribbon[data-formula-library-layout='row'] [data-ribbon-group='Function library'] .sheet-ribbon-tools {
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+}
+.sheet-ribbon[data-formula-library-layout='row'] [data-ribbon-group='Function library'] .sheet-ribbon-tool-icon {
+  width: 27px;
+  height: 27px;
+}
+
+.sheet-ribbon[data-ribbon-tab='Formulas'] .sheet-ribbon-tools > [data-ribbon-item='names.manager'] {
+  grid-column: 1;
+  grid-row: 1 / 4;
+}
+.sheet-ribbon[data-ribbon-tab='Formulas'] .sheet-ribbon-tools > [data-ribbon-item='names.define'] {
+  grid-column: 2;
+  grid-row: 1;
+}
+.sheet-ribbon[data-ribbon-tab='Formulas'] .sheet-ribbon-tools > [data-ribbon-item='names.use-in-formula'] {
+  grid-column: 2;
+  grid-row: 2;
+}
+.sheet-ribbon[data-ribbon-tab='Formulas'] .sheet-ribbon-tools > [data-ribbon-item='names.create-from-selection'] {
+  grid-column: 2;
+  grid-row: 3;
+}
+.sheet-ribbon[data-ribbon-tab='Formulas'] .sheet-ribbon-tools > [data-ribbon-item='formulas.trace-precedents'] {
+  grid-column: 1;
+  grid-row: 1;
+}
+.sheet-ribbon[data-ribbon-tab='Formulas'] .sheet-ribbon-tools > [data-ribbon-item='formulas.trace-dependents'] {
+  grid-column: 1;
+  grid-row: 2;
+}
+.sheet-ribbon[data-ribbon-tab='Formulas'] .sheet-ribbon-tools > [data-ribbon-item='formulas.remove-arrows'] {
+  grid-column: 1;
+  grid-row: 3;
+}
+.sheet-ribbon[data-ribbon-tab='Formulas'] .sheet-ribbon-tools > [data-ribbon-item='view.show-formulas'] {
+  grid-column: 2;
+  grid-row: 1 / 4;
+}
+.sheet-ribbon[data-ribbon-tab='Formulas'] .sheet-ribbon-tools > [data-ribbon-item='formulas.error-checking'] {
+  grid-column: 3;
+  grid-row: 1 / 4;
+}
+.sheet-ribbon[data-ribbon-tab='Formulas'] .sheet-ribbon-tools > [data-ribbon-item='formulas.watch'] {
+  grid-column: 4;
+  grid-row: 1 / 4;
+}
+.sheet-ribbon[data-ribbon-tab='Formulas'] .sheet-ribbon-tools > [data-ribbon-item='formulas.calculation-options'] {
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+.sheet-ribbon[data-ribbon-tab='Formulas'] .sheet-ribbon-tools > [data-ribbon-item='formulas.calculate-now'] {
+  grid-column: 2;
+  grid-row: 1;
+}
+.sheet-ribbon[data-ribbon-tab='Formulas'] .sheet-ribbon-tools > [data-ribbon-item='formulas.calculate-sheet'] {
+  grid-column: 2;
+  grid-row: 2;
+}
+.sheet-ribbon[data-ribbon-tab='Formulas']
+  .sheet-ribbon-tools
+  > :is(
+    [data-ribbon-item='names.define'],
+    [data-ribbon-item='names.use-in-formula'],
+    [data-ribbon-item='formulas.trace-precedents'],
+    [data-ribbon-item='formulas.trace-dependents'],
+    [data-ribbon-item='formulas.remove-arrows'],
+    [data-ribbon-item='formulas.calculate-now'],
+    [data-ribbon-item='formulas.calculate-sheet']
+  ),
+.sheet-ribbon[data-ribbon-tab='Formulas']
+  .sheet-ribbon-tools
+  > :is([data-ribbon-item='names.use-in-formula'], [data-ribbon-item='names.create-from-selection'])
+  > button {
+  flex-direction: row;
+  justify-content: flex-start;
+  text-align: left;
+}
+.sheet-ribbon[data-ribbon-tab='Formulas']
+  .sheet-ribbon-tools
+  > :is(
+    [data-ribbon-item='names.create-from-selection'],
+    [data-ribbon-item^='formulas.trace-'],
+    [data-ribbon-item^='formulas.calculate-']
+  )
+  .sheet-ribbon-tool-label {
+  text-align: left;
+}
+
+.sheet-ribbon[data-formula-library-layout='narrow'] [data-ribbon-group='Function library'] .sheet-ribbon-tools {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}

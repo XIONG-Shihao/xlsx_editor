@@ -1,0 +1,156 @@
+{
+  "excel": "16.113",
+  "cases": [
+    {
+      "ref": "B1",
+      "formula": "REPT(\"ab\",2.9)",
+      "expected": "abab"
+    },
+    {
+      "ref": "B2",
+      "formula": "REPT(\"\",1000000000)",
+      "expected": ""
+    },
+    {
+      "ref": "B3",
+      "formula": "SUBSTITUTE(\"aba aba\",\"aba\",\"X\")",
+      "expected": "X X"
+    },
+    {
+      "ref": "B4",
+      "formula": "SUBSTITUTE(\"aaa\",\"aa\",\"b\")",
+      "expected": "ba"
+    },
+    {
+      "ref": "B5",
+      "formula": "SUBSTITUTE(\"abc\",\"\",\"X\")",
+      "expected": "abc"
+    },
+    {
+      "ref": "B6",
+      "formula": "SUBSTITUTE(\"a-a-a\",\"a\",\"X\",2.9)",
+      "expected": "a-X-a"
+    },
+    {
+      "ref": "B7",
+      "formula": "SUBSTITUTE(\"a\",\"a\",\"X\",9)",
+      "expected": "a"
+    },
+    {
+      "ref": "B8",
+      "formula": "EXACT(\"a\",\"A\")",
+      "expected": false
+    },
+    {
+      "ref": "B9",
+      "formula": "EXACT(12,\"12\")",
+      "expected": true
+    },
+    {
+      "ref": "B10",
+      "formula": "N(TRUE)",
+      "expected": 1
+    },
+    {
+      "ref": "B11",
+      "formula": "N(FALSE)",
+      "expected": 0
+    },
+    {
+      "ref": "B12",
+      "formula": "N(\"12\")",
+      "expected": 0
+    },
+    {
+      "ref": "B13",
+      "formula": "N(A1)",
+      "expected": 0
+    },
+    {
+      "ref": "B14",
+      "formula": "N(A2)",
+      "expected": 1
+    },
+    {
+      "ref": "B15",
+      "formula": "N(A3)",
+      "expected": 0
+    },
+    {
+      "ref": "B16",
+      "formula": "T(12)",
+      "expected": ""
+    },
+    {
+      "ref": "B17",
+      "formula": "T(A1)",
+      "expected": "12"
+    },
+    {
+      "ref": "B18",
+      "formula": "T(A3)",
+      "expected": ""
+    },
+    {
+      "ref": "B19",
+      "formula": "ISNUMBER(A1)",
+      "expected": false
+    },
+    {
+      "ref": "B20",
+      "formula": "ISNUMBER(12)",
+      "expected": true
+    },
+    {
+      "ref": "B21",
+      "formula": "ISTEXT(A1)",
+      "expected": true
+    },
+    {
+      "ref": "B22",
+      "formula": "ISLOGICAL(A2)",
+      "expected": true
+    },
+    {
+      "ref": "B23",
+      "formula": "ISBLANK(A3)",
+      "expected": true
+    },
+    {
+      "ref": "B24",
+      "formula": "ISBLANK(\"\")",
+      "expected": false
+    },
+    {
+      "ref": "B25",
+      "formula": "ISNUMBER(1/0)",
+      "expected": false
+    },
+    {
+      "ref": "B26",
+      "formula": "IF(ISNUMBER(12),N(TRUE)+2,0)",
+      "expected": 3
+    },
+    {
+      "ref": "B27",
+      "formula": "IFERROR(REPT(\"a\",-1),\"bad\")",
+      "expected": "bad"
+    },
+    {
+      "ref": "B28",
+      "formula": "IFERROR(SUBSTITUTE(\"a\",\"a\",\"b\",0),\"bad\")",
+      "expected": "bad"
+    },
+    {
+      "ref": "B29",
+      "formula": "REPT(\"a\",-0.2)",
+      "expected": "#VALUE!"
+    },
+    {
+      "ref": "B30",
+      "formula": "IFERROR(SUBSTITUTE(\"a\",\"a\",\"b\",0.9),\"bad\")",
+      "expected": "bad"
+    }
+  ],
+  "emptyStrings": "Validated empty <v> with t=str; openpyxl returns None for those caches."
+}

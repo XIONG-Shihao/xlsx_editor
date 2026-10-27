@@ -1,0 +1,9 @@
+export interface CalculationBinding {documentId:string;ownerId:string;state:string;revision:string}
+export type CalculationAction = {type:'setOptions';mode:'auto'|'manual';recalculateBeforeSave?:boolean}|{type:'calculateSheet';sheet:string}|{type:'calculateAllOpen'};
+export type CalculationCommand = {type:'recalculate'}|{type:'calculateSheet';sheet:string}|{type:'setCalculationOptions';mode:'auto'|'manual';recalculateBeforeSave?:boolean};
+export interface CalculationProgress {requestId:string;phase:string;completed:number;total:number;currentName?:string;cancellable:boolean}
+export interface CalculationOutcome {documentId:string;ownerId:string;name:string;beforeState:string;afterState?:string;status:'accepted'|'skipped'|'refused'|'failed'|'cancelled'|'notRun';reason?:string}
+export interface CalculationGroupReceipt {schema:1;requestId:string;initiator:CalculationBinding;action:CalculationAction;consistency:'independent-workbook-commits';outcome:'completed'|'partial'|'cancelled';results:CalculationOutcome[];applicationMode?:{mode:'auto'|'manual';revision:number}}
+export interface CalculationTarget extends CalculationBinding {name:string;profile:'xlsx'|'delimited'|'passive';readOnly:boolean;canRecalculate?:boolean;canChangeOptions?:boolean;canCalculateSheet?:boolean;reason?:string}
+export function validateCalculationAction(value:unknown):CalculationAction;
+export function runCalculationGroup<T extends CalculationTarget>(options:{requestId:string;initiator:CalculationBinding;action:CalculationAction;targets:readonly T[];current:(target:T,state:string)=>boolean;authorize:(target:T)=>Promise<void>;apply:(target:T,commands:CalculationCommand[])=>Promise<CalculationBinding>;signal?:AbortSignal;progress?:(value:CalculationProgress)=>void;onAccepted?:(target:T,result:CalculationBinding)=>void;maxParticipants?:number}):Promise<CalculationGroupReceipt>;

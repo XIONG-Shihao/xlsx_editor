@@ -1,0 +1,85 @@
+{
+ "_about": "For each row of docs/FEATURES.md: the test files (name fragments) that exercise it, and which of the 30 measured everyday actions touch it. scripts/audit/feature-coverage.py turns this into the 'Checked by' column.",
+ "Home": {
+  "Copy, cut, paste, Paste Special": {"tests": ["value-paste", "typed-paste-protocol", "staged-paste-oracle", "clipboard-text", "large-paste"], "actions": ["Copy and paste values"]},
+  "Font": {"tests": ["workbook-home-ui", "home-commands", "workbook-style-index", "page-style-samples"], "actions": ["Make the header row bold", "Fill cells with a colour"]},
+  "Alignment and merge": {"tests": ["ordinary-sheets", "home-commands", "preserved-layout"], "actions": ["Centre and wrap text", "Merge two empty cells", "Merge, then unmerge"]},
+  "Number formats": {"tests": ["custom-number-format", "workbook-dates", "page-style-samples"], "actions": ["Show numbers as percent"]},
+  "Insert and delete rows and columns": {"tests": ["ordinary-sheets", "preserved-structural-edits", "workbook-indexed", "workbook-table-edits"], "actions": ["Insert a row in the data", "Delete a row from the data", "Insert a column in the data", "Delete a column from the data"]},
+  "Row height, column width": {"tests": ["preserved-layout", "layout-planning", "view-preferences-geometry"], "actions": ["Widen a column", "Make a row taller"]},
+  "Fill down, right, up, left": {"tests": ["directional-fill-owner", "literal-fill", "workbook-fill-ui", "workbook-fill-grid-ui"], "actions": ["Fill a value down"]},
+  "Fill series: numbers": {"tests": ["fill-series-owner", "fill-series-preview"], "actions": []},
+  "Fill series: dates": {"tests": ["date-series-preview", "fill-series-owner"], "actions": []},
+  "Fill across worksheets": {"tests": ["workbook-fill-across-ui"], "actions": []},
+  "Clear": {"tests": ["clear-hyperlinks-core", "workbook-clear-hyperlinks-ui", "home-commands"], "actions": ["Clear a cell"]},
+  "Find and Replace": {"tests": ["search-pages", "replace-preview", "workbook-replace-ui", "workbook-replace-grid-ui"], "actions": []},
+  "Go To Special": {"tests": ["special-selection", "current-region", "workbook-special-selection-ui", "workbook-current-region-ui"], "actions": []},
+  "Undo and Redo": {"tests": ["sheet-history", "document-redo-retention", "document-session"], "actions": []},
+  "Conditional formatting": {"tests": ["rules-model", "workbook-rules", "document-rules", "print-conditional"], "actions": ["Highlight values above a number"]},
+  "Cell styles": {"tests": ["page-style-samples", "page-styles-controller"], "actions": []}
+ },
+ "Insert (everyday part)": {
+  "Table": {"tests": ["workbook-table-edits", "workbook-table-shorthand", "table-column-structure-owner"], "actions": []},
+  "Chart": {"tests": ["chart-authoring-model", "workbook-objects", "document-objects", "native-managed-chart-cache", "indexed-owner-objects"], "actions": []},
+  "Picture": {"tests": ["workbook-objects", "document-objects", "object-transport", "worksheet-object-model"], "actions": []},
+  "Hyperlink": {"tests": ["hyperlinks-core", "hyperlink-controller", "hyperlink-ui"], "actions": ["Add a web link"]},
+  "Checkbox and symbols": {"tests": ["cell-insertions-core", "cell-insertions-owner", "cell-insertion-controller", "cell-insertion-ui"], "actions": []}
+ },
+ "Page Layout (everyday part)": {
+  "Margins, orientation, paper size, scaling": {"tests": ["workbook-page-layout", "workbook-print", "document-print"], "actions": []},
+  "Print area and repeated titles": {"tests": ["workbook-print", "workbook-print-ui", "page-boundaries"], "actions": []},
+  "Print preview and PDF": {"tests": ["document-print", "workbook-print", "print-conditional", "workbook-spill-print"], "actions": []},
+  "Print": {"tests": [], "actions": []},
+  "Headers and footers": {"tests": ["print-header-footer"], "actions": []}
+ },
+ "Formulas": {
+  "Typing formulas": {"tests": ["workbook-native-formula", "workbook-indexed", "compat-xlsx-calculation"], "actions": ["Enter a SUM formula"]},
+  "Calculation": {"tests": ["calculator-routes", "document-recalculate", "sheet-calculation-history", "calculation-group", "compat-xlsx-calculation"], "actions": []},
+  "Insert Function": {"tests": ["function-catalog", "common-function-catalog", "common-function-owner", "workbook-functions-ui"], "actions": []},
+  "AutoSum and recently used": {"tests": ["grid-autosum-preflight", "function-recents"], "actions": []},
+  "Names": {"tests": ["workbook-names", "workbook-name-update", "create-names-backend", "name-scope-metadata", "workbook-connected-names", "name-update-admission"], "actions": []},
+  "Trace, Watch, Error Checking": {"tests": ["formula-trace", "trace-cursor", "workbook-trace-ui", "workbook-watch-ui", "workbook-errors-ui"], "actions": []},
+  "Show formulas": {"tests": ["view-defaults-presets", "workbook-view-presets-ui"], "actions": []},
+  "Lookup and conditional sums": {"tests": ["workbook-native-formula", "calculator-routes", "common-function-owner"], "actions": []}
+ },
+ "Data": {
+  "Sort": {"tests": ["ordinary-sheets", "workbook-sort-ui", "workbook-ordered-sort"], "actions": ["Sort by the first column"]},
+  "Filter": {"tests": ["ordinary-sheets", "workbook-filter-values", "workbook-filter-reapply", "workbook-filter-ui", "filter-values-transport"], "actions": ["Filter by a value", "Filter, then show all rows again", "Filter, then switch the filter off"]},
+  "Remove Duplicates": {"tests": ["workbook-dedup-preview", "workbook-duplicates-ui"], "actions": []},
+  "Text to Columns": {"tests": ["text-conversion", "workbook-text-columns-ui", "workbook-text-columns-typed-ui", "workbook-text-columns-fixed-ui"], "actions": []},
+  "Data validation": {"tests": ["rules-model", "workbook-rules", "document-rules"], "actions": []},
+  "Import CSV or TSV": {"tests": ["delimited-import", "delimited-file-import", "local-query", "local-query-typed", "document-import"], "actions": []},
+  "Refresh All": {"tests": ["local-query-refresh-all", "query-refresh-all-controller", "query-refresh-all-request", "workbook-refresh-all-ui"], "actions": []},
+  "Table editing": {"tests": ["workbook-table-edits", "table-column-structure-owner"], "actions": []}
+ },
+ "Review": {
+  "Notes": {"tests": ["notes-model", "notes-owner", "notes-ui", "indexed-notes", "ordinary-sheets"], "actions": ["Add a note to a cell"]},
+  "Spelling": {"tests": ["offline-spelling", "workbook-spelling-jobs"], "actions": []},
+  "Workbook statistics": {"tests": ["workbook-review", "workbook-review-ui", "review-host-adapter"], "actions": []},
+  "Accessibility check": {"tests": ["accessibility-model", "accessibility-ui"], "actions": []}
+ },
+ "View": {
+  "Freeze panes": {"tests": ["ordinary-sheets", "preserved-layout", "layout-planning"], "actions": ["Freeze the top row"]},
+  "Zoom": {"tests": ["view-defaults-presets", "view-preferences-geometry", "view-preference-identity"], "actions": []},
+  "Gridlines, headings, formula bar": {"tests": ["view-defaults-presets", "workbook-view-presets-ui"], "actions": []},
+  "Saved zoom and display from Excel": {"tests": ["source-geometry-metadata", "view-defaults-presets"], "actions": []},
+  "Local views": {"tests": ["view-defaults-presets", "workbook-view-presets-ui", "view-preference-identity"], "actions": []},
+  "Page Layout view": {"tests": ["workbook-page-layout", "page-boundaries"], "actions": []},
+  "Page Break Preview": {"tests": ["page-boundaries"], "actions": []}
+ },
+ "Pivot tables": {
+  "Create": {"tests": ["workbook-pivots", "document-pivots", "pivot-target"], "actions": []},
+  "Refresh": {"tests": ["workbook-pivots", "document-pivots"], "actions": []},
+  "Fields": {"tests": ["pivot-field-owner", "pivot-context-inventory", "pivot-context-ui"], "actions": []},
+  "Go to source, field list": {"tests": ["pivot-selection", "pivot-context-ui", "pivot-context-inventory"], "actions": []},
+  "Pivots made in Excel": {"tests": ["workbook-pivots", "package-roundtrip"], "actions": []}
+ },
+ "Files and safety": {
+  "Open and save `.xlsx`": {"tests": ["package-roundtrip", "ordinary-sheets", "preservation-content", "document-session", "portable-package"], "actions": ["Type a number in an empty cell", "Type text in an empty cell", "Change an existing number"]},
+  "Open and save `.csv`, `.tsv`": {"tests": ["csv-file", "csv-sparse-save", "indexed-csv-session", "csv-owner-worker", "compat-csv-workbook"], "actions": []},
+  "Open `.xlsm`, `.xls`, `.xlsb`": {"tests": ["passive-formats", "passive-format-ovba", "passive-data-export", "document-passive-formats", "xlsb-values-normalize", "pure-vba"], "actions": []},
+  "Several workbooks": {"tests": ["workbook-tab-registry"], "actions": ["Add a worksheet", "Rename the worksheet", "Duplicate the worksheet"]},
+  "Recovery": {"tests": ["kept-recovery", "document-save-crash", "document-import-crash", "document-session"], "actions": []},
+  "Protected or signed workbooks": {"tests": ["workbook-real-protected", "readonly-export"], "actions": []}
+ }
+}

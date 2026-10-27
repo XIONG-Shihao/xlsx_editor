@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "XLSX Editor", "version": "0.1.0",
+  "identifier": "com.agentplatform.xlsx.tauri.internal",
+  "build": {"frontendDist": "../out/renderer"},
+  "app": {
+    "windows": [{"label":"main","create":false,"title":"XLSX Editor","width":1400,"height":920,"minWidth":720,"minHeight":500}],
+    "security": {"csp":"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' ipc: http://ipc.localhost; worker-src 'self' blob:; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"}
+  },
+  "bundle": {
+    "active":false,"targets":["app"],"icon":["icons/icon.png"],
+    "fileAssociations":[{"ext":["xlsx","xlsm","xls","xlsb","csv","tsv"],"name":"Spreadsheet","role":"Editor","rank":"Alternate"}],
+    "macOS":{"minimumSystemVersion":"14.0"}
+  }
+}

@@ -1,0 +1,276 @@
+{
+  "schema": 1,
+  "method": "independent-reference-fixtures-not-product-output",
+  "fixtures": [
+    {
+      "file": "source.xlsx",
+      "sha256": "2483ecab8ec783df2cc69b18c2c7487ed458fd3c470e2be3e02ae4e0cb55236f",
+      "parts": {
+        "[Content_Types].xml": "3af1efe046e3be8d2a1edca662505358ff4cbb3ffcb6e6e8c83a132789ce7a4a",
+        "_rels/.rels": "d4e7d81dae0532f7af55b7e8d93aa36916c94ac7a0584412032df0eb4b7fb175",
+        "custom/opaque.bin": "470a587f474b8d685830827a698441f0fa4feb8729cc55d55387f9811edc64f0",
+        "xl/_rels/workbook.xml.rels": "126a9ddb59e0436ef944dfc0bb33f5d1ebf09dcbe04e5a3ebf41aee7b73cced4",
+        "xl/workbook.xml": "2573221dde1e2ae9cbcd4c248ddb6c7715f826a69752897cf49f09dd55071b31",
+        "xl/worksheets/sheet1.xml": "63539afcb93e66330aef55793fd5bd870760eca4e2fbda9fd143110898c2ca34",
+        "xl/worksheets/sheet2.xml": "71c21d9da6461af1731e143b3a7d8b2da0ffb700a42fd212d65a3abed6aef879"
+      }
+    },
+    {
+      "file": "created-column.xlsx",
+      "sha256": "79352f8b71f7857189e69afcf90dba7f686a13214824a7d3e7405d968f0eb835",
+      "parts": {
+        "[Content_Types].xml": "bb04c2ed7e89c67c381769f9478d5516e1e802139117ded205e60155870c3f7d",
+        "_rels/.rels": "d4e7d81dae0532f7af55b7e8d93aa36916c94ac7a0584412032df0eb4b7fb175",
+        "custom/opaque.bin": "470a587f474b8d685830827a698441f0fa4feb8729cc55d55387f9811edc64f0",
+        "xl/_rels/workbook.xml.rels": "126a9ddb59e0436ef944dfc0bb33f5d1ebf09dcbe04e5a3ebf41aee7b73cced4",
+        "xl/charts/chart1.xml": "075f55d602c002bc5a56e8a4ff7fa3ef8b67ab3ab7f7303ad8c7528a8f2050b9",
+        "xl/drawings/_rels/drawing1.xml.rels": "6b124ee5c87df431a59215ad6047888a0ae5c98c8e690d12a72d3f3c636ef583",
+        "xl/drawings/drawing1.xml": "ab82997f4acbf6ed4176169be0529b673fc6109e83e5222373a8bf210a11b886",
+        "xl/media/marker.jpg": "a2a75cee707914d51154d429e425c9920bfb5a88cce802b9f7cf69dedc100da0",
+        "xl/media/marker.png": "c162f517f5a42e8b0b4a824761000fc44950ed4cdb05843b1cc0f40b61bc01a5",
+        "xl/workbook.xml": "2573221dde1e2ae9cbcd4c248ddb6c7715f826a69752897cf49f09dd55071b31",
+        "xl/worksheets/_rels/sheet1.xml.rels": "622ac827221675d07abfaf6efaeca5aa5018a20d3058e79f9d0e1b5b05a53dc7",
+        "xl/worksheets/sheet1.xml": "84209e27181406b3b4058e157ad161672e96ef1b3ed34895c484f615ecbd0487",
+        "xl/worksheets/sheet2.xml": "71c21d9da6461af1731e143b3a7d8b2da0ffb700a42fd212d65a3abed6aef879"
+      }
+    },
+    {
+      "file": "created-line.xlsx",
+      "sha256": "167f997566724ebba0c0dc4001046a953a7aeabbadb507457da8754e24420d50",
+      "parts": {
+        "[Content_Types].xml": "bb04c2ed7e89c67c381769f9478d5516e1e802139117ded205e60155870c3f7d",
+        "_rels/.rels": "d4e7d81dae0532f7af55b7e8d93aa36916c94ac7a0584412032df0eb4b7fb175",
+        "custom/opaque.bin": "470a587f474b8d685830827a698441f0fa4feb8729cc55d55387f9811edc64f0",
+        "xl/_rels/workbook.xml.rels": "126a9ddb59e0436ef944dfc0bb33f5d1ebf09dcbe04e5a3ebf41aee7b73cced4",
+        "xl/charts/chart1.xml": "86e61663e814cabda3118662456985fbbed94ac1b200a6c82eb232415e320de0",
+        "xl/drawings/_rels/drawing1.xml.rels": "6b124ee5c87df431a59215ad6047888a0ae5c98c8e690d12a72d3f3c636ef583",
+        "xl/drawings/drawing1.xml": "ab82997f4acbf6ed4176169be0529b673fc6109e83e5222373a8bf210a11b886",
+        "xl/media/marker.jpg": "a2a75cee707914d51154d429e425c9920bfb5a88cce802b9f7cf69dedc100da0",
+        "xl/media/marker.png": "c162f517f5a42e8b0b4a824761000fc44950ed4cdb05843b1cc0f40b61bc01a5",
+        "xl/workbook.xml": "2573221dde1e2ae9cbcd4c248ddb6c7715f826a69752897cf49f09dd55071b31",
+        "xl/worksheets/_rels/sheet1.xml.rels": "622ac827221675d07abfaf6efaeca5aa5018a20d3058e79f9d0e1b5b05a53dc7",
+        "xl/worksheets/sheet1.xml": "84209e27181406b3b4058e157ad161672e96ef1b3ed34895c484f615ecbd0487",
+        "xl/worksheets/sheet2.xml": "71c21d9da6461af1731e143b3a7d8b2da0ffb700a42fd212d65a3abed6aef879"
+      }
+    },
+    {
+      "file": "opaque-shared.xlsx",
+      "sha256": "bdc8207f435e4822e32894003066279869a65b81298835c90a3601e59263d8a7",
+      "parts": {
+        "[Content_Types].xml": "bb04c2ed7e89c67c381769f9478d5516e1e802139117ded205e60155870c3f7d",
+        "_rels/.rels": "d4e7d81dae0532f7af55b7e8d93aa36916c94ac7a0584412032df0eb4b7fb175",
+        "custom/opaque.bin": "470a587f474b8d685830827a698441f0fa4feb8729cc55d55387f9811edc64f0",
+        "xl/_rels/workbook.xml.rels": "126a9ddb59e0436ef944dfc0bb33f5d1ebf09dcbe04e5a3ebf41aee7b73cced4",
+        "xl/charts/chart1.xml": "075f55d602c002bc5a56e8a4ff7fa3ef8b67ab3ab7f7303ad8c7528a8f2050b9",
+        "xl/drawings/_rels/drawing1.xml.rels": "729c4cc2022c590cc654e7d7abb7516da3a6dfcb0ec8877b4917ecbd3892cd03",
+        "xl/drawings/drawing1.xml": "dabc0e18ffe00336027b117eab8672c29dbf8e0aa1786f67ac24aa9345940507",
+        "xl/media/marker.jpg": "a2a75cee707914d51154d429e425c9920bfb5a88cce802b9f7cf69dedc100da0",
+        "xl/media/marker.png": "c162f517f5a42e8b0b4a824761000fc44950ed4cdb05843b1cc0f40b61bc01a5",
+        "xl/workbook.xml": "2573221dde1e2ae9cbcd4c248ddb6c7715f826a69752897cf49f09dd55071b31",
+        "xl/worksheets/_rels/sheet1.xml.rels": "622ac827221675d07abfaf6efaeca5aa5018a20d3058e79f9d0e1b5b05a53dc7",
+        "xl/worksheets/sheet1.xml": "84209e27181406b3b4058e157ad161672e96ef1b3ed34895c484f615ecbd0487",
+        "xl/worksheets/sheet2.xml": "71c21d9da6461af1731e143b3a7d8b2da0ffb700a42fd212d65a3abed6aef879"
+      }
+    },
+    {
+      "file": "updated-line.xlsx",
+      "sha256": "6a6484d6632f20f0d1994b3e25f96cb0ee2193c590d2de81d000b3df74d3b640",
+      "parts": {
+        "[Content_Types].xml": "bb04c2ed7e89c67c381769f9478d5516e1e802139117ded205e60155870c3f7d",
+        "_rels/.rels": "d4e7d81dae0532f7af55b7e8d93aa36916c94ac7a0584412032df0eb4b7fb175",
+        "custom/opaque.bin": "470a587f474b8d685830827a698441f0fa4feb8729cc55d55387f9811edc64f0",
+        "xl/_rels/workbook.xml.rels": "126a9ddb59e0436ef944dfc0bb33f5d1ebf09dcbe04e5a3ebf41aee7b73cced4",
+        "xl/charts/chart1.xml": "1fdc11d20c0280525d3e2f04d05fcba42fff17190350cb89c568d0dbe15e674e",
+        "xl/drawings/_rels/drawing1.xml.rels": "6b124ee5c87df431a59215ad6047888a0ae5c98c8e690d12a72d3f3c636ef583",
+        "xl/drawings/drawing1.xml": "9da549a19b979f4dc15e4f5dbd1ecfadb6aeda53c62d4635edf62cb462729ddf",
+        "xl/media/marker.jpg": "a2a75cee707914d51154d429e425c9920bfb5a88cce802b9f7cf69dedc100da0",
+        "xl/media/marker.png": "c162f517f5a42e8b0b4a824761000fc44950ed4cdb05843b1cc0f40b61bc01a5",
+        "xl/workbook.xml": "2573221dde1e2ae9cbcd4c248ddb6c7715f826a69752897cf49f09dd55071b31",
+        "xl/worksheets/_rels/sheet1.xml.rels": "622ac827221675d07abfaf6efaeca5aa5018a20d3058e79f9d0e1b5b05a53dc7",
+        "xl/worksheets/sheet1.xml": "84209e27181406b3b4058e157ad161672e96ef1b3ed34895c484f615ecbd0487",
+        "xl/worksheets/sheet2.xml": "71c21d9da6461af1731e143b3a7d8b2da0ffb700a42fd212d65a3abed6aef879"
+      }
+    },
+    {
+      "file": "typed-refusals.xlsx",
+      "sha256": "b521fd424be704459726c2fcb91f2f3221e41874d1fee1b4fa7b279a63432286",
+      "parts": {
+        "[Content_Types].xml": "3af1efe046e3be8d2a1edca662505358ff4cbb3ffcb6e6e8c83a132789ce7a4a",
+        "_rels/.rels": "d4e7d81dae0532f7af55b7e8d93aa36916c94ac7a0584412032df0eb4b7fb175",
+        "custom/opaque.bin": "470a587f474b8d685830827a698441f0fa4feb8729cc55d55387f9811edc64f0",
+        "xl/_rels/workbook.xml.rels": "126a9ddb59e0436ef944dfc0bb33f5d1ebf09dcbe04e5a3ebf41aee7b73cced4",
+        "xl/workbook.xml": "2573221dde1e2ae9cbcd4c248ddb6c7715f826a69752897cf49f09dd55071b31",
+        "xl/worksheets/sheet1.xml": "259493b8d14c4eff0b390d2073da4d60441d54b5569fb8e99d7c30548831cc4a",
+        "xl/worksheets/sheet2.xml": "71c21d9da6461af1731e143b3a7d8b2da0ffb700a42fd212d65a3abed6aef879"
+      }
+    },
+    {
+      "file": "special-formula.xlsx",
+      "sha256": "be9e9afe1abc800fdc16146b02486abe49b8960ac5853ff4c798583c7f5340c4",
+      "parts": {
+        "[Content_Types].xml": "3af1efe046e3be8d2a1edca662505358ff4cbb3ffcb6e6e8c83a132789ce7a4a",
+        "_rels/.rels": "d4e7d81dae0532f7af55b7e8d93aa36916c94ac7a0584412032df0eb4b7fb175",
+        "custom/opaque.bin": "470a587f474b8d685830827a698441f0fa4feb8729cc55d55387f9811edc64f0",
+        "xl/_rels/workbook.xml.rels": "126a9ddb59e0436ef944dfc0bb33f5d1ebf09dcbe04e5a3ebf41aee7b73cced4",
+        "xl/workbook.xml": "2573221dde1e2ae9cbcd4c248ddb6c7715f826a69752897cf49f09dd55071b31",
+        "xl/worksheets/sheet1.xml": "5efa80b289c9f61807b0718718599f9c6cd58ee2fda0646e8bdec9bde394a994",
+        "xl/worksheets/sheet2.xml": "71c21d9da6461af1731e143b3a7d8b2da0ffb700a42fd212d65a3abed6aef879"
+      }
+    },
+    {
+      "file": "external-chart.xlsx",
+      "sha256": "a02d8f83d04f977eb789f18bee7cd7bc1c2f95725cef2ca4ab72b98a1bbe2b0c",
+      "parts": {
+        "[Content_Types].xml": "bb04c2ed7e89c67c381769f9478d5516e1e802139117ded205e60155870c3f7d",
+        "_rels/.rels": "d4e7d81dae0532f7af55b7e8d93aa36916c94ac7a0584412032df0eb4b7fb175",
+        "custom/opaque.bin": "470a587f474b8d685830827a698441f0fa4feb8729cc55d55387f9811edc64f0",
+        "xl/_rels/workbook.xml.rels": "126a9ddb59e0436ef944dfc0bb33f5d1ebf09dcbe04e5a3ebf41aee7b73cced4",
+        "xl/charts/chart1.xml": "075f55d602c002bc5a56e8a4ff7fa3ef8b67ab3ab7f7303ad8c7528a8f2050b9",
+        "xl/drawings/_rels/drawing1.xml.rels": "a6136c6e46247a358998f463d10a4ee60fe394f8b4ff86c61ebd74ba2b051b6d",
+        "xl/drawings/drawing1.xml": "ab82997f4acbf6ed4176169be0529b673fc6109e83e5222373a8bf210a11b886",
+        "xl/media/marker.jpg": "a2a75cee707914d51154d429e425c9920bfb5a88cce802b9f7cf69dedc100da0",
+        "xl/media/marker.png": "c162f517f5a42e8b0b4a824761000fc44950ed4cdb05843b1cc0f40b61bc01a5",
+        "xl/workbook.xml": "2573221dde1e2ae9cbcd4c248ddb6c7715f826a69752897cf49f09dd55071b31",
+        "xl/worksheets/_rels/sheet1.xml.rels": "622ac827221675d07abfaf6efaeca5aa5018a20d3058e79f9d0e1b5b05a53dc7",
+        "xl/worksheets/sheet1.xml": "84209e27181406b3b4058e157ad161672e96ef1b3ed34895c484f615ecbd0487",
+        "xl/worksheets/sheet2.xml": "71c21d9da6461af1731e143b3a7d8b2da0ffb700a42fd212d65a3abed6aef879"
+      }
+    },
+    {
+      "file": "extended-chart.xlsx",
+      "sha256": "0516a42ab9aa94b34446a2f742f16c62f976178bad9b69ed1f99f53829280404",
+      "parts": {
+        "[Content_Types].xml": "bb04c2ed7e89c67c381769f9478d5516e1e802139117ded205e60155870c3f7d",
+        "_rels/.rels": "d4e7d81dae0532f7af55b7e8d93aa36916c94ac7a0584412032df0eb4b7fb175",
+        "custom/opaque.bin": "470a587f474b8d685830827a698441f0fa4feb8729cc55d55387f9811edc64f0",
+        "xl/_rels/workbook.xml.rels": "126a9ddb59e0436ef944dfc0bb33f5d1ebf09dcbe04e5a3ebf41aee7b73cced4",
+        "xl/charts/chart1.xml": "fbd101491a830b5b10a866e446ba3cfa2f6bf24cd331a10868441a101de7de0b",
+        "xl/drawings/_rels/drawing1.xml.rels": "6b124ee5c87df431a59215ad6047888a0ae5c98c8e690d12a72d3f3c636ef583",
+        "xl/drawings/drawing1.xml": "ab82997f4acbf6ed4176169be0529b673fc6109e83e5222373a8bf210a11b886",
+        "xl/media/marker.jpg": "a2a75cee707914d51154d429e425c9920bfb5a88cce802b9f7cf69dedc100da0",
+        "xl/media/marker.png": "c162f517f5a42e8b0b4a824761000fc44950ed4cdb05843b1cc0f40b61bc01a5",
+        "xl/workbook.xml": "2573221dde1e2ae9cbcd4c248ddb6c7715f826a69752897cf49f09dd55071b31",
+        "xl/worksheets/_rels/sheet1.xml.rels": "622ac827221675d07abfaf6efaeca5aa5018a20d3058e79f9d0e1b5b05a53dc7",
+        "xl/worksheets/sheet1.xml": "84209e27181406b3b4058e157ad161672e96ef1b3ed34895c484f615ecbd0487",
+        "xl/worksheets/sheet2.xml": "71c21d9da6461af1731e143b3a7d8b2da0ffb700a42fd212d65a3abed6aef879"
+      }
+    },
+    {
+      "file": "pivot-chart.xlsx",
+      "sha256": "fc3b166ee1e24d9bd8b46cf745372177b05d184e122ed67dbccf6b5a64dc8595",
+      "parts": {
+        "[Content_Types].xml": "bb04c2ed7e89c67c381769f9478d5516e1e802139117ded205e60155870c3f7d",
+        "_rels/.rels": "d4e7d81dae0532f7af55b7e8d93aa36916c94ac7a0584412032df0eb4b7fb175",
+        "custom/opaque.bin": "470a587f474b8d685830827a698441f0fa4feb8729cc55d55387f9811edc64f0",
+        "xl/_rels/workbook.xml.rels": "126a9ddb59e0436ef944dfc0bb33f5d1ebf09dcbe04e5a3ebf41aee7b73cced4",
+        "xl/charts/chart1.xml": "f585164b27cef31d56bd69dc43a02611bd112b8d2b82cbb6881d85f2f2fb177f",
+        "xl/drawings/_rels/drawing1.xml.rels": "6b124ee5c87df431a59215ad6047888a0ae5c98c8e690d12a72d3f3c636ef583",
+        "xl/drawings/drawing1.xml": "ab82997f4acbf6ed4176169be0529b673fc6109e83e5222373a8bf210a11b886",
+        "xl/media/marker.jpg": "a2a75cee707914d51154d429e425c9920bfb5a88cce802b9f7cf69dedc100da0",
+        "xl/media/marker.png": "c162f517f5a42e8b0b4a824761000fc44950ed4cdb05843b1cc0f40b61bc01a5",
+        "xl/workbook.xml": "2573221dde1e2ae9cbcd4c248ddb6c7715f826a69752897cf49f09dd55071b31",
+        "xl/worksheets/_rels/sheet1.xml.rels": "622ac827221675d07abfaf6efaeca5aa5018a20d3058e79f9d0e1b5b05a53dc7",
+        "xl/worksheets/sheet1.xml": "84209e27181406b3b4058e157ad161672e96ef1b3ed34895c484f615ecbd0487",
+        "xl/worksheets/sheet2.xml": "71c21d9da6461af1731e143b3a7d8b2da0ffb700a42fd212d65a3abed6aef879"
+      }
+    },
+    {
+      "file": "unknown-dependent.xlsx",
+      "sha256": "d3da639f429c9338ca1bb4d68f5f07e60b1a02a331fd1ca11c1d3e078cf6c0c6",
+      "parts": {
+        "[Content_Types].xml": "bb04c2ed7e89c67c381769f9478d5516e1e802139117ded205e60155870c3f7d",
+        "_rels/.rels": "d4e7d81dae0532f7af55b7e8d93aa36916c94ac7a0584412032df0eb4b7fb175",
+        "custom/opaque.bin": "470a587f474b8d685830827a698441f0fa4feb8729cc55d55387f9811edc64f0",
+        "xl/_rels/workbook.xml.rels": "126a9ddb59e0436ef944dfc0bb33f5d1ebf09dcbe04e5a3ebf41aee7b73cced4",
+        "xl/charts/_rels/chart1.xml.rels": "baa4a1025ce953fe525693beda3ffa7f5a3ff91eec1f864bc3cb1007aad65266",
+        "xl/charts/chart1.xml": "075f55d602c002bc5a56e8a4ff7fa3ef8b67ab3ab7f7303ad8c7528a8f2050b9",
+        "xl/drawings/_rels/drawing1.xml.rels": "6b124ee5c87df431a59215ad6047888a0ae5c98c8e690d12a72d3f3c636ef583",
+        "xl/drawings/drawing1.xml": "ab82997f4acbf6ed4176169be0529b673fc6109e83e5222373a8bf210a11b886",
+        "xl/media/marker.jpg": "a2a75cee707914d51154d429e425c9920bfb5a88cce802b9f7cf69dedc100da0",
+        "xl/media/marker.png": "c162f517f5a42e8b0b4a824761000fc44950ed4cdb05843b1cc0f40b61bc01a5",
+        "xl/workbook.xml": "2573221dde1e2ae9cbcd4c248ddb6c7715f826a69752897cf49f09dd55071b31",
+        "xl/worksheets/_rels/sheet1.xml.rels": "622ac827221675d07abfaf6efaeca5aa5018a20d3058e79f9d0e1b5b05a53dc7",
+        "xl/worksheets/sheet1.xml": "84209e27181406b3b4058e157ad161672e96ef1b3ed34895c484f615ecbd0487",
+        "xl/worksheets/sheet2.xml": "71c21d9da6461af1731e143b3a7d8b2da0ffb700a42fd212d65a3abed6aef879"
+      }
+    },
+    {
+      "file": "shared-mutable-chart.xlsx",
+      "sha256": "38bb231211a195b31e54373d8a4dcc43ecd9c9e7402093294179f609a08b64e0",
+      "parts": {
+        "[Content_Types].xml": "bb04c2ed7e89c67c381769f9478d5516e1e802139117ded205e60155870c3f7d",
+        "_rels/.rels": "d4e7d81dae0532f7af55b7e8d93aa36916c94ac7a0584412032df0eb4b7fb175",
+        "custom/opaque.bin": "470a587f474b8d685830827a698441f0fa4feb8729cc55d55387f9811edc64f0",
+        "xl/_rels/workbook.xml.rels": "126a9ddb59e0436ef944dfc0bb33f5d1ebf09dcbe04e5a3ebf41aee7b73cced4",
+        "xl/charts/chart1.xml": "075f55d602c002bc5a56e8a4ff7fa3ef8b67ab3ab7f7303ad8c7528a8f2050b9",
+        "xl/drawings/_rels/drawing1.xml.rels": "084e68d95df9c350eaa249ffc7e9db04868bd6380498b5ef65c73594a76f0d60",
+        "xl/drawings/drawing1.xml": "737085f7d2e4d476d715afa9611447ce26753edb0df50dbc8134e1f8da4c536f",
+        "xl/media/marker.jpg": "a2a75cee707914d51154d429e425c9920bfb5a88cce802b9f7cf69dedc100da0",
+        "xl/media/marker.png": "c162f517f5a42e8b0b4a824761000fc44950ed4cdb05843b1cc0f40b61bc01a5",
+        "xl/workbook.xml": "2573221dde1e2ae9cbcd4c248ddb6c7715f826a69752897cf49f09dd55071b31",
+        "xl/worksheets/_rels/sheet1.xml.rels": "622ac827221675d07abfaf6efaeca5aa5018a20d3058e79f9d0e1b5b05a53dc7",
+        "xl/worksheets/sheet1.xml": "84209e27181406b3b4058e157ad161672e96ef1b3ed34895c484f615ecbd0487",
+        "xl/worksheets/sheet2.xml": "71c21d9da6461af1731e143b3a7d8b2da0ffb700a42fd212d65a3abed6aef879"
+      }
+    },
+    {
+      "file": "deleted-chart.xlsx",
+      "sha256": "e080241f70fdc1c01d6eb6bfd13aeb56e1cfd8f6bfa3618dc3d08201420f2f2f",
+      "parts": {
+        "[Content_Types].xml": "a2a96d7de21ab2f6475b1bc010398254152d5e639ee57bcc522a0355e29eeb09",
+        "_rels/.rels": "d4e7d81dae0532f7af55b7e8d93aa36916c94ac7a0584412032df0eb4b7fb175",
+        "custom/opaque.bin": "470a587f474b8d685830827a698441f0fa4feb8729cc55d55387f9811edc64f0",
+        "xl/_rels/workbook.xml.rels": "126a9ddb59e0436ef944dfc0bb33f5d1ebf09dcbe04e5a3ebf41aee7b73cced4",
+        "xl/drawings/_rels/drawing1.xml.rels": "82f674ae068e2bdede749cb64ac7cc6ae541a7f8a8b8e1681f6cf1ce00f3937f",
+        "xl/drawings/drawing1.xml": "69c036cbf0b5f2c1a70efe24d08bd22f1f592fb0b31f4eff3fdec7e5c7c1689e",
+        "xl/media/marker.jpg": "a2a75cee707914d51154d429e425c9920bfb5a88cce802b9f7cf69dedc100da0",
+        "xl/media/marker.png": "c162f517f5a42e8b0b4a824761000fc44950ed4cdb05843b1cc0f40b61bc01a5",
+        "xl/workbook.xml": "2573221dde1e2ae9cbcd4c248ddb6c7715f826a69752897cf49f09dd55071b31",
+        "xl/worksheets/_rels/sheet1.xml.rels": "622ac827221675d07abfaf6efaeca5aa5018a20d3058e79f9d0e1b5b05a53dc7",
+        "xl/worksheets/sheet1.xml": "84209e27181406b3b4058e157ad161672e96ef1b3ed34895c484f615ecbd0487",
+        "xl/worksheets/sheet2.xml": "71c21d9da6461af1731e143b3a7d8b2da0ffb700a42fd212d65a3abed6aef879"
+      }
+    },
+    {
+      "file": "deleted-shared-first.xlsx",
+      "sha256": "f0d1b91e7c780a84aa5f11eba74bbfd547f55bbd8219eee068de66f084fa6f7c",
+      "parts": {
+        "[Content_Types].xml": "bb04c2ed7e89c67c381769f9478d5516e1e802139117ded205e60155870c3f7d",
+        "_rels/.rels": "d4e7d81dae0532f7af55b7e8d93aa36916c94ac7a0584412032df0eb4b7fb175",
+        "custom/opaque.bin": "470a587f474b8d685830827a698441f0fa4feb8729cc55d55387f9811edc64f0",
+        "xl/_rels/workbook.xml.rels": "126a9ddb59e0436ef944dfc0bb33f5d1ebf09dcbe04e5a3ebf41aee7b73cced4",
+        "xl/charts/chart1.xml": "075f55d602c002bc5a56e8a4ff7fa3ef8b67ab3ab7f7303ad8c7528a8f2050b9",
+        "xl/drawings/_rels/drawing1.xml.rels": "001e6efac77ea1cba1e969316730fc5b839aaf237a854a6342563c5025cde4f7",
+        "xl/drawings/drawing1.xml": "a9c95f6177b575e0836669ecfa2d960cbea0c8ae1ddf1574f37d147f0c037b42",
+        "xl/media/marker.jpg": "a2a75cee707914d51154d429e425c9920bfb5a88cce802b9f7cf69dedc100da0",
+        "xl/media/marker.png": "c162f517f5a42e8b0b4a824761000fc44950ed4cdb05843b1cc0f40b61bc01a5",
+        "xl/workbook.xml": "2573221dde1e2ae9cbcd4c248ddb6c7715f826a69752897cf49f09dd55071b31",
+        "xl/worksheets/_rels/sheet1.xml.rels": "622ac827221675d07abfaf6efaeca5aa5018a20d3058e79f9d0e1b5b05a53dc7",
+        "xl/worksheets/sheet1.xml": "84209e27181406b3b4058e157ad161672e96ef1b3ed34895c484f615ecbd0487",
+        "xl/worksheets/sheet2.xml": "71c21d9da6461af1731e143b3a7d8b2da0ffb700a42fd212d65a3abed6aef879"
+      }
+    },
+    {
+      "file": "deleted-shared-last.xlsx",
+      "sha256": "a7890e1cd17c27c31b4f22b36b8636b1172ebd8a44ea7ae962c288fee49c8e98",
+      "parts": {
+        "[Content_Types].xml": "bb04c2ed7e89c67c381769f9478d5516e1e802139117ded205e60155870c3f7d",
+        "_rels/.rels": "d4e7d81dae0532f7af55b7e8d93aa36916c94ac7a0584412032df0eb4b7fb175",
+        "custom/opaque.bin": "470a587f474b8d685830827a698441f0fa4feb8729cc55d55387f9811edc64f0",
+        "xl/_rels/workbook.xml.rels": "126a9ddb59e0436ef944dfc0bb33f5d1ebf09dcbe04e5a3ebf41aee7b73cced4",
+        "xl/charts/chart1.xml": "075f55d602c002bc5a56e8a4ff7fa3ef8b67ab3ab7f7303ad8c7528a8f2050b9",
+        "xl/drawings/_rels/drawing1.xml.rels": "ed8e7541ab1ef3d9b1da44a69eaf681edf908383f1a3c171e35bc905ceca4d52",
+        "xl/drawings/drawing1.xml": "8f9499a7db36c2ff6460b0db81a11ba8ec24d9f5f71152cefd893b91b19f57af",
+        "xl/media/marker.jpg": "a2a75cee707914d51154d429e425c9920bfb5a88cce802b9f7cf69dedc100da0",
+        "xl/workbook.xml": "2573221dde1e2ae9cbcd4c248ddb6c7715f826a69752897cf49f09dd55071b31",
+        "xl/worksheets/_rels/sheet1.xml.rels": "622ac827221675d07abfaf6efaeca5aa5018a20d3058e79f9d0e1b5b05a53dc7",
+        "xl/worksheets/sheet1.xml": "84209e27181406b3b4058e157ad161672e96ef1b3ed34895c484f615ecbd0487",
+        "xl/worksheets/sheet2.xml": "71c21d9da6461af1731e143b3a7d8b2da0ffb700a42fd212d65a3abed6aef879"
+      }
+    }
+  ],
+  "media": {
+    "marker.png": "c162f517f5a42e8b0b4a824761000fc44950ed4cdb05843b1cc0f40b61bc01a5",
+    "marker.jpg": "a2a75cee707914d51154d429e425c9920bfb5a88cce802b9f7cf69dedc100da0"
+  }
+}

@@ -1,0 +1,277 @@
+{
+  "schema": "rpf.xlsx.excel-month-script-oracle.v1",
+  "excel": "16.113.3",
+  "date1904": true,
+  "source": "excel-month-1904-source.xlsx",
+  "sourceSha256": "848c65d3b4a9af2e10da0849d15de2dbe1218e8f40fe4e749b5848a053008372",
+  "scriptReadback": ".build/tests/remaining-month-capture/1904-raw-final.txt",
+  "scriptReadbackSha256": "e1b94b168f13594e6cf6e2a6ca1f741a0e04c5498d039a6db04c9b2ed1b69721",
+  "capturedAt": "2026-10-01T06:54:12.390109+00:00",
+  "method": "LaunchServices open of uncached disposable source; scoped vendor formula/value/class/string-value reads; original bytes reproduced independently; no saved reference workbook",
+  "calculationBefore": "calculation automatic",
+  "calculationAfter": "calculation automatic",
+  "ownedWorkbookInventory": [
+    ".build/tests/remaining-excel-capture-probe/disposable-source.xlsx",
+    ".build/tests/remaining-month-capture/excel-month-1900-source.xlsx",
+    ".build/tests/remaining-month-capture/excel-month-1904-source.xlsx"
+  ],
+  "cells": {
+    "B1": {
+      "formula": "EDATE(DATE(2024,1,31),1)",
+      "valueClass": "real",
+      "rawScriptValue": "4.3889E+4",
+      "display": "43889",
+      "expected": 43889.0,
+      "dataType": "number",
+      "qualification": "actual typed numeric scripting read"
+    },
+    "B2": {
+      "formula": "EDATE(DATE(2023,1,31),1)",
+      "valueClass": "real",
+      "rawScriptValue": "4.3523E+4",
+      "display": "43523",
+      "expected": 43523.0,
+      "dataType": "number",
+      "qualification": "actual typed numeric scripting read"
+    },
+    "B3": {
+      "formula": "EDATE(DATE(2024,3,31),-1)",
+      "valueClass": "real",
+      "rawScriptValue": "4.3889E+4",
+      "display": "43889",
+      "expected": 43889.0,
+      "dataType": "number",
+      "qualification": "actual typed numeric scripting read"
+    },
+    "B4": {
+      "formula": "EDATE(DATE(2024,2,29),12)",
+      "valueClass": "real",
+      "rawScriptValue": "4.4254E+4",
+      "display": "44254",
+      "expected": 44254.0,
+      "dataType": "number",
+      "qualification": "actual typed numeric scripting read"
+    },
+    "B5": {
+      "formula": "EDATE(DATE(2024,1,15),1.9)",
+      "valueClass": "real",
+      "rawScriptValue": "4.3875E+4",
+      "display": "43875",
+      "expected": 43875.0,
+      "dataType": "number",
+      "qualification": "actual typed numeric scripting read"
+    },
+    "B6": {
+      "formula": "EDATE(DATE(2024,1,15),-1.9)",
+      "valueClass": "real",
+      "rawScriptValue": "4.3813E+4",
+      "display": "43813",
+      "expected": 43813.0,
+      "dataType": "number",
+      "qualification": "actual typed numeric scripting read"
+    },
+    "B7": {
+      "formula": "EOMONTH(DATE(2024,1,15),1)",
+      "valueClass": "real",
+      "rawScriptValue": "4.3889E+4",
+      "display": "43889",
+      "expected": 43889.0,
+      "dataType": "number",
+      "qualification": "actual typed numeric scripting read"
+    },
+    "B8": {
+      "formula": "EOMONTH(DATE(2023,1,15),1)",
+      "valueClass": "real",
+      "rawScriptValue": "4.3523E+4",
+      "display": "43523",
+      "expected": 43523.0,
+      "dataType": "number",
+      "qualification": "actual typed numeric scripting read"
+    },
+    "B9": {
+      "formula": "EOMONTH(DATE(2024,2,29),0)",
+      "valueClass": "real",
+      "rawScriptValue": "4.3889E+4",
+      "display": "43889",
+      "expected": 43889.0,
+      "dataType": "number",
+      "qualification": "actual typed numeric scripting read"
+    },
+    "B10": {
+      "formula": "EOMONTH(DATE(2024,1,15),-1.9)",
+      "valueClass": "real",
+      "rawScriptValue": "4.3829E+4",
+      "display": "43829",
+      "expected": 43829.0,
+      "dataType": "number",
+      "qualification": "actual typed numeric scripting read"
+    },
+    "B11": {
+      "formula": "EDATE(0,0)",
+      "valueClass": "real",
+      "rawScriptValue": "0.0",
+      "display": "0",
+      "expected": 0.0,
+      "dataType": "number",
+      "qualification": "actual typed numeric scripting read"
+    },
+    "B12": {
+      "formula": "EDATE(0,1)",
+      "valueClass": "real",
+      "rawScriptValue": "31.0",
+      "display": "31",
+      "expected": 31.0,
+      "dataType": "number",
+      "qualification": "actual typed numeric scripting read"
+    },
+    "B13": {
+      "formula": "EOMONTH(0,0)",
+      "valueClass": "real",
+      "rawScriptValue": "30.0",
+      "display": "30",
+      "expected": 30.0,
+      "dataType": "number",
+      "qualification": "actual typed numeric scripting read"
+    },
+    "B14": {
+      "formula": "EDATE(59,1)",
+      "valueClass": "real",
+      "rawScriptValue": "88.0",
+      "display": "88",
+      "expected": 88.0,
+      "dataType": "number",
+      "qualification": "actual typed numeric scripting read"
+    },
+    "B15": {
+      "formula": "EDATE(60,1)",
+      "valueClass": "real",
+      "rawScriptValue": "91.0",
+      "display": "91",
+      "expected": 91.0,
+      "dataType": "number",
+      "qualification": "actual typed numeric scripting read"
+    },
+    "B16": {
+      "formula": "EDATE(61,-1)",
+      "valueClass": "real",
+      "rawScriptValue": "32.0",
+      "display": "32",
+      "expected": 32.0,
+      "dataType": "number",
+      "qualification": "actual typed numeric scripting read"
+    },
+    "B17": {
+      "formula": "EOMONTH(59,0)",
+      "valueClass": "real",
+      "rawScriptValue": "59.0",
+      "display": "59",
+      "expected": 59.0,
+      "dataType": "number",
+      "qualification": "actual typed numeric scripting read"
+    },
+    "B18": {
+      "formula": "EOMONTH(60,0)",
+      "valueClass": "real",
+      "rawScriptValue": "90.0",
+      "display": "90",
+      "expected": 90.0,
+      "dataType": "number",
+      "qualification": "actual typed numeric scripting read"
+    },
+    "B19": {
+      "formula": "EOMONTH(61,-1)",
+      "valueClass": "real",
+      "rawScriptValue": "59.0",
+      "display": "59",
+      "expected": 59.0,
+      "dataType": "number",
+      "qualification": "actual typed numeric scripting read"
+    },
+    "B20": {
+      "formula": "EDATE(61.75,1)",
+      "valueClass": "real",
+      "rawScriptValue": "92.0",
+      "display": "92",
+      "expected": 92.0,
+      "dataType": "number",
+      "qualification": "actual typed numeric scripting read"
+    },
+    "B21": {
+      "formula": "EOMONTH(61.75,0)",
+      "valueClass": "real",
+      "rawScriptValue": "90.0",
+      "display": "90",
+      "expected": 90.0,
+      "dataType": "number",
+      "qualification": "actual typed numeric scripting read"
+    },
+    "B22": {
+      "formula": "EDATE(DATE(9999,12,31),1)",
+      "valueClass": "class",
+      "rawScriptValue": "missing value",
+      "display": "#NUM!",
+      "observedError": "#NUM!",
+      "qualification": "missing scripting value plus displayed error; no saved OOXML typed cache"
+    },
+    "B23": {
+      "formula": "EOMONTH(DATE(9999,12,31),1)",
+      "valueClass": "class",
+      "rawScriptValue": "missing value",
+      "display": "#NUM!",
+      "observedError": "#NUM!",
+      "qualification": "missing scripting value plus displayed error; no saved OOXML typed cache"
+    },
+    "B24": {
+      "formula": "EDATE(-1,1)",
+      "valueClass": "class",
+      "rawScriptValue": "missing value",
+      "display": "#NUM!",
+      "observedError": "#NUM!",
+      "qualification": "missing scripting value plus displayed error; no saved OOXML typed cache"
+    },
+    "B25": {
+      "formula": "EOMONTH(-1,1)",
+      "valueClass": "class",
+      "rawScriptValue": "missing value",
+      "display": "#NUM!",
+      "observedError": "#NUM!",
+      "qualification": "missing scripting value plus displayed error; no saved OOXML typed cache"
+    },
+    "B26": {
+      "formula": "EDATE(0,-1)",
+      "valueClass": "real",
+      "rawScriptValue": "-31.0",
+      "display": "-31",
+      "expected": -31.0,
+      "dataType": "number",
+      "qualification": "actual typed numeric scripting read"
+    },
+    "B27": {
+      "formula": "EOMONTH(0,-1)",
+      "valueClass": "real",
+      "rawScriptValue": "-1.0",
+      "display": "-1",
+      "expected": -1.0,
+      "dataType": "number",
+      "qualification": "actual typed numeric scripting read"
+    },
+    "B28": {
+      "formula": "EDATE(DATE(2024,1,15),0)",
+      "valueClass": "real",
+      "rawScriptValue": "4.3844E+4",
+      "display": "43844",
+      "expected": 43844.0,
+      "dataType": "number",
+      "qualification": "actual typed numeric scripting read"
+    },
+    "B29": {
+      "formula": "EOMONTH(DATE(2024,1,15),0)",
+      "valueClass": "real",
+      "rawScriptValue": "4.386E+4",
+      "display": "43860",
+      "expected": 43860.0,
+      "dataType": "number",
+      "qualification": "actual typed numeric scripting read"
+    }
+  }
+}

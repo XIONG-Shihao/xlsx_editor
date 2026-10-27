@@ -1,0 +1,69 @@
+{
+  "schema": "workbook.xlsx.acceptance-policy.v2",
+  "recordedDate": "2026-09-23",
+  "status": "functionality-and-correctness-first",
+  "authority": "User instruction: no hard cell-count or memory-MB acceptance caps; retain lossless performance improvements and prioritize working correct workflows.",
+  "acceptance": {
+    "required": [
+      "Complete the requested read/edit/calculate/save/reopen workflow.",
+      "Preserve literal values, formulas, types, source revisions and unrelated content.",
+      "Reject unsupported semantic mutations explicitly before publication.",
+      "Preserve drafts, cancellation, atomic batches and durable recovery.",
+      "Record exact source/build/fixture identity and observed test outcomes."
+    ],
+    "numericPerformanceThresholds": false,
+    "cellCountCeiling": null,
+    "memoryBytesCeiling": null,
+    "latencyMsCeiling": null
+  },
+  "workloads": {
+    "selection": "Use representative authorized files and documented synthetic regression fixtures. Fixture sizes describe measurements, not product limits.",
+    "historicalSyntheticCellCounts": [
+      10000,
+      100000
+    ],
+    "currentSuppliedSample": {
+      "formats": [
+        "csv",
+        "xlsx"
+      ],
+      "dataRows": 129971,
+      "headerRows": 1,
+      "columns": 15,
+      "originals": [
+        {
+          "path": "samples/xlsx_sample.csv",
+          "bytes": 53428104,
+          "sha256": "2ebd1e497176268b8ce1e3a6b48d5b8f5b2308ce9b1f6a5260d2924802098772"
+        },
+        {
+          "path": "samples/xlsx_sample.xlsx",
+          "bytes": 25413034,
+          "sha256": "122f585eba10a5e53ac1b749ae11287f339445ad0caeb31dec958cbfa97d392b"
+        }
+      ],
+      "equivalence": "Not equivalent: independent streaming inventory found128126 typed cell mismatches already present in the originals. Preserve each original separately; do not normalize text encoding.",
+      "inventory": "docs/verification/measurements/xlsx-real-sample-inventory-20260923.json",
+      "qualification": "Source-level read/edit/save and first-formula evidence is separate from final current-package and live-agent acceptance. No fixture size is a product limit."
+    }
+  },
+  "observations": {
+    "required": [
+      "open/edit-to-computed-paint/calculation/save-reopen timings where applicable",
+      "sample counts, cold/warm conditions and machine/runtime/source/build identity",
+      "memory measurement method, samples and sampling errors",
+      "MCP calls and returned bytes",
+      "functional results, preserved package/content and source identity"
+    ],
+    "unavailable": "Record missing measurements as unavailable with a reason. Functional acceptance and measurement completeness are separate; unavailable diagnostics are never reported as measured or as performance passes.",
+    "comparison": "Compare like workloads and runtime conditions. A high measurement alone does not reject a correct completed workflow."
+  },
+  "safeguards": {
+    "preserve": [
+      "Cancellation and finite test deadlines for hung work.",
+      "Bounded MCP responses with explicit pagination/truncation.",
+      "Input integrity, authorization, atomic publication and resource cleanup."
+    ],
+    "qualification": "Operational safeguards do not establish product cell/RSS/latency limits and must not silently omit content or disable otherwise qualified features."
+  }
+}

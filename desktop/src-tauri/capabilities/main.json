@@ -1,0 +1,1 @@
+{"identifier":"main","description":"Bundled standalone UI only; file selection and workbook ownership remain host-owned.","windows":["main"],"permissions":["core:default"]}

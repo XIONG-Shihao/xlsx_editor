@@ -1,0 +1,17 @@
+{
+ "_about": "Every tests/*.mjs file is run by scripts/test/run-parallel.mjs --suite xlsx unless it is listed here with the reason. A new test file needs no registration.",
+ "fails and needs repair (first failure shown)": {
+  "offline-spelling.mjs": "A missing copied US dictionary is explicitly unavailable while the intact copied GB dictionary remains usable (86.879667",
+  "workbook-calculation-lifecycle-ui.mjs": "Stored display provenance never leaks into actual selected-grid clipboard data or authored formulas (160.897125ms)",
+  "workbook-errors-ui.mjs": "central Page Layout immediately masks and pauses issue navigation; Normal return requires a fresh manual scan (149.84525",
+  "workbook-ordered-sort.mjs": "native three-key sort is one transform and preserves formulas, caches, marker styles and row attributes (106.70375ms)",
+  "workbook-spelling-jobs.mjs": "Real dictionaries bind availability and dialect results to one readonly accepted owner (177.311958ms)",
+  "workbook-watch-ui.mjs": "production Grid uses one dock/auditing group and a real scoped readonly reader; range/merge/special selection cannot add"
+ },
+ "passes, but refuses to start while another spreadsheet engine process is running, so it cannot join a parallel run": [
+  "accessibility-owner.mjs",
+  "excel-view-oracle.mjs",
+  "ink-stroke-owner.mjs",
+  "name-scope-oracle-controls.mjs"
+ ]
+}
